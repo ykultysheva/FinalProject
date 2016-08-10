@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import CoreData
 
 class AddHouse: UIViewController, UITextFieldDelegate {
     
@@ -17,6 +18,10 @@ class AddHouse: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var addAddress: UITextField!
     
     @IBOutlet weak var addLandlord: UITextField!
+    
+    
+    var managedObjectContext: NSManagedObjectContext!
+    
     
     
     override func viewDidLoad() {
@@ -38,8 +43,51 @@ class AddHouse: UIViewController, UITextFieldDelegate {
     
     
     @IBAction func save(sender: AnyObject) {
-        dismissViewControllerAnimated(true, completion: nil)
+        
+        let address = addAddress.text!
+        let descriptionHouse = addDescription.text!
+        
+        guard address.isEmpty == false else {
+            showAlertWithTitle("Warning", message: "Add address.", cancelButtonTitle: "OK")
+            
+            return
+        }
+        guard descriptionHouse.isEmpty == false else {
+            showAlertWithTitle("Warning", message: "Add description.", cancelButtonTitle: "OK")
+            
+            return
+        }
+        
+        //        if let isEmpty = address?.isEmpty where isEmpty == false {
+        // Create Entity
+        let entity = NSEntityDescription.entityForName("House", inManagedObjectContext: self.managedObjectContext)
+        // Initialize Record
+        let record = NSManagedObject(entity: entity!, insertIntoManagedObjectContext: self.managedObjectContext)
+        // Populate Record
+        record.setValue(address, forKey: "address")
+        record.setValue(descriptionHouse, forKey: "descriptionHouse")
+        
+        do {
+            // Save Record
+            try record.managedObjectContext?.save()
+            
+            // Dismiss View Controller
+            dismissViewControllerAnimated(true, completion: nil)
+            
+        } catch {
+            let saveError = error as NSError
+            print("\(saveError), \(saveError.userInfo)")
+            
+            //                // Show Alert View
+        }
+        
     }
+    //    else {
+    //            // Show Alert View
+    //            showAlertWithTitle("Warning", message: "Your house needs an address.", cancelButtonTitle: "OK")
+    //        }
+    //
+    //    }
     
     
     @IBAction func cancel(sender: AnyObject) {
@@ -47,7 +95,17 @@ class AddHouse: UIViewController, UITextFieldDelegate {
     }
     
     
+    private func showAlertWithTitle(title: String, message: String, cancelButtonTitle: String) {
+        // Initialize Alert Controller
+        let alertController = UIAlertController(title: title, message: message, preferredStyle: .Alert)
+        
+        // Configure Alert Controller
+        alertController.addAction(UIAlertAction(title: cancelButtonTitle, style: .Default, handler: nil))
+        
+        // Present Alert Controller
+        presentViewController(alertController, animated: true, completion: nil)
+    }
+    
+    
 }
-
-
 

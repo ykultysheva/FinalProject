@@ -72,6 +72,14 @@ class MasterViewController: UITableViewController, NSFetchedResultsControllerDel
                 controller.detailItem = object
             }
         }
+        
+        if segue.identifier == "toAddHouse" {
+            if let viewController = segue.destinationViewController as? AddHouse {
+                //                if let viewController = navigationController.topViewController as? AddHouse {
+                viewController.managedObjectContext = managedObjectContext
+                //                }
+            }
+        }
     }
 
     // MARK: - Table View
