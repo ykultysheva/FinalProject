@@ -14,10 +14,9 @@ class MasterViewController: UITableViewController, NSFetchedResultsControllerDel
     var detailViewController: DetailViewController? = nil
     var managedObjectContext: NSManagedObjectContext? = nil
 
-
-    
-       
-    
+    @IBOutlet weak var descriptionHouseLabel: UILabel!
+    @IBOutlet weak var addressLable: UILabel!
+    @IBOutlet weak var landlordLabel: UILabel!
     
     
     override func viewDidLoad() {
@@ -75,9 +74,7 @@ class MasterViewController: UITableViewController, NSFetchedResultsControllerDel
         
         if segue.identifier == "toAddHouse" {
             if let viewController = segue.destinationViewController as? AddHouse {
-                //                if let viewController = navigationController.topViewController as? AddHouse {
                 viewController.managedObjectContext = managedObjectContext
-                //                }
             }
         }
     }
@@ -93,10 +90,6 @@ class MasterViewController: UITableViewController, NSFetchedResultsControllerDel
         return sectionInfo.numberOfObjects
     }
  
-//    From the turorial
-//    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-//        return 0
-//    }
 
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("CustomCell", forIndexPath: indexPath)
@@ -126,11 +119,16 @@ class MasterViewController: UITableViewController, NSFetchedResultsControllerDel
     }
 
     func configureCell(cell: UITableViewCell, atIndexPath indexPath: NSIndexPath) {
+        
+        let cell = cell as! CustomCell
         let object = self.fetchedResultsController.objectAtIndexPath(indexPath)
-        cell.textLabel!.text = object.valueForKey("name")!.description
+//        cell.textLabel!.text = object.valueForKey("address")!.description
+//        cell.descriptionHouse!.text = object.valueForKey("descriptionHouse")!.description
+        cell.Address!.text = object.valueForKey("address")?.description
+        cell.Description!.text = object.valueForKey("descriptionHouse")?.description
     }
 
-    // MARK: - Fetched results controller
+    // MARK: - Fetched results controlle
 
     var fetchedResultsController: NSFetchedResultsController {
         if _fetchedResultsController != nil {
@@ -139,14 +137,14 @@ class MasterViewController: UITableViewController, NSFetchedResultsControllerDel
         
         let fetchRequest = NSFetchRequest()
         // Edit the entity name as appropriate.
-        let entity = NSEntityDescription.entityForName("Landlord", inManagedObjectContext: self.managedObjectContext!)
+        let entity = NSEntityDescription.entityForName("House", inManagedObjectContext: self.managedObjectContext!)
         fetchRequest.entity = entity
         
         // Set the batch size to a suitable number.
         fetchRequest.fetchBatchSize = 20
         
         // Edit the sort key as appropriate.
-        let sortDescriptor = NSSortDescriptor(key: "name", ascending: false)
+        let sortDescriptor = NSSortDescriptor(key: "address", ascending: true)
         
         fetchRequest.sortDescriptors = [sortDescriptor]
         
