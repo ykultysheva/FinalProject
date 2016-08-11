@@ -269,7 +269,6 @@
         <!--Login View Controller-->
         <scene sceneID="fQu-HC-gFy">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="cVk-ie-LeR" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController id="WLq-eC-tD9" customClass="LoginViewController" customModule="FinalProject" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="XmE-SA-tsR"/>
@@ -387,6 +386,7 @@
                         <outlet property="passwordField" destination="Dg2-pl-Ouz" id="dpk-um-5xH"/>
                     </connections>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="cVk-ie-LeR" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="781" y="-1355"/>
         </scene>
