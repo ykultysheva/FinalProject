@@ -42,5 +42,14 @@ class LoginViewController: UIViewController, NSFetchedResultsControllerDelegate 
         // Pass the selected object to the new view controller.
     }
     */
+    
+    // MARK: Actions
+    
+    @IBAction func loginButtonPressed(sender: AnyObject) {
+        let email = emailField.text
+        let password = passwordField.text
+        let userEmail = self.managedObjectContext
+        
+    }
 
 }
