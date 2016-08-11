@@ -34,7 +34,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let landlord2 = NSManagedObject(entity: entityPerson!, insertIntoManagedObjectContext: self.managedObjectContext)
         
         landlord1.setValue("Yana", forKey: "name")
-        landlord2.setValue("Mike", forKey: "name")
+        landlord2.setValue("Bob", forKey: "name")
         
         let entityHouse = NSEntityDescription.entityForName("House", inManagedObjectContext: self.managedObjectContext)
         let house1 = NSManagedObject(entity: entityHouse!, insertIntoManagedObjectContext: self.managedObjectContext)
@@ -179,7 +179,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let fetchRequest3 = NSFetchRequest(entityName: "Landlord")
         
         // Create Predicate
-        let predicate = NSPredicate(format: "%K == %@", "name", "Mike")
+        let predicate = NSPredicate(format: "%K == %@", "name", "Bob")
         fetchRequest3.predicate = predicate
         
         // Execute Fetch Request
