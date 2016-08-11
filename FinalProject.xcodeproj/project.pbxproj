@@ -28,6 +28,8 @@
 		972D473E1D593A2F00AF6464 /* ImagesInteriorPart.m in Sources */ = {isa = PBXBuildFile; fileRef = 972D47361D593A2F00AF6464 /* ImagesInteriorPart.m */; };
 		972D47441D5A71B900AF6464 /* CustomCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 972D47431D5A71B900AF6464 /* CustomCell.swift */; };
 		972D47461D5A826100AF6464 /* AddHouse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 972D47451D5A826100AF6464 /* AddHouse.swift */; };
+		AB6438261D5CA73F002912D5 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB6438241D5CA73F002912D5 /* LoginViewController.swift */; };
+		AB6438271D5CA73F002912D5 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB6438251D5CA73F002912D5 /* RegisterViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -67,6 +69,8 @@
 		972D47361D593A2F00AF6464 /* ImagesInteriorPart.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImagesInteriorPart.m; sourceTree = "<group>"; };
 		972D47431D5A71B900AF6464 /* CustomCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomCell.swift; sourceTree = "<group>"; };
 		972D47451D5A826100AF6464 /* AddHouse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddHouse.swift; sourceTree = "<group>"; };
+		AB6438241D5CA73F002912D5 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		AB6438251D5CA73F002912D5 /* RegisterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,6 +105,8 @@
 			children = (
 				972D47011D5911D600AF6464 /* AppDelegate.swift */,
 				972D47061D5911D600AF6464 /* MasterViewController.swift */,
+				AB6438241D5CA73F002912D5 /* LoginViewController.swift */,
+				AB6438251D5CA73F002912D5 /* RegisterViewController.swift */,
 				972D47431D5A71B900AF6464 /* CustomCell.swift */,
 				972D47081D5911D600AF6464 /* DetailViewController.swift */,
 				972D470A1D5911D600AF6464 /* Main.storyboard */,
@@ -261,12 +267,14 @@
 				972D473B1D593A2F00AF6464 /* InteriorPart+CoreDataProperties.m in Sources */,
 				972D47461D5A826100AF6464 /* AddHouse.swift in Sources */,
 				972D47441D5A71B900AF6464 /* CustomCell.swift in Sources */,
+				AB6438261D5CA73F002912D5 /* LoginViewController.swift in Sources */,
 				972D47371D593A2F00AF6464 /* Room+CoreDataProperties.m in Sources */,
 				972D473A1D593A2F00AF6464 /* ImagesHouse.m in Sources */,
 				972D473D1D593A2F00AF6464 /* ImagesInteriorPart+CoreDataProperties.m in Sources */,
 				972D47221D5938A500AF6464 /* House.m in Sources */,
 				972D47391D593A2F00AF6464 /* ImagesHouse+CoreDataProperties.m in Sources */,
 				972D47231D5938A500AF6464 /* Landlord+CoreDataProperties.m in Sources */,
+				AB6438271D5CA73F002912D5 /* RegisterViewController.swift in Sources */,
 				972D473E1D593A2F00AF6464 /* ImagesInteriorPart.m in Sources */,
 				972D47211D5938A500AF6464 /* House+CoreDataProperties.m in Sources */,
 				972D473C1D593A2F00AF6464 /* InteriorPart.m in Sources */,
@@ -429,6 +437,7 @@
 				972D47171D5911D600AF6464 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
