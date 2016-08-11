@@ -21,7 +21,9 @@
         <relationship name="room" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Room" inverseName="interiorPart" inverseEntity="Room" syncable="YES"/>
     </entity>
     <entity name="Landlord" representedClassName="Landlord">
+        <attribute name="email" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="password" optional="YES" attributeType="String" syncable="YES"/>
         <relationship name="houses" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="House" inverseName="landlord" inverseEntity="House" syncable="YES"/>
         <userInfo/>
     </entity>
@@ -31,11 +33,11 @@
         <relationship name="interiorPart" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="InteriorPart" inverseName="room" inverseEntity="InteriorPart" syncable="YES"/>
     </entity>
     <elements>
-        <element name="Landlord" positionX="-198" positionY="189" width="128" height="73"/>
         <element name="House" positionX="63" positionY="69" width="128" height="118"/>
-        <element name="Room" positionX="108" positionY="288" width="128" height="88"/>
-        <element name="InteriorPart" positionX="-108" positionY="324" width="128" height="118"/>
         <element name="ImagesHouse" positionX="-56" positionY="-0" width="128" height="43"/>
         <element name="ImagesInteriorPart" positionX="-83" positionY="513" width="128" height="58"/>
+        <element name="InteriorPart" positionX="-108" positionY="324" width="128" height="118"/>
+        <element name="Landlord" positionX="-198" positionY="189" width="128" height="105"/>
+        <element name="Room" positionX="108" positionY="288" width="128" height="88"/>
     </elements>
 </model>

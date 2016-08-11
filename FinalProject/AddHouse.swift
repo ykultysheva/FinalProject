@@ -36,6 +36,7 @@ class AddHouse: UIViewController, UITextFieldDelegate {
     }
     
     func textFieldShouldReturn(textField: UITextField) -> Bool {
+        
         // Hide the keyboard.
         textField.resignFirstResponder()
         return true
