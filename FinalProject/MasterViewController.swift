@@ -68,7 +68,8 @@ class MasterViewController: UITableViewController, NSFetchedResultsControllerDel
             if let indexPath = self.tableView.indexPathForSelectedRow {
             let object = self.fetchedResultsController.objectAtIndexPath(indexPath)
                 let controller = segue.destinationViewController as! DetailViewController
-                controller.detailItem = object
+                controller.managedObjectContext = managedObjectContext
+                controller.detailItem = object as! House
             }
         }
         
@@ -123,7 +124,6 @@ class MasterViewController: UITableViewController, NSFetchedResultsControllerDel
         let cell = cell as! CustomCell
         let object = self.fetchedResultsController.objectAtIndexPath(indexPath)
 //        cell.textLabel!.text = object.valueForKey("address")!.description
-//        cell.descriptionHouse!.text = object.valueForKey("descriptionHouse")!.description
         cell.Address!.text = object.valueForKey("address")?.description
         cell.Description!.text = object.valueForKey("descriptionHouse")?.description
     }
@@ -212,5 +212,8 @@ class MasterViewController: UITableViewController, NSFetchedResultsControllerDel
      }
      */
 
+    @IBAction func unwindToMasterViewController(sender:UIStoryboardSegue) {
+        self.tableView.reloadData()
+    }
 }
 
