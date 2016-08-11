@@ -51,14 +51,16 @@ class RegisterViewController: UIViewController, NSFetchedResultsControllerDelega
     let email = emailField.text
     let password = passwordField.text
     let confirm = confirmPasswordField.text
-        // Provide alert if user has not completed all fields
+        // Check for empty fields
+        
         if (name!.isEmpty || password!.isEmpty || confirm!.isEmpty || (email?.isEmpty)!){
             displayMyAlertMessage("You haven't completed all fields")
             return;
         }
-        
+        //check for password match
         if password != confirm {
             displayMyAlertMessage("Passwords do not match")
+            return
         }
         
         var appDel: AppDelegate = (UIApplication.sharedApplication().delegate as! AppDelegate)
@@ -70,13 +72,19 @@ class RegisterViewController: UIViewController, NSFetchedResultsControllerDelega
         
         newUser.setValue(password, forKey: "password")
         newUser.setValue(email, forKey: "email")
-       
+       // Save store data
         do { try
             context.save()
         } catch {
             print("failed to save")
         }
-        
+        var myAlert = UIAlertController(title: "Success!", message: "Saved User Successful", preferredStyle: .Alert)
+        let okAction = UIAlertAction(title: "OK", style: .Default){
+            action in self.dismissViewControllerAnimated(true, completion: nil)
+        }
+        myAlert.addAction(okAction)
+        presentViewController(myAlert, animated:true, completion: nil)
+//        dismissViewControllerAnimated(true, completion: nil)
     }
     
     // alert message function

@@ -263,6 +263,9 @@
                                 </constraints>
                                 <color key="tintColor" red="1" green="0.97845294849999997" blue="0.98587254040000005" alpha="1" colorSpace="calibratedRGB"/>
                                 <state key="normal" title="Login"/>
+                                <connections>
+                                    <action selector="loginButtonPressed:" destination="WLq-eC-tD9" eventType="touchUpInside" id="WTO-Et-vPX"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FxB-Ad-vL5">
                                 <rect key="frame" x="241" y="482" width="118" height="43"/>
