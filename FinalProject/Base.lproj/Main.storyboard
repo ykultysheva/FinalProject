@@ -269,7 +269,6 @@
         <!--Login View Controller-->
         <scene sceneID="fQu-HC-gFy">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="cVk-ie-LeR" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController id="WLq-eC-tD9" customClass="LoginViewController" customModule="FinalProject" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="XmE-SA-tsR"/>
@@ -320,6 +319,7 @@
                                 <state key="normal" title="Login"/>
                                 <connections>
                                     <action selector="loginButtonPressed:" destination="WLq-eC-tD9" eventType="touchUpInside" id="WTO-Et-vPX"/>
+                                    <segue destination="HnI-QE-Vb2" kind="show" id="USj-GE-i39"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FxB-Ad-vL5">
@@ -390,6 +390,7 @@
                         <outlet property="passwordField" destination="Dg2-pl-Ouz" id="dpk-um-5xH"/>
                     </connections>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="cVk-ie-LeR" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="781" y="-1355"/>
         </scene>
