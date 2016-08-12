@@ -31,7 +31,7 @@ class LoginViewController: UIViewController, NSFetchedResultsControllerDelegate 
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
+
 
     /*
     // MARK: - Navigation
@@ -73,8 +73,14 @@ class LoginViewController: UIViewController, NSFetchedResultsControllerDelegate 
             displayMyAlertMessage("Invalid Password")
         }else {
             performSegueWithIdentifier("toHouse", sender: self)
+            let defaults = NSUserDefaults.standardUserDefaults()
+            defaults.setObject(email, forKey: "email")
+            defaults.setObject(password, forKey: "password")
+            defaults.synchronize()
             return
         }
+        
+        
     }
     func displayMyAlertMessage(userMessage:String) {
         

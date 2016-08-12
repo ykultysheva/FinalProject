@@ -20,184 +20,187 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         
         print(NSFileManager.defaultManager().URLsForDirectory(.DocumentDirectory, inDomains: .UserDomainMask))
+//        let defaults = NSUserDefaults.standardUserDefaults()
+//        defaults.removeObjectForKey("email")
+//        defaults.removeObjectForKey("password")
         
         let masterNavigationController = window!.rootViewController as! UINavigationController
-        let controller = masterNavigationController.topViewController as! LoginViewController
+        let controller = masterNavigationController.topViewController as! MasterViewController
         controller.managedObjectContext = self.managedObjectContext
         
         
-        //create Managed Object
-        let entityPerson = NSEntityDescription.entityForName("Landlord", inManagedObjectContext: self.managedObjectContext)
-        
-        let landlord1 = NSManagedObject(entity: entityPerson!, insertIntoManagedObjectContext: self.managedObjectContext)
-        
-        let landlord2 = NSManagedObject(entity: entityPerson!, insertIntoManagedObjectContext: self.managedObjectContext)
-        
-        landlord1.setValue("Yana", forKey: "name")
-        landlord2.setValue("Bob", forKey: "name")
-        
-        let entityHouse = NSEntityDescription.entityForName("House", inManagedObjectContext: self.managedObjectContext)
-        let house1 = NSManagedObject(entity: entityHouse!, insertIntoManagedObjectContext: self.managedObjectContext)
-        let house2 = NSManagedObject(entity: entityHouse!, insertIntoManagedObjectContext: self.managedObjectContext)
-        let house4 = NSManagedObject(entity: entityHouse!, insertIntoManagedObjectContext: self.managedObjectContext)
-        
-        // Populate House
-        house1.setValue("232 Combe", forKey: "address")
-        house1.setValue("3BR/2W", forKey: "descriptionHouse")
-        house2.setValue("66 Grenadier", forKey: "address")
-        house2.setValue("bungalow", forKey: "descriptionHouse")
-        house4.setValue("St.Clair", forKey: "address")
-        house4.setValue("Semi", forKey: "descriptionHouse")
-
-
-        
-//        save to the backing store
-        do {
-            try landlord1.managedObjectContext?.save()
-            try landlord2.managedObjectContext?.save()
-            try house1.managedObjectContext?.save()
-            try house2.managedObjectContext?.save()
-            try house4.managedObjectContext?.save()
-        } catch {
-            print(error)
-        }
-        
-//        Fetch Request
-        // Initialize Fetch Request
-        let fetchRequest = NSFetchRequest()
-        
-        // Configure Fetch Request
-        fetchRequest.entity = entityPerson
-        
-        do {
-            let result = try self.managedObjectContext.executeFetchRequest(fetchRequest)
-            print(result)
-            
-        } catch {
-            let fetchError = error as NSError
-            print(fetchError)
-        }
-        
-//        Access attribute of an object
+//        //create Managed Object
+//        let entityPerson = NSEntityDescription.entityForName("Landlord", inManagedObjectContext: self.managedObjectContext)
+//        
+//        let landlord1 = NSManagedObject(entity: entityPerson!, insertIntoManagedObjectContext: self.managedObjectContext)
+//        
+//        let landlord2 = NSManagedObject(entity: entityPerson!, insertIntoManagedObjectContext: self.managedObjectContext)
+//        
+//        landlord1.setValue("Yana", forKey: "name")
+//        landlord2.setValue("Bob", forKey: "name")
+//        
+//        let entityHouse = NSEntityDescription.entityForName("House", inManagedObjectContext: self.managedObjectContext)
+//        let house1 = NSManagedObject(entity: entityHouse!, insertIntoManagedObjectContext: self.managedObjectContext)
+//        let house2 = NSManagedObject(entity: entityHouse!, insertIntoManagedObjectContext: self.managedObjectContext)
+//        let house4 = NSManagedObject(entity: entityHouse!, insertIntoManagedObjectContext: self.managedObjectContext)
+//        
+//        // Populate House
+//        house1.setValue("232 Combe", forKey: "address")
+//        house1.setValue("3BR/2W", forKey: "descriptionHouse")
+//        house2.setValue("66 Grenadier", forKey: "address")
+//        house2.setValue("bungalow", forKey: "descriptionHouse")
+//        house4.setValue("St.Clair", forKey: "address")
+//        house4.setValue("Semi", forKey: "descriptionHouse")
+//
+//
+//        
+////        save to the backing store
+//        do {
+//            try landlord1.managedObjectContext?.save()
+//            try landlord2.managedObjectContext?.save()
+//            try house1.managedObjectContext?.save()
+//            try house2.managedObjectContext?.save()
+//            try house4.managedObjectContext?.save()
+//        } catch {
+//            print(error)
+//        }
+//        
+////        Fetch Request
+//        // Initialize Fetch Request
+//        let fetchRequest = NSFetchRequest()
+//        
+//        // Configure Fetch Request
+//        fetchRequest.entity = entityPerson
+//        
 //        do {
 //            let result = try self.managedObjectContext.executeFetchRequest(fetchRequest)
-//            
-//            if (result.count > 0) {
-//                let landlord = result[6] as! NSManagedObject
-//                
-//                print("1 - \(landlord)")
-//                
-//                if let name = landlord.valueForKey("name") {
-//                    print("\(name)")
-//                }
-//                
-//                print("2 - \(landlord)")
-//            }
+//            print(result)
 //            
 //        } catch {
 //            let fetchError = error as NSError
 //            print(fetchError)
 //        }
-   
-        
-//        Update
-        do {
-            let result = try self.managedObjectContext.executeFetchRequest(fetchRequest)
-            let landlord3 = result[0] as! NSManagedObject
-            landlord3.setValue("Yana 123", forKey: "name")
-            try landlord3.managedObjectContext?.save()
-        } catch {
-            let saveError = error as NSError
-            print(saveError)
-        }
-        
-       
-        do {
-            let result = try self.managedObjectContext.executeFetchRequest(fetchRequest)
-            let landlord4 = result[0] as! NSManagedObject
-            self.managedObjectContext.deleteObject(landlord4)
-            try self.managedObjectContext.save()
-        } catch {
-            let saveError = error as NSError
-            print(saveError)
-        }
-        
-//        add house to the landlord (relationships)
-        landlord1.setValue(NSSet(object: house1), forKey: "houses")
-        
-        do {
-            try landlord1.managedObjectContext?.save()
-        } catch {
-            let saveError = error as NSError
-            print(saveError)
-        }
-        
-        landlord2.setValue(NSSet(object: house2), forKey: "houses")
-        
-        do {
-            try landlord2.managedObjectContext?.save()
-        } catch {
-            let saveError = error as NSError
-            print(saveError)
-        }
-        
-//        add house to the landlord1
-        let houses = landlord1.mutableSetValueForKey("houses")
-        houses.addObject(house4)
-        do {
-            try landlord1.managedObjectContext?.save()
-        } catch {
-            let saveError = error as NSError
-            print(saveError)
-        }
-        
-//        sorting
-        // Create Fetch Request
-//        let fetchRequest2 = NSFetchRequest(entityName: "Landlord")
 //        
-//        // Add Sort Descriptor
-//        let sortDescriptor2 = NSSortDescriptor(key: "name", ascending: true)
-//        fetchRequest2.sortDescriptors = [sortDescriptor2]
+////        Access attribute of an object
+////        do {
+////            let result = try self.managedObjectContext.executeFetchRequest(fetchRequest)
+////            
+////            if (result.count > 0) {
+////                let landlord = result[6] as! NSManagedObject
+////                
+////                print("1 - \(landlord)")
+////                
+////                if let name = landlord.valueForKey("name") {
+////                    print("\(name)")
+////                }
+////                
+////                print("2 - \(landlord)")
+////            }
+////            
+////        } catch {
+////            let fetchError = error as NSError
+////            print(fetchError)
+////        }
+//   
+//        
+////        Update
+//        do {
+//            let result = try self.managedObjectContext.executeFetchRequest(fetchRequest)
+//            let landlord3 = result[0] as! NSManagedObject
+//            landlord3.setValue("Yana 123", forKey: "name")
+//            try landlord3.managedObjectContext?.save()
+//        } catch {
+//            let saveError = error as NSError
+//            print(saveError)
+//        }
+//        
+//       
+//        do {
+//            let result = try self.managedObjectContext.executeFetchRequest(fetchRequest)
+//            let landlord4 = result[0] as! NSManagedObject
+//            self.managedObjectContext.deleteObject(landlord4)
+//            try self.managedObjectContext.save()
+//        } catch {
+//            let saveError = error as NSError
+//            print(saveError)
+//        }
+//        
+////        add house to the landlord (relationships)
+//        landlord1.setValue(NSSet(object: house1), forKey: "houses")
+//        
+//        do {
+//            try landlord1.managedObjectContext?.save()
+//        } catch {
+//            let saveError = error as NSError
+//            print(saveError)
+//        }
+//        
+//        landlord2.setValue(NSSet(object: house2), forKey: "houses")
+//        
+//        do {
+//            try landlord2.managedObjectContext?.save()
+//        } catch {
+//            let saveError = error as NSError
+//            print(saveError)
+//        }
+//        
+////        add house to the landlord1
+//        let houses = landlord1.mutableSetValueForKey("houses")
+//        houses.addObject(house4)
+//        do {
+//            try landlord1.managedObjectContext?.save()
+//        } catch {
+//            let saveError = error as NSError
+//            print(saveError)
+//        }
+//        
+////        sorting
+//        // Create Fetch Request
+////        let fetchRequest2 = NSFetchRequest(entityName: "Landlord")
+////        
+////        // Add Sort Descriptor
+////        let sortDescriptor2 = NSSortDescriptor(key: "name", ascending: true)
+////        fetchRequest2.sortDescriptors = [sortDescriptor2]
+////        
+////        // Execute Fetch Request
+////        do {
+////            let result = try self.managedObjectContext.executeFetchRequest(fetchRequest2)
+////            
+////            for managedObject in result {
+////                if let name = managedObject.valueForKey("name") {
+////                    print("\(name)")
+////                }
+////            }
+////        } catch {
+////            let fetchError = error as NSError
+////            print(fetchError)
+////        }
+//        
+//// predicates
+//        
+//        // Fetching
+//        let fetchRequest3 = NSFetchRequest(entityName: "Landlord")
+//        
+//        // Create Predicate
+//        let predicate = NSPredicate(format: "%K == %@", "name", "Bob")
+//        fetchRequest3.predicate = predicate
 //        
 //        // Execute Fetch Request
 //        do {
-//            let result = try self.managedObjectContext.executeFetchRequest(fetchRequest2)
+//            let result = try self.managedObjectContext.executeFetchRequest(fetchRequest3)
 //            
 //            for managedObject in result {
 //                if let name = managedObject.valueForKey("name") {
 //                    print("\(name)")
 //                }
 //            }
+//            
 //        } catch {
 //            let fetchError = error as NSError
 //            print(fetchError)
 //        }
-        
-// predicates
-        
-        // Fetching
-        let fetchRequest3 = NSFetchRequest(entityName: "Landlord")
-        
-        // Create Predicate
-        let predicate = NSPredicate(format: "%K == %@", "name", "Bob")
-        fetchRequest3.predicate = predicate
-        
-        // Execute Fetch Request
-        do {
-            let result = try self.managedObjectContext.executeFetchRequest(fetchRequest3)
-            
-            for managedObject in result {
-                if let name = managedObject.valueForKey("name") {
-                    print("\(name)")
-                }
-            }
-            
-        } catch {
-            let fetchError = error as NSError
-            print(fetchError)
-        }
-        
-        
+//        
+//        
         return true
     }
 

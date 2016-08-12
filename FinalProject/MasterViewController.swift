@@ -13,7 +13,7 @@ class MasterViewController: UITableViewController, NSFetchedResultsControllerDel
 
     var detailViewController: DetailViewController? = nil
     var managedObjectContext: NSManagedObjectContext? = nil
-
+    let defaults = NSUserDefaults.standardUserDefaults()
     @IBOutlet weak var descriptionHouseLabel: UILabel!
     @IBOutlet weak var addressLable: UILabel!
     @IBOutlet weak var landlordLabel: UILabel!
@@ -29,6 +29,12 @@ class MasterViewController: UITableViewController, NSFetchedResultsControllerDel
     }
 
     override func viewWillAppear(animated: Bool) {
+        super.viewWillAppear(true)
+        let defaults = NSUserDefaults.standardUserDefaults()
+        
+        if defaults.objectForKey("email") == nil {
+            performSegueWithIdentifier("toLogin", sender: self)
+        }
     }
 
     override func didReceiveMemoryWarning() {
