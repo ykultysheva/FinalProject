@@ -45,6 +45,10 @@ class AddHouse: UIViewController, UITextFieldDelegate {
     
     @IBAction func save(sender: AnyObject) {
         
+        var appDel: AppDelegate = (UIApplication.sharedApplication().delegate as! AppDelegate)
+        var context:NSManagedObjectContext = appDel.managedObjectContext
+        
+        
         let address = addAddress.text!
         let descriptionHouse = addDescription.text!
         
@@ -61,9 +65,9 @@ class AddHouse: UIViewController, UITextFieldDelegate {
         
         //        if let isEmpty = address?.isEmpty where isEmpty == false {
         // Create Entity
-        let entity = NSEntityDescription.entityForName("House", inManagedObjectContext: self.managedObjectContext)
+        let entity = NSEntityDescription.entityForName("House", inManagedObjectContext: context)
         // Initialize Record
-        let record = NSManagedObject(entity: entity!, insertIntoManagedObjectContext: self.managedObjectContext)
+        let record = NSManagedObject(entity: entity!, insertIntoManagedObjectContext: context)
         // Populate Record
         record.setValue(address, forKey: "address")
         record.setValue(descriptionHouse, forKey: "descriptionHouse")

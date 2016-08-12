@@ -196,7 +196,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0vW-Fp-0I3" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2333" y="-1343"/>
+            <point key="canvasLocation" x="1181" y="137"/>
         </scene>
         <!--Master-->
         <scene sceneID="smW-Zh-WAh">
@@ -319,7 +319,6 @@
                                 <state key="normal" title="Login"/>
                                 <connections>
                                     <action selector="loginButtonPressed:" destination="WLq-eC-tD9" eventType="touchUpInside" id="WTO-Et-vPX"/>
-                                    <segue destination="HnI-QE-Vb2" kind="show" id="USj-GE-i39"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FxB-Ad-vL5">
@@ -388,6 +387,7 @@
                     <connections>
                         <outlet property="emailField" destination="4iy-zP-enz" id="mqa-EN-fqB"/>
                         <outlet property="passwordField" destination="Dg2-pl-Ouz" id="dpk-um-5xH"/>
+                        <segue destination="HnI-QE-Vb2" kind="show" identifier="toHouse" id="dn7-PR-XBf"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cVk-ie-LeR" userLabel="First Responder" sceneMemberID="firstResponder"/>

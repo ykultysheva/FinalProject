@@ -122,10 +122,11 @@ class MasterViewController: UITableViewController, NSFetchedResultsControllerDel
     func configureCell(cell: UITableViewCell, atIndexPath indexPath: NSIndexPath) {
         
         let cell = cell as! CustomCell
-        let object = self.fetchedResultsController.objectAtIndexPath(indexPath)
+        let object = self.fetchedResultsController.objectAtIndexPath(indexPath) as! House
 //        cell.textLabel!.text = object.valueForKey("address")!.description
         cell.Address!.text = object.valueForKey("address")?.description
         cell.Description!.text = object.valueForKey("descriptionHouse")?.description
+        cell.Landlord!.text = (object.landlord as! Landlord).name
     }
 
     // MARK: - Fetched results controlle
