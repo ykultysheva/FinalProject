@@ -44,6 +44,10 @@ class AddHouse: UIViewController, UITextFieldDelegate, UIImagePickerControllerDe
     
     @IBAction func save(sender: AnyObject) {
         
+        var appDel: AppDelegate = (UIApplication.sharedApplication().delegate as! AppDelegate)
+        var context:NSManagedObjectContext = appDel.managedObjectContext
+        
+        
         let address = addAddress.text!
         let descriptionHouse = addDescription.text!
         
@@ -57,9 +61,9 @@ class AddHouse: UIViewController, UITextFieldDelegate, UIImagePickerControllerDe
             
             return
         }
-        
-        var appDel: AppDelegate = (UIApplication.sharedApplication().delegate as! AppDelegate)
-        var context:NSManagedObjectContext = appDel.managedObjectContext
+//        
+//        var appDel: AppDelegate = (UIApplication.sharedApplication().delegate as! AppDelegate)
+//        var context:NSManagedObjectContext = appDel.managedObjectContext
         
         
         //        if let isEmpty = address?.isEmpty where isEmpty == false {
@@ -85,6 +89,10 @@ class AddHouse: UIViewController, UITextFieldDelegate, UIImagePickerControllerDe
         
         
         
+        // Create Entity
+//        let entity = NSEntityDescription.entityForName("House", inManagedObjectContext: context)
+        // Initialize Record
+//        let record = NSManagedObject(entity: entity!, insertIntoManagedObjectContext: context)
         // Populate Record
         record.setValue(address, forKey: "address")
         record.setValue(descriptionHouse, forKey: "descriptionHouse")

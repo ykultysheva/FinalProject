@@ -24,6 +24,8 @@ class RegisterViewController: UIViewController, NSFetchedResultsControllerDelega
 
         // Do any additional setup after loading the view.
     }
+    
+    
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -52,6 +54,24 @@ class RegisterViewController: UIViewController, NSFetchedResultsControllerDelega
     let password = passwordField.text
     let confirm = confirmPasswordField.text
         // Check for empty fields
+        var appDel: AppDelegate = (UIApplication.sharedApplication().delegate as! AppDelegate)
+        var context:NSManagedObjectContext = appDel.managedObjectContext
+        
+        var newUser = NSEntityDescription.insertNewObjectForEntityForName("Landlord", inManagedObjectContext: context) as NSManagedObject
+        
+        
+        // Check if landlord with E-mail already exists
+        let fetchRequest = NSFetchRequest()
+        let entity = NSEntityDescription.entityForName("Landlord", inManagedObjectContext: context)
+        fetchRequest.entity = entity
+        //        fetchRequest.returnsObjectsAsFaults = false
+        fetchRequest.predicate = NSPredicate(format: "email = %@", email!)
+        let results:NSArray = try! context.executeFetchRequest(fetchRequest)
+        
+        if results.count > 0 {
+            displayMyAlertMessage("Account with E-mail Already Exists")
+            return
+        }
         
         if (name!.isEmpty || password!.isEmpty || confirm!.isEmpty || (email?.isEmpty)!){
             displayMyAlertMessage("You haven't completed all fields")
@@ -63,10 +83,6 @@ class RegisterViewController: UIViewController, NSFetchedResultsControllerDelega
             return
         }
         
-        var appDel: AppDelegate = (UIApplication.sharedApplication().delegate as! AppDelegate)
-        var context:NSManagedObjectContext = appDel.managedObjectContext
-    
-        var newUser = NSEntityDescription.insertNewObjectForEntityForName("Landlord", inManagedObjectContext: context) as NSManagedObject
         
         newUser.setValue(name, forKey: "name")
         

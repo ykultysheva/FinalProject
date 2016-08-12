@@ -31,7 +31,7 @@ class LoginViewController: UIViewController, NSFetchedResultsControllerDelegate 
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
+
 
     /*
     // MARK: - Navigation
@@ -48,8 +48,49 @@ class LoginViewController: UIViewController, NSFetchedResultsControllerDelegate 
     @IBAction func loginButtonPressed(sender: AnyObject) {
         let email = emailField.text
         let password = passwordField.text
-        let userEmail = self.managedObjectContext
+        var appDel: AppDelegate = (UIApplication.sharedApplication().delegate as! AppDelegate)
+        var context:NSManagedObjectContext = appDel.managedObjectContext
+        let fetchRequest = NSFetchRequest()
+        // Edit the entity name as appropriate.
         
+        let entity = NSEntityDescription.entityForName("Landlord", inManagedObjectContext: context)
+        fetchRequest.entity = entity
+//        fetchRequest.returnsObjectsAsFaults = false
+        fetchRequest.predicate = NSPredicate(format: "email = %@", email!)
+        let results:NSArray = try! context.executeFetchRequest(fetchRequest)
+        
+        if results.count == 0 {
+            displayMyAlertMessage("Invalid email or password")
+            return
+        }
+        
+        if (email!.isEmpty || password!.isEmpty){
+            displayMyAlertMessage("You haven't completed all fields")
+            return
+        }
+        
+        if password != results[0].password{
+            displayMyAlertMessage("Invalid Password")
+        }else {
+            performSegueWithIdentifier("toHouse", sender: self)
+            let defaults = NSUserDefaults.standardUserDefaults()
+            defaults.setObject(email, forKey: "email")
+            defaults.setObject(password, forKey: "password")
+            defaults.synchronize()
+            return
+        }
+        
+        
+    }
+    func displayMyAlertMessage(userMessage:String) {
+        
+        let alert = UIAlertController(title: "Alert!", message: userMessage, preferredStyle: UIAlertControllerStyle.Alert)
+        
+        let okAction = UIAlertAction(title: "OK", style: UIAlertActionStyle.Default, handler: nil)
+        
+        alert.addAction(okAction)
+        
+        self.presentViewController(alert, animated: true, completion: nil)
     }
 
 }
