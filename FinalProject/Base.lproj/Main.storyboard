@@ -151,7 +151,7 @@
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Add New House" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ffd-hs-eND">
-                                <rect key="frame" x="238" y="154" width="124" height="21"/>
+                                <rect key="frame" x="238" y="184" width="124" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
@@ -170,6 +170,18 @@
                                     <action selector="save:" destination="n36-wC-ESE" eventType="touchUpInside" id="8Ib-fQ-A8P"/>
                                 </connections>
                             </button>
+                            <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="bpL-Dr-ZKu">
+                                <rect key="frame" x="225" y="19" width="150" height="150"/>
+                                <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <gestureRecognizers/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="150" id="ZxD-do-4Yd"/>
+                                    <constraint firstAttribute="height" constant="150" id="tUm-s9-UJZ"/>
+                                </constraints>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="b5j-YU-SH4" appends="YES" id="qgf-YU-bkv"/>
+                                </connections>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -177,24 +189,40 @@
                             <constraint firstItem="tnB-a9-YO1" firstAttribute="centerY" secondItem="oG0-C1-z8c" secondAttribute="centerY" id="3SU-1P-rrI"/>
                             <constraint firstItem="tnB-a9-YO1" firstAttribute="centerX" secondItem="oG0-C1-z8c" secondAttribute="centerX" id="B2a-AN-zGa"/>
                             <constraint firstItem="JKo-JF-4FL" firstAttribute="top" secondItem="tnB-a9-YO1" secondAttribute="bottom" constant="30" id="Fzl-BU-Bii"/>
+                            <constraint firstItem="bpL-Dr-ZKu" firstAttribute="centerX" secondItem="oG0-C1-z8c" secondAttribute="centerX" id="HnZ-UO-84f"/>
+                            <constraint firstItem="bpL-Dr-ZKu" firstAttribute="top" secondItem="bdU-TO-g2m" secondAttribute="bottom" constant="-1" id="LBE-kt-POr"/>
                             <constraint firstItem="jCK-BX-TzR" firstAttribute="centerX" secondItem="oG0-C1-z8c" secondAttribute="centerX" id="OEC-zK-ByY"/>
                             <constraint firstItem="GrP-3W-lcp" firstAttribute="top" secondItem="JKo-JF-4FL" secondAttribute="bottom" constant="20" id="OTa-u5-wCq"/>
+                            <constraint firstItem="Ffd-hs-eND" firstAttribute="top" secondItem="bpL-Dr-ZKu" secondAttribute="bottom" constant="15" id="cSE-5Q-s0K"/>
                             <constraint firstItem="tnB-a9-YO1" firstAttribute="top" secondItem="jCK-BX-TzR" secondAttribute="bottom" constant="30" id="dNV-9j-9Zr"/>
                             <constraint firstItem="JKo-JF-4FL" firstAttribute="centerX" secondItem="oG0-C1-z8c" secondAttribute="centerX" id="fCF-Ba-icy"/>
                             <constraint firstItem="uXs-H3-F1V" firstAttribute="centerX" secondItem="oG0-C1-z8c" secondAttribute="centerX" id="gFW-Bm-iMM"/>
                             <constraint firstItem="GrP-3W-lcp" firstAttribute="centerX" secondItem="oG0-C1-z8c" secondAttribute="centerX" id="me2-pW-qPw"/>
-                            <constraint firstItem="jCK-BX-TzR" firstAttribute="top" secondItem="Ffd-hs-eND" secondAttribute="bottom" constant="50" id="rPh-ST-eF8"/>
+                            <constraint firstItem="jCK-BX-TzR" firstAttribute="top" secondItem="Ffd-hs-eND" secondAttribute="bottom" constant="20" id="rPh-ST-eF8"/>
                             <constraint firstItem="Ffd-hs-eND" firstAttribute="centerX" secondItem="oG0-C1-z8c" secondAttribute="centerX" id="rjr-U1-UWS"/>
+                            <constraint firstItem="bpL-Dr-ZKu" firstAttribute="top" secondItem="bdU-TO-g2m" secondAttribute="bottom" constant="-1" id="taV-5r-jqA"/>
                         </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="LBE-kt-POr"/>
+                                <exclude reference="taV-5r-jqA"/>
+                            </mask>
+                        </variation>
                     </view>
                     <navigationItem key="navigationItem" id="vhU-S0-yRd"/>
                     <connections>
                         <outlet property="addAddress" destination="jCK-BX-TzR" id="Zjw-fV-I4m"/>
                         <outlet property="addDescription" destination="tnB-a9-YO1" id="Y2Z-hK-ez7"/>
+                        <outlet property="addImage" destination="bpL-Dr-ZKu" id="YzA-fX-1pv"/>
                         <outlet property="addLandlord" destination="JKo-JF-4FL" id="9sz-uR-a3w"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0vW-Fp-0I3" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="b5j-YU-SH4">
+                    <connections>
+                        <action selector="selectImageFromLibrary:" destination="n36-wC-ESE" id="Rxm-kn-0Dq"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="2333" y="-1343"/>
         </scene>
@@ -319,7 +347,6 @@
                                 <state key="normal" title="Login"/>
                                 <connections>
                                     <action selector="loginButtonPressed:" destination="WLq-eC-tD9" eventType="touchUpInside" id="WTO-Et-vPX"/>
-                                    <segue destination="HnI-QE-Vb2" kind="show" identifier="login" id="Wm8-7B-aGd"/>
                                     <segue destination="HnI-QE-Vb2" kind="show" id="USj-GE-i39"/>
                                 </connections>
                             </button>

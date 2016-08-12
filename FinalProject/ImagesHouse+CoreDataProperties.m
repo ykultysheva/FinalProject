@@ -2,7 +2,7 @@
 //  ImagesHouse+CoreDataProperties.m
 //  FinalProject
 //
-//  Created by Yana Kultysheva on 2016-08-08.
+//  Created by Yana Kultysheva on 2016-08-12.
 //  Copyright © 2016 Yana Kultysheva. All rights reserved.
 //
 //  Choose "Create NSManagedObject Subclass…" from the Core Data editor menu
@@ -13,6 +13,7 @@
 
 @implementation ImagesHouse (CoreDataProperties)
 
+@dynamic image;
 @dynamic house;
 
 @end

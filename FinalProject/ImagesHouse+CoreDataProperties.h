@@ -2,7 +2,7 @@
 //  ImagesHouse+CoreDataProperties.h
 //  FinalProject
 //
-//  Created by Yana Kultysheva on 2016-08-08.
+//  Created by Yana Kultysheva on 2016-08-12.
 //  Copyright © 2016 Yana Kultysheva. All rights reserved.
 //
 //  Choose "Create NSManagedObject Subclass…" from the Core Data editor menu
@@ -15,6 +15,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface ImagesHouse (CoreDataProperties)
 
+@property (nullable, nonatomic, retain) NSData *image;
 @property (nullable, nonatomic, retain) House *house;
 
 @end

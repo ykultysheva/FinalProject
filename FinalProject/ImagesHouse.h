@@ -2,7 +2,7 @@
 //  ImagesHouse.h
 //  FinalProject
 //
-//  Created by Yana Kultysheva on 2016-08-08.
+//  Created by Yana Kultysheva on 2016-08-12.
 //  Copyright © 2016 Yana Kultysheva. All rights reserved.
 //
 

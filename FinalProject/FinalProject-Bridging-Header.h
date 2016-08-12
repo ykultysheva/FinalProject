@@ -3,3 +3,8 @@
 //
 
 #import "House.h"
+#import "Landlord.h"
+#import "ImagesInteriorPart.h"
+#import "InteriorPart.h"
+#import "Room.h"
+#import "ImagesHouse.h"
