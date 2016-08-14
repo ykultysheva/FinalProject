@@ -33,7 +33,7 @@ class MasterViewController: UITableViewController, NSFetchedResultsControllerDel
         let defaults = NSUserDefaults.standardUserDefaults()
         
         if defaults.objectForKey("email") == nil {
-            performSegueWithIdentifier("toLogin", sender: self)
+            performSegueWithIdentifier("login", sender: self)
         }
     }
 
@@ -132,7 +132,9 @@ class MasterViewController: UITableViewController, NSFetchedResultsControllerDel
 //        cell.textLabel!.text = object.valueForKey("address")!.description
         cell.Address!.text = object.valueForKey("address")?.description
         cell.Description!.text = object.valueForKey("descriptionHouse")?.description
+        if object.landlord != nil {
         cell.Landlord!.text = (object.landlord as! Landlord).name
+        }
     }
 
     // MARK: - Fetched results controlle

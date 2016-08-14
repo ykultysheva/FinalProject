@@ -275,7 +275,7 @@
                                     <outlet property="Address" destination="FHU-FV-LAQ" id="yfi-6H-Vd1"/>
                                     <outlet property="Description" destination="spf-2N-9j4" id="tfP-kz-iXO"/>
                                     <outlet property="Landlord" destination="b9B-Cd-N64" id="z4N-xV-xdl"/>
-                                    <segue destination="aWz-as-i9g" kind="show" identifier="toLogin" id="hPN-NM-dX6"/>
+                                    <segue destination="JEX-9P-axG" kind="showDetail" identifier="showDetail" id="tJY-dw-fep"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -288,6 +288,7 @@
                     <navigationItem key="navigationItem" title="Master" id="Zdf-7t-Un8"/>
                     <connections>
                         <segue destination="n36-wC-ESE" kind="presentation" identifier="toAddHouse" id="hDb-vn-gtQ"/>
+                        <segue destination="WLq-eC-tD9" kind="presentation" identifier="login" id="vf6-Rw-Sg6"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Rux-fX-hf1" sceneMemberID="firstResponder"/>
@@ -565,4 +566,7 @@
             <point key="canvasLocation" x="9" y="-1363"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="vf6-Rw-Sg6"/>
+    </inferredMetricsTieBreakers>
 </document>

@@ -16,8 +16,6 @@
 		972D47111D5911D600AF6464 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 972D470F1D5911D600AF6464 /* LaunchScreen.storyboard */; };
 		972D47211D5938A500AF6464 /* House+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 972D471A1D5938A500AF6464 /* House+CoreDataProperties.m */; };
 		972D47221D5938A500AF6464 /* House.m in Sources */ = {isa = PBXBuildFile; fileRef = 972D471C1D5938A500AF6464 /* House.m */; };
-		972D47231D5938A500AF6464 /* Landlord+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 972D471E1D5938A500AF6464 /* Landlord+CoreDataProperties.m */; };
-		972D47241D5938A500AF6464 /* Landlord.m in Sources */ = {isa = PBXBuildFile; fileRef = 972D47201D5938A500AF6464 /* Landlord.m */; };
 		972D47371D593A2F00AF6464 /* Room+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 972D47281D593A2F00AF6464 /* Room+CoreDataProperties.m */; };
 		972D47381D593A2F00AF6464 /* Room.m in Sources */ = {isa = PBXBuildFile; fileRef = 972D472A1D593A2F00AF6464 /* Room.m */; };
 		972D47391D593A2F00AF6464 /* ImagesHouse+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 972D472C1D593A2F00AF6464 /* ImagesHouse+CoreDataProperties.m */; };
@@ -30,6 +28,8 @@
 		972D47461D5A826100AF6464 /* AddHouse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 972D47451D5A826100AF6464 /* AddHouse.swift */; };
 		AB6438261D5CA73F002912D5 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB6438241D5CA73F002912D5 /* LoginViewController.swift */; };
 		AB6438271D5CA73F002912D5 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB6438251D5CA73F002912D5 /* RegisterViewController.swift */; };
+		AB64382C1D5FE40E002912D5 /* Landlord+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = AB6438291D5FE40E002912D5 /* Landlord+CoreDataProperties.m */; };
+		AB64382D1D5FE40E002912D5 /* Landlord.m in Sources */ = {isa = PBXBuildFile; fileRef = AB64382B1D5FE40E002912D5 /* Landlord.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -47,10 +47,6 @@
 		972D471A1D5938A500AF6464 /* House+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "House+CoreDataProperties.m"; sourceTree = "<group>"; };
 		972D471B1D5938A500AF6464 /* House.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = House.h; sourceTree = "<group>"; };
 		972D471C1D5938A500AF6464 /* House.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = House.m; sourceTree = "<group>"; };
-		972D471D1D5938A500AF6464 /* Landlord+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Landlord+CoreDataProperties.h"; sourceTree = "<group>"; };
-		972D471E1D5938A500AF6464 /* Landlord+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Landlord+CoreDataProperties.m"; sourceTree = "<group>"; };
-		972D471F1D5938A500AF6464 /* Landlord.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Landlord.h; sourceTree = "<group>"; };
-		972D47201D5938A500AF6464 /* Landlord.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Landlord.m; sourceTree = "<group>"; };
 		972D47271D593A2F00AF6464 /* Room+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Room+CoreDataProperties.h"; sourceTree = "<group>"; };
 		972D47281D593A2F00AF6464 /* Room+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Room+CoreDataProperties.m"; sourceTree = "<group>"; };
 		972D47291D593A2F00AF6464 /* Room.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Room.h; sourceTree = "<group>"; };
@@ -71,6 +67,10 @@
 		972D47451D5A826100AF6464 /* AddHouse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddHouse.swift; sourceTree = "<group>"; };
 		AB6438241D5CA73F002912D5 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		AB6438251D5CA73F002912D5 /* RegisterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
+		AB6438281D5FE40E002912D5 /* Landlord+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "Landlord+CoreDataProperties.h"; path = "../Landlord+CoreDataProperties.h"; sourceTree = "<group>"; };
+		AB6438291D5FE40E002912D5 /* Landlord+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "Landlord+CoreDataProperties.m"; path = "../Landlord+CoreDataProperties.m"; sourceTree = "<group>"; };
+		AB64382A1D5FE40E002912D5 /* Landlord.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Landlord.h; path = ../Landlord.h; sourceTree = "<group>"; };
+		AB64382B1D5FE40E002912D5 /* Landlord.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Landlord.m; path = ../Landlord.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -140,10 +140,10 @@
 		972D47261D59398B00AF6464 /* Landlord */ = {
 			isa = PBXGroup;
 			children = (
-				972D471D1D5938A500AF6464 /* Landlord+CoreDataProperties.h */,
-				972D471E1D5938A500AF6464 /* Landlord+CoreDataProperties.m */,
-				972D471F1D5938A500AF6464 /* Landlord.h */,
-				972D47201D5938A500AF6464 /* Landlord.m */,
+				AB6438291D5FE40E002912D5 /* Landlord+CoreDataProperties.m */,
+				AB6438281D5FE40E002912D5 /* Landlord+CoreDataProperties.h */,
+				AB64382A1D5FE40E002912D5 /* Landlord.h */,
+				AB64382B1D5FE40E002912D5 /* Landlord.m */,
 			);
 			name = Landlord;
 			sourceTree = "<group>";
@@ -274,14 +274,14 @@
 				972D473D1D593A2F00AF6464 /* ImagesInteriorPart+CoreDataProperties.m in Sources */,
 				972D47221D5938A500AF6464 /* House.m in Sources */,
 				972D47391D593A2F00AF6464 /* ImagesHouse+CoreDataProperties.m in Sources */,
-				972D47231D5938A500AF6464 /* Landlord+CoreDataProperties.m in Sources */,
+				AB64382D1D5FE40E002912D5 /* Landlord.m in Sources */,
 				AB6438271D5CA73F002912D5 /* RegisterViewController.swift in Sources */,
 				972D473E1D593A2F00AF6464 /* ImagesInteriorPart.m in Sources */,
 				972D47211D5938A500AF6464 /* House+CoreDataProperties.m in Sources */,
 				972D473C1D593A2F00AF6464 /* InteriorPart.m in Sources */,
+				AB64382C1D5FE40E002912D5 /* Landlord+CoreDataProperties.m in Sources */,
 				972D47051D5911D600AF6464 /* FinalProject.xcdatamodeld in Sources */,
 				972D47021D5911D600AF6464 /* AppDelegate.swift in Sources */,
-				972D47241D5938A500AF6464 /* Landlord.m in Sources */,
 				972D47071D5911D600AF6464 /* MasterViewController.swift in Sources */,
 				972D47091D5911D600AF6464 /* DetailViewController.swift in Sources */,
 			);

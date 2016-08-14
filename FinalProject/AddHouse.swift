@@ -9,7 +9,7 @@
 import UIKit
 import CoreData
 
-class AddHouse: UIViewController, UITextFieldDelegate, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+class AddHouse: UIViewController, UITextFieldDelegate, UIImagePickerControllerDelegate, UINavigationControllerDelegate , NSFetchedResultsControllerDelegate {
     
     
     
@@ -46,9 +46,9 @@ class AddHouse: UIViewController, UITextFieldDelegate, UIImagePickerControllerDe
         
         var appDel: AppDelegate = (UIApplication.sharedApplication().delegate as! AppDelegate)
         var context:NSManagedObjectContext = appDel.managedObjectContext
+
         
-        
-        let address = addAddress.text!
+               let address = addAddress.text!
         let descriptionHouse = addDescription.text!
         
         guard address.isEmpty == false else {
@@ -65,44 +65,61 @@ class AddHouse: UIViewController, UITextFieldDelegate, UIImagePickerControllerDe
 //        var appDel: AppDelegate = (UIApplication.sharedApplication().delegate as! AppDelegate)
 //        var context:NSManagedObjectContext = appDel.managedObjectContext
         
+        // fetchrequest for current user.
+        let emailSort = NSSortDescriptor(key:"email", ascending: true)
+        let fetchrequest = NSFetchRequest()
+        fetchrequest.entity = NSEntityDescription.entityForName("Landlord", inManagedObjectContext: context)
+        fetchrequest.sortDescriptors = [emailSort]
+        fetchrequest.predicate = NSPredicate(format: "email = %@", NSUserDefaults.standardUserDefaults().stringForKey("email")!)
+        print(NSUserDefaults.standardUserDefaults().stringForKey("email"))
         
+        //(format: "email = %@", NSUserDefaults.standardUserDefaults().stringForKey("email")!)
         //        if let isEmpty = address?.isEmpty where isEmpty == false {
         // Create Entity House
         let entity = NSEntityDescription.entityForName("House", inManagedObjectContext: context)
         // Initialize Record
         let record = NSManagedObject(entity: entity!, insertIntoManagedObjectContext: context)
+        record.setValue(address, forKey: "address")
+        record.setValue(descriptionHouse, forKey: "descriptionHouse")
         
         
+        let results:NSArray = try! context.executeFetchRequest(fetchrequest)
+        do {
+            let landlord = results[0] as! NSManagedObject
+            landlord.setValue(NSSet(object: record), forKey: "houses")
+            try landlord.managedObjectContext?.save()
+        } catch {
+            let saveError = error as NSError
+            print(saveError)
+        }
+//        if results.count > 0 {
+//            showAlertWithTitle("User Found!", message: "\(results.description)", cancelButtonTitle: "okay")
+//            return
+//        }
         // Create Entity Images
         let entityImagesHouse = NSEntityDescription.entityForName("ImagesHouse", inManagedObjectContext: context)
         // Initialize Record
         let recordImagesHouse = NSManagedObject(entity: entityImagesHouse!, insertIntoManagedObjectContext: context)
         
         
-        
+        if addImage.image != nil {
         let imageData: NSData = UIImagePNGRepresentation(addImage.image!)!
         
         
         recordImagesHouse.setValue(imageData, forKey: "image")
-
-        
-        
-        
         
         // Create Entity
 //        let entity = NSEntityDescription.entityForName("House", inManagedObjectContext: context)
         // Initialize Record
 //        let record = NSManagedObject(entity: entity!, insertIntoManagedObjectContext: context)
         // Populate Record
-        record.setValue(address, forKey: "address")
-        record.setValue(descriptionHouse, forKey: "descriptionHouse")
         
         var imagesSet = Set<NSManagedObject>()
         imagesSet.insert(recordImagesHouse)
         
         
         record.setValue(imagesSet, forKey: "images")
-        
+        }
         
         do {
             // Save Record
