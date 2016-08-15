@@ -13,12 +13,11 @@ class DetailViewController: UIViewController, UITextFieldDelegate {
     
     @IBOutlet weak var detailDescriptionLabel: UILabel!
     @IBOutlet weak var Address: UILabel!
-    
-    
     @IBOutlet weak var houseAddress: UITextField!
     @IBOutlet weak var houseDescription: UITextField!
-    
     @IBOutlet weak var saveButton: UIButton!
+    @IBOutlet weak var imageDetailedHouse: UIImageView!
+    
     
     var managedObjectContext: NSManagedObjectContext!
     
@@ -46,6 +45,20 @@ class DetailViewController: UIViewController, UITextFieldDelegate {
             }
             if let text2 = self.houseDescription {
                 text2.text = detail.valueForKey("descriptionHouse")!.description
+            }
+            
+            if let imageHouse = self.imageDetailedHouse {
+                
+                if let imageSet = detail.images as? Set<ImagesHouse> {
+                    print ("image set size: " + String(imageSet.count))
+                    
+                    if let mainImageForHouse = imageSet.first {
+                        let image1: UIImage = UIImage(data: mainImageForHouse.image!)!
+                        imageHouse.image = image1
+
+                    }
+                }
+                
             }
             
         }

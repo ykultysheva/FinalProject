@@ -8,6 +8,8 @@
 
 import UIKit
 import CoreData
+//import OrderedSet
+
 
 class AddHouse: UIViewController, UITextFieldDelegate, UIImagePickerControllerDelegate, UINavigationControllerDelegate , NSFetchedResultsControllerDelegate {
     
@@ -18,6 +20,7 @@ class AddHouse: UIViewController, UITextFieldDelegate, UIImagePickerControllerDe
     @IBOutlet weak var addLandlord: UITextField!
     @IBOutlet weak var addImage: UIImageView!
     
+    var addedImages: [UIImage] = []
     
     var managedObjectContext: NSManagedObjectContext!
     
@@ -61,9 +64,7 @@ class AddHouse: UIViewController, UITextFieldDelegate, UIImagePickerControllerDe
             
             return
         }
-//        
-//        var appDel: AppDelegate = (UIApplication.sharedApplication().delegate as! AppDelegate)
-//        var context:NSManagedObjectContext = appDel.managedObjectContext
+
         
         // fetchrequest for current user.
         let emailSort = NSSortDescriptor(key:"email", ascending: true)
@@ -78,7 +79,7 @@ class AddHouse: UIViewController, UITextFieldDelegate, UIImagePickerControllerDe
         // Create Entity House
         let entity = NSEntityDescription.entityForName("House", inManagedObjectContext: context)
         // Initialize Record
-        let record = NSManagedObject(entity: entity!, insertIntoManagedObjectContext: context)
+        let record = NSManagedObject(entity: entity!, insertIntoManagedObjectContext: context) as! House
         record.setValue(address, forKey: "address")
         record.setValue(descriptionHouse, forKey: "descriptionHouse")
         
@@ -92,35 +93,23 @@ class AddHouse: UIViewController, UITextFieldDelegate, UIImagePickerControllerDe
             let saveError = error as NSError
             print(saveError)
         }
-//        if results.count > 0 {
-//            showAlertWithTitle("User Found!", message: "\(results.description)", cancelButtonTitle: "okay")
-//            return
-//        }
-        // Create Entity Images
-        let entityImagesHouse = NSEntityDescription.entityForName("ImagesHouse", inManagedObjectContext: context)
-        // Initialize Record
-        let recordImagesHouse = NSManagedObject(entity: entityImagesHouse!, insertIntoManagedObjectContext: context)
         
-        
-        if addImage.image != nil {
-        let imageData: NSData = UIImagePNGRepresentation(addImage.image!)!
-        
-        
-        recordImagesHouse.setValue(imageData, forKey: "image")
-        
-        // Create Entity
-//        let entity = NSEntityDescription.entityForName("House", inManagedObjectContext: context)
-        // Initialize Record
-//        let record = NSManagedObject(entity: entity!, insertIntoManagedObjectContext: context)
-        // Populate Record
-        
-        var imagesSet = Set<NSManagedObject>()
-        imagesSet.insert(recordImagesHouse)
-        
-        
-        record.setValue(imagesSet, forKey: "images")
-        }
-        
+        if addedImages.isEmpty == false {
+            
+            let images = record.mutableOrderedSetValueForKey("images")
+
+            
+            for image in addedImages {
+                let imageData: NSData = UIImagePNGRepresentation(image)!
+                
+                let entityImagesHouse = NSEntityDescription.entityForName("ImagesHouse", inManagedObjectContext: context)
+                let recordImagesHouse = NSManagedObject(entity: entityImagesHouse!, insertIntoManagedObjectContext: context)
+                
+                recordImagesHouse.setValue(imageData, forKey: "image")
+                images.addObject(recordImagesHouse)
+
+            }
+    }
         do {
             // Save Record
             try record.managedObjectContext?.save()
@@ -134,41 +123,17 @@ class AddHouse: UIViewController, UITextFieldDelegate, UIImagePickerControllerDe
             
             //                // Show Alert View
         }
-        
-        
-        
-        
-        
-
-        
     }
     
     
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    //    else {
-    //            // Show Alert View
-    //            showAlertWithTitle("Warning", message: "Your house needs an address.", cancelButtonTitle: "OK")
-    //        }
-    //
-    //    }
-    
-    
+
     
     func imagePickerController(picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : AnyObject]) {
         let selectedImage = info[UIImagePickerControllerOriginalImage] as! UIImage
         
         addImage.image = selectedImage
         
-        //record.imagesHouse = selectedImage
+        addedImages.append(selectedImage)
         
         dismissViewControllerAnimated(true, completion: nil)
     }
@@ -212,13 +177,10 @@ class AddHouse: UIViewController, UITextFieldDelegate, UIImagePickerControllerDe
         self.addDescription.resignFirstResponder()
         self.addLandlord.resignFirstResponder()
         
-     
-
-        
+    
         
         actionSheetController.addAction(cancelAction)
         //Create and add first option action
-        
         
         
         
@@ -262,12 +224,6 @@ class AddHouse: UIViewController, UITextFieldDelegate, UIImagePickerControllerDe
     @IBAction func cancel(sender: AnyObject) {
         dismissViewControllerAnimated(true, completion: nil)
     }
-    
-    
-    
-    
-    
-    
     
     
 }
