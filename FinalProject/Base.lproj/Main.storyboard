@@ -18,20 +18,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" text="Detail view content goes here" textAlignment="center" lineBreakMode="tailTruncation" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="0XM-y9-sOw">
-                                <rect key="frame" x="20" y="291" width="560" height="17"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <fontDescription key="fontDescription" type="system" size="system"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xwU-B3-C2t">
-                                <rect key="frame" x="330" y="442" width="250" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="House Description" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Ppy-qy-n1f">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="House Description" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Ppy-qy-n1f">
                                 <rect key="frame" x="175" y="388" width="250" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="250" id="6PG-RX-YJn"/>
@@ -39,21 +26,21 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UHM-QT-mMH">
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UHM-QT-mMH">
                                 <rect key="frame" x="283" y="438" width="34" height="30"/>
                                 <state key="normal" title="Save"/>
                                 <connections>
                                     <action selector="saveChanges:" destination="JEX-9P-axG" eventType="touchUpInside" id="y5w-7s-GxS"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7V4-3Q-x03">
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7V4-3Q-x03">
                                 <rect key="frame" x="276" y="493" width="48" height="30"/>
                                 <state key="normal" title="Cancel"/>
                                 <connections>
                                     <action selector="cancelChanges:" destination="JEX-9P-axG" eventType="touchUpInside" id="TYY-U4-5vj"/>
                                 </connections>
                             </button>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="House Address" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ps1-Vc-AFC">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="House Address" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ps1-Vc-AFC">
                                 <rect key="frame" x="175" y="333" width="250" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="250" id="bjT-xq-3ox"/>
@@ -61,41 +48,23 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Mea-k8-D5x">
-                                <rect key="frame" x="360" y="484" width="200" height="200"/>
-                                <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="200" id="GmZ-eL-fuK"/>
-                                    <constraint firstAttribute="width" constant="200" id="UlU-RH-WVm"/>
-                                </constraints>
-                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="7V4-3Q-x03" firstAttribute="top" secondItem="UHM-QT-mMH" secondAttribute="bottom" constant="25" id="GZZ-yL-axu"/>
-                            <constraint firstItem="Mea-k8-D5x" firstAttribute="top" secondItem="xwU-B3-C2t" secondAttribute="bottom" constant="10" id="H8U-F9-FiC"/>
                             <constraint firstItem="UHM-QT-mMH" firstAttribute="top" secondItem="Ppy-qy-n1f" secondAttribute="bottom" constant="20" id="JBu-Ae-acn"/>
-                            <constraint firstItem="ps1-Vc-AFC" firstAttribute="top" secondItem="0XM-y9-sOw" secondAttribute="bottom" constant="25" id="PeM-mC-SQU"/>
-                            <constraint firstItem="0XM-y9-sOw" firstAttribute="leading" secondItem="svH-Pt-448" secondAttribute="leading" constant="20" symbolic="YES" id="Tsc-yG-G1q"/>
                             <constraint firstItem="ps1-Vc-AFC" firstAttribute="centerX" secondItem="svH-Pt-448" secondAttribute="centerX" id="XXh-rZ-5Ra"/>
-                            <constraint firstItem="Mea-k8-D5x" firstAttribute="centerX" secondItem="svH-Pt-448" secondAttribute="centerX" id="isj-8D-Pj3"/>
-                            <constraint firstItem="0XM-y9-sOw" firstAttribute="centerY" secondItem="svH-Pt-448" secondAttribute="centerY" id="jWN-iV-94e"/>
                             <constraint firstItem="UHM-QT-mMH" firstAttribute="centerX" secondItem="svH-Pt-448" secondAttribute="centerX" id="jdA-9E-aSh"/>
                             <constraint firstItem="Ppy-qy-n1f" firstAttribute="centerX" secondItem="svH-Pt-448" secondAttribute="centerX" id="lGa-uS-eHL"/>
                             <constraint firstItem="Ppy-qy-n1f" firstAttribute="top" secondItem="ps1-Vc-AFC" secondAttribute="bottom" constant="25" id="npN-E1-9Wm"/>
                             <constraint firstItem="7V4-3Q-x03" firstAttribute="centerX" secondItem="svH-Pt-448" secondAttribute="centerX" id="shR-Y8-e65"/>
-                            <constraint firstAttribute="trailing" secondItem="0XM-y9-sOw" secondAttribute="trailing" constant="20" symbolic="YES" id="tHV-ZD-HQj"/>
-                            <constraint firstItem="xwU-B3-C2t" firstAttribute="leading" secondItem="UHM-QT-mMH" secondAttribute="trailing" constant="10" id="wZY-Hm-SEP"/>
                         </constraints>
                     </view>
                     <toolbarItems/>
                     <navigationItem key="navigationItem" title="Detail" id="mOI-FS-AaM"/>
                     <connections>
-                        <outlet property="Address" destination="xwU-B3-C2t" id="TKs-Vz-TY4"/>
-                        <outlet property="detailDescriptionLabel" destination="0XM-y9-sOw" id="deQ-Na-JPF"/>
                         <outlet property="houseAddress" destination="ps1-Vc-AFC" id="pJu-bh-6T8"/>
                         <outlet property="houseDescription" destination="Ppy-qy-n1f" id="F6N-I4-VMo"/>
-                        <outlet property="imageDetailedHouse" destination="Mea-k8-D5x" id="cLl-Ij-xqq"/>
                         <outlet property="saveButton" destination="UHM-QT-mMH" id="Hyc-sb-gT8"/>
                         <segue destination="sx7-A0-DCU" kind="unwind" identifier="backToMaster" unwindAction="unwindToMasterViewController:" id="N6p-2C-JNi"/>
                         <segue destination="1nG-fR-o5c" kind="show" identifier="addRoom" id="0hz-xX-JeJ"/>
