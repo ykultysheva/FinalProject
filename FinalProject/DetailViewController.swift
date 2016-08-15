@@ -9,7 +9,9 @@
 import UIKit
 import CoreData
 
-class DetailViewController: UIViewController, UITextFieldDelegate {
+
+
+class DetailViewController: UIViewController, UITextFieldDelegate  {
     
     @IBOutlet weak var detailDescriptionLabel: UILabel!
     @IBOutlet weak var Address: UILabel!
@@ -29,6 +31,9 @@ class DetailViewController: UIViewController, UITextFieldDelegate {
             self.configureView()
         }
     }
+    
+    
+    
     
 //    to populate text fields with house details
     func configureView() {
@@ -58,11 +63,12 @@ class DetailViewController: UIViewController, UITextFieldDelegate {
 
                     }
                 }
-                
             }
-            
         }
     }
+    
+    
+
     
     
     override func viewDidLoad() {
@@ -73,9 +79,12 @@ class DetailViewController: UIViewController, UITextFieldDelegate {
         houseDescription.text = detailItem!.descriptionHouse
         houseAddress.text = detailItem!.address
         
-            }
+        
+    }
     
     
+ 
+
     func textFieldShouldReturn(textField: UITextField) -> Bool {
         // Hide the keyboard.
         houseDescription.resignFirstResponder()
@@ -141,4 +150,3 @@ class DetailViewController: UIViewController, UITextFieldDelegate {
     
     
 }
-
