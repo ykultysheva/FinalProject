@@ -75,7 +75,7 @@ class MasterViewController: UITableViewController, NSFetchedResultsControllerDel
             let object = self.fetchedResultsController.objectAtIndexPath(indexPath)
                 let controller = segue.destinationViewController as! DetailViewController
                 controller.managedObjectContext = managedObjectContext
-                controller.detailItem = object as! House
+                controller.detailItem = object as? House
             }
         }
         
@@ -144,8 +144,8 @@ class MasterViewController: UITableViewController, NSFetchedResultsControllerDel
         if _fetchedResultsController != nil {
             return _fetchedResultsController!
         }
-        var appDel: AppDelegate = (UIApplication.sharedApplication().delegate as! AppDelegate)
-        var context:NSManagedObjectContext = appDel.managedObjectContext
+        let appDel: AppDelegate = (UIApplication.sharedApplication().delegate as! AppDelegate)
+        let context:NSManagedObjectContext = appDel.managedObjectContext
         
         
         let fetchRequest = NSFetchRequest()

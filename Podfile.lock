@@ -1,12 +1,12 @@
 PODS:
-  - MVCarouselCollectionView (1.0.9)
+  - Material (1.42.7)
 
 DEPENDENCIES:
-  - MVCarouselCollectionView
+  - Material
 
 SPEC CHECKSUMS:
-  MVCarouselCollectionView: 45b31730d7424a6d9dde3d5fa8f794efefea37f9
+  Material: 2d46a44719b1f19e52956518af8aea54ac714963
 
-PODFILE CHECKSUM: 83f66cecfc820deff0edd5a99a0f0e31d48bda28
+PODFILE CHECKSUM: 6f1775346698efb578d186d6299c2cb8cdf6cca2
 
 COCOAPODS: 1.0.1
