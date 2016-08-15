@@ -31,6 +31,8 @@
 		AB6438271D5CA73F002912D5 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB6438251D5CA73F002912D5 /* RegisterViewController.swift */; };
 		AB64382C1D5FE40E002912D5 /* Landlord+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = AB6438291D5FE40E002912D5 /* Landlord+CoreDataProperties.m */; };
 		AB64382D1D5FE40E002912D5 /* Landlord.m in Sources */ = {isa = PBXBuildFile; fileRef = AB64382B1D5FE40E002912D5 /* Landlord.m */; };
+		AB6438341D6231B3002912D5 /* Inspection+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = AB6438311D6231B3002912D5 /* Inspection+CoreDataProperties.m */; };
+		AB6438351D6231B3002912D5 /* Inspection.m in Sources */ = {isa = PBXBuildFile; fileRef = AB6438331D6231B3002912D5 /* Inspection.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -74,6 +76,10 @@
 		AB6438291D5FE40E002912D5 /* Landlord+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "Landlord+CoreDataProperties.m"; path = "../Landlord+CoreDataProperties.m"; sourceTree = "<group>"; };
 		AB64382A1D5FE40E002912D5 /* Landlord.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Landlord.h; path = ../Landlord.h; sourceTree = "<group>"; };
 		AB64382B1D5FE40E002912D5 /* Landlord.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Landlord.m; path = ../Landlord.m; sourceTree = "<group>"; };
+		AB6438301D6231B3002912D5 /* Inspection+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Inspection+CoreDataProperties.h"; sourceTree = "<group>"; };
+		AB6438311D6231B3002912D5 /* Inspection+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Inspection+CoreDataProperties.m"; sourceTree = "<group>"; };
+		AB6438321D6231B3002912D5 /* Inspection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Inspection.h; sourceTree = "<group>"; };
+		AB6438331D6231B3002912D5 /* Inspection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Inspection.m; sourceTree = "<group>"; };
 		EB1BBA4637954BCFE44701D8 /* Pods_FinalProject.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FinalProject.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -132,6 +138,7 @@
 				972D47121D5911D600AF6464 /* Info.plist */,
 				972D47031D5911D600AF6464 /* FinalProject.xcdatamodeld */,
 				972D47181D5938A500AF6464 /* FinalProject-Bridging-Header.h */,
+				AB64382F1D6231AB002912D5 /* Inspections */,
 				972D47421D593A7400AF6464 /* ImagesInteriorPart */,
 				972D47411D593A6600AF6464 /* InteriorPart */,
 				972D47261D59398B00AF6464 /* Landlord */,
@@ -206,6 +213,18 @@
 				972D47361D593A2F00AF6464 /* ImagesInteriorPart.m */,
 			);
 			name = ImagesInteriorPart;
+			sourceTree = "<group>";
+		};
+		AB64382F1D6231AB002912D5 /* Inspections */ = {
+			isa = PBXGroup;
+			children = (
+				AB6438301D6231B3002912D5 /* Inspection+CoreDataProperties.h */,
+				AB6438311D6231B3002912D5 /* Inspection+CoreDataProperties.m */,
+				AB6438321D6231B3002912D5 /* Inspection.h */,
+				AB6438331D6231B3002912D5 /* Inspection.m */,
+			);
+			name = Inspections;
+			path = ..;
 			sourceTree = "<group>";
 		};
 		C281F698F7E7237140D92A6D /* Frameworks */ = {
@@ -347,10 +366,12 @@
 				972D47371D593A2F00AF6464 /* Room+CoreDataProperties.m in Sources */,
 				972D473A1D593A2F00AF6464 /* ImagesHouse.m in Sources */,
 				972D473D1D593A2F00AF6464 /* ImagesInteriorPart+CoreDataProperties.m in Sources */,
+				AB6438341D6231B3002912D5 /* Inspection+CoreDataProperties.m in Sources */,
 				972D47221D5938A500AF6464 /* House.m in Sources */,
 				972D47391D593A2F00AF6464 /* ImagesHouse+CoreDataProperties.m in Sources */,
 				AB64382D1D5FE40E002912D5 /* Landlord.m in Sources */,
 				AB6438271D5CA73F002912D5 /* RegisterViewController.swift in Sources */,
+				AB6438351D6231B3002912D5 /* Inspection.m in Sources */,
 				972D473E1D593A2F00AF6464 /* ImagesInteriorPart.m in Sources */,
 				972D47211D5938A500AF6464 /* House+CoreDataProperties.m in Sources */,
 				972D473C1D593A2F00AF6464 /* InteriorPart.m in Sources */,
