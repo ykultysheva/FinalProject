@@ -86,7 +86,8 @@ class AddHouse: UIViewController, UITextFieldDelegate, UIImagePickerControllerDe
         let results:NSArray = try! context.executeFetchRequest(fetchrequest)
         do {
             let landlord = results[0] as! NSManagedObject
-            landlord.setValue(NSSet(object: record), forKey: "houses")
+            let houses = landlord.mutableSetValueForKey("houses")
+            houses.addObject(record)
             try landlord.managedObjectContext?.save()
         } catch {
             let saveError = error as NSError

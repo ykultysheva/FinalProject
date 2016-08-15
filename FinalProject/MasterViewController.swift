@@ -134,6 +134,7 @@ class MasterViewController: UITableViewController, NSFetchedResultsControllerDel
         cell.Description!.text = object.valueForKey("descriptionHouse")?.description
         if object.landlord != nil {
         cell.Landlord!.text = (object.landlord as! Landlord).name
+            
         }
     }
 
