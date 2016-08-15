@@ -305,7 +305,7 @@
                                     <outlet property="Address" destination="FHU-FV-LAQ" id="yfi-6H-Vd1"/>
                                     <outlet property="Description" destination="spf-2N-9j4" id="tfP-kz-iXO"/>
                                     <outlet property="Landlord" destination="b9B-Cd-N64" id="z4N-xV-xdl"/>
-                                    <segue destination="JEX-9P-axG" kind="showDetail" identifier="showDetail" id="tJY-dw-fep"/>
+                                    <segue destination="JEX-9P-axG" kind="show" identifier="showDetail" action="showDetailViewController:sender:" id="tJY-dw-fep"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
