@@ -54,10 +54,10 @@ class RegisterViewController: UIViewController, NSFetchedResultsControllerDelega
     let password = passwordField.text
     let confirm = confirmPasswordField.text
         // Check for empty fields
-        var appDel: AppDelegate = (UIApplication.sharedApplication().delegate as! AppDelegate)
-        var context:NSManagedObjectContext = appDel.managedObjectContext
+        let appDel: AppDelegate = (UIApplication.sharedApplication().delegate as! AppDelegate)
+        let context:NSManagedObjectContext = appDel.managedObjectContext
         
-        var newUser = NSEntityDescription.insertNewObjectForEntityForName("Landlord", inManagedObjectContext: context) as NSManagedObject
+        let newUser = NSEntityDescription.insertNewObjectForEntityForName("Landlord", inManagedObjectContext: context) as NSManagedObject
         
         
         // Check if landlord with E-mail already exists
@@ -94,7 +94,7 @@ class RegisterViewController: UIViewController, NSFetchedResultsControllerDelega
         } catch {
             print("failed to save")
         }
-        var myAlert = UIAlertController(title: "Success!", message: "Saved User Successful", preferredStyle: .Alert)
+        let myAlert = UIAlertController(title: "Success!", message: "Saved User Successful", preferredStyle: .Alert)
         let okAction = UIAlertAction(title: "OK", style: .Default){
             action in self.dismissViewControllerAnimated(true, completion: nil)
         }

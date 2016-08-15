@@ -48,8 +48,8 @@ class AddHouse: UIViewController, UITextFieldDelegate, UIImagePickerControllerDe
     
     @IBAction func save(sender: AnyObject) {
         
-        var appDel: AppDelegate = (UIApplication.sharedApplication().delegate as! AppDelegate)
-        var context:NSManagedObjectContext = appDel.managedObjectContext
+        let appDel: AppDelegate = (UIApplication.sharedApplication().delegate as! AppDelegate)
+        let context:NSManagedObjectContext = appDel.managedObjectContext
 
         
                let address = addAddress.text!
