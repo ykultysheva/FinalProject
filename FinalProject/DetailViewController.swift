@@ -1,3 +1,7 @@
+
+
+
+
 //
 //  DetailViewController.swift
 //  FinalProject
@@ -32,6 +36,9 @@ class DetailViewController: UIViewController, UITextFieldDelegate  {
         }
     }
     
+    
+    let pagedScrollViewController = PagedScrollViewController()
+
     
     
     
@@ -79,6 +86,28 @@ class DetailViewController: UIViewController, UITextFieldDelegate  {
         houseDescription.text = detailItem!.descriptionHouse
         houseAddress.text = detailItem!.address
         
+        
+        // array to hold images
+        var imageViewArray = [UIImageView]()
+        
+        
+        
+        if let imageSet1 = detailItem!.images as? Set<ImagesHouse> {
+            for imageHouse in imageSet1 {
+                if let image = imageHouse.image {
+                    if let actualImage = UIImage(data: image) {
+                        let imageView = UIImageView(image: actualImage)
+                        imageViewArray.append(imageView)
+                    }
+                }
+            }
+        
+            pagedScrollViewController.pages = imageViewArray
+            
+            displayContentController(pagedScrollViewController, frame: CGRect(x: 0, y: 0, width: view.bounds.size.width, height: 300))
+           
+
+        }
         
     }
     

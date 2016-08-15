@@ -26,12 +26,12 @@
 		972D473E1D593A2F00AF6464 /* ImagesInteriorPart.m in Sources */ = {isa = PBXBuildFile; fileRef = 972D47361D593A2F00AF6464 /* ImagesInteriorPart.m */; };
 		972D47441D5A71B900AF6464 /* CustomCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 972D47431D5A71B900AF6464 /* CustomCell.swift */; };
 		972D47461D5A826100AF6464 /* AddHouse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 972D47451D5A826100AF6464 /* AddHouse.swift */; };
+		97D247E61D6276540032B534 /* PagedScrollViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97D247E51D6276540032B534 /* PagedScrollViewController.swift */; };
+		97D247EA1D627ABF0032B534 /* UIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97D247E91D627ABF0032B534 /* UIViewController.swift */; };
 		AB6438261D5CA73F002912D5 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB6438241D5CA73F002912D5 /* LoginViewController.swift */; };
 		AB6438271D5CA73F002912D5 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB6438251D5CA73F002912D5 /* RegisterViewController.swift */; };
 		AB64382C1D5FE40E002912D5 /* Landlord+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = AB6438291D5FE40E002912D5 /* Landlord+CoreDataProperties.m */; };
 		AB64382D1D5FE40E002912D5 /* Landlord.m in Sources */ = {isa = PBXBuildFile; fileRef = AB64382B1D5FE40E002912D5 /* Landlord.m */; };
-		AB6438341D6231B3002912D5 /* Inspection+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = AB6438311D6231B3002912D5 /* Inspection+CoreDataProperties.m */; };
-		AB6438351D6231B3002912D5 /* Inspection.m in Sources */ = {isa = PBXBuildFile; fileRef = AB6438331D6231B3002912D5 /* Inspection.m */; };
 		EF55B553ACE5C8A8C4E0CE65 /* Pods_FinalProject.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D73AD9749EDCFD84BF19CF65 /* Pods_FinalProject.framework */; };
 /* End PBXBuildFile section */
 
@@ -69,16 +69,14 @@
 		972D47431D5A71B900AF6464 /* CustomCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomCell.swift; sourceTree = "<group>"; };
 		972D47451D5A826100AF6464 /* AddHouse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddHouse.swift; sourceTree = "<group>"; };
 		97CE993A6F17847CAD888303 /* Pods-FinalProject.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FinalProject.release.xcconfig"; path = "Pods/Target Support Files/Pods-FinalProject/Pods-FinalProject.release.xcconfig"; sourceTree = "<group>"; };
+		97D247E51D6276540032B534 /* PagedScrollViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PagedScrollViewController.swift; sourceTree = "<group>"; };
+		97D247E91D627ABF0032B534 /* UIViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewController.swift; sourceTree = "<group>"; };
 		AB6438241D5CA73F002912D5 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		AB6438251D5CA73F002912D5 /* RegisterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		AB6438281D5FE40E002912D5 /* Landlord+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "Landlord+CoreDataProperties.h"; path = "../Landlord+CoreDataProperties.h"; sourceTree = "<group>"; };
 		AB6438291D5FE40E002912D5 /* Landlord+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "Landlord+CoreDataProperties.m"; path = "../Landlord+CoreDataProperties.m"; sourceTree = "<group>"; };
 		AB64382A1D5FE40E002912D5 /* Landlord.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Landlord.h; path = ../Landlord.h; sourceTree = "<group>"; };
 		AB64382B1D5FE40E002912D5 /* Landlord.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Landlord.m; path = ../Landlord.m; sourceTree = "<group>"; };
-		AB6438301D6231B3002912D5 /* Inspection+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Inspection+CoreDataProperties.h"; sourceTree = "<group>"; };
-		AB6438311D6231B3002912D5 /* Inspection+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Inspection+CoreDataProperties.m"; sourceTree = "<group>"; };
-		AB6438321D6231B3002912D5 /* Inspection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Inspection.h; sourceTree = "<group>"; };
-		AB6438331D6231B3002912D5 /* Inspection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Inspection.m; sourceTree = "<group>"; };
 		CCB3DA64D2F244B129226BBA /* Pods-FinalProject.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FinalProject.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FinalProject/Pods-FinalProject.debug.xcconfig"; sourceTree = "<group>"; };
 		D73AD9749EDCFD84BF19CF65 /* Pods_FinalProject.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FinalProject.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -135,6 +133,7 @@
 			children = (
 				972D47011D5911D600AF6464 /* AppDelegate.swift */,
 				972D47061D5911D600AF6464 /* MasterViewController.swift */,
+				97D247E91D627ABF0032B534 /* UIViewController.swift */,
 				AB6438241D5CA73F002912D5 /* LoginViewController.swift */,
 				AB6438251D5CA73F002912D5 /* RegisterViewController.swift */,
 				972D47431D5A71B900AF6464 /* CustomCell.swift */,
@@ -146,7 +145,7 @@
 				972D47121D5911D600AF6464 /* Info.plist */,
 				972D47031D5911D600AF6464 /* FinalProject.xcdatamodeld */,
 				972D47181D5938A500AF6464 /* FinalProject-Bridging-Header.h */,
-				AB64382F1D6231AB002912D5 /* Inspections */,
+				97D247E51D6276540032B534 /* PagedScrollViewController.swift */,
 				972D47421D593A7400AF6464 /* ImagesInteriorPart */,
 				972D47411D593A6600AF6464 /* InteriorPart */,
 				972D47261D59398B00AF6464 /* Landlord */,
@@ -221,18 +220,6 @@
 				972D47361D593A2F00AF6464 /* ImagesInteriorPart.m */,
 			);
 			name = ImagesInteriorPart;
-			sourceTree = "<group>";
-		};
-		AB64382F1D6231AB002912D5 /* Inspections */ = {
-			isa = PBXGroup;
-			children = (
-				AB6438301D6231B3002912D5 /* Inspection+CoreDataProperties.h */,
-				AB6438311D6231B3002912D5 /* Inspection+CoreDataProperties.m */,
-				AB6438321D6231B3002912D5 /* Inspection.h */,
-				AB6438331D6231B3002912D5 /* Inspection.m */,
-			);
-			name = Inspections;
-			path = ..;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -366,19 +353,19 @@
 				972D47371D593A2F00AF6464 /* Room+CoreDataProperties.m in Sources */,
 				972D473A1D593A2F00AF6464 /* ImagesHouse.m in Sources */,
 				972D473D1D593A2F00AF6464 /* ImagesInteriorPart+CoreDataProperties.m in Sources */,
-				AB6438341D6231B3002912D5 /* Inspection+CoreDataProperties.m in Sources */,
 				972D47221D5938A500AF6464 /* House.m in Sources */,
 				972D47391D593A2F00AF6464 /* ImagesHouse+CoreDataProperties.m in Sources */,
 				AB64382D1D5FE40E002912D5 /* Landlord.m in Sources */,
 				AB6438271D5CA73F002912D5 /* RegisterViewController.swift in Sources */,
-				AB6438351D6231B3002912D5 /* Inspection.m in Sources */,
 				972D473E1D593A2F00AF6464 /* ImagesInteriorPart.m in Sources */,
 				972D47211D5938A500AF6464 /* House+CoreDataProperties.m in Sources */,
+				97D247EA1D627ABF0032B534 /* UIViewController.swift in Sources */,
 				972D473C1D593A2F00AF6464 /* InteriorPart.m in Sources */,
 				AB64382C1D5FE40E002912D5 /* Landlord+CoreDataProperties.m in Sources */,
 				972D47051D5911D600AF6464 /* FinalProject.xcdatamodeld in Sources */,
 				972D47021D5911D600AF6464 /* AppDelegate.swift in Sources */,
 				972D47071D5911D600AF6464 /* MasterViewController.swift in Sources */,
+				97D247E61D6276540032B534 /* PagedScrollViewController.swift in Sources */,
 				972D47091D5911D600AF6464 /* DetailViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
