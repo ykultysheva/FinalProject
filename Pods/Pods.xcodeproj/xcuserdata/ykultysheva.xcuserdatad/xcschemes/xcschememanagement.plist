@@ -4,11 +4,6 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
-		<key>MVCarouselCollectionView.xcscheme</key>
-		<dict>
-			<key>isShown</key>
-			<false/>
-		</dict>
 		<key>Pods-FinalProject.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -17,12 +12,7 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>0CD1072B43683DD07D7F2C3BBCB0A0F0</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>91FE4E3C2B90A6C6498F0F88505EB14A</key>
+		<key>1B7C5F8E507521052E8992659C150E31</key>
 		<dict>
 			<key>primary</key>
 			<true/>

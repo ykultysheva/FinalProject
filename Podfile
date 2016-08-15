@@ -4,7 +4,7 @@ use_frameworks!
 
 target 'FinalProject' do
 
-pod 'MVCarouselCollectionView'
+
 
 
 end

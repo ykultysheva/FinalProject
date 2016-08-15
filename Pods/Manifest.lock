@@ -1,12 +1,3 @@
-PODS:
-  - MVCarouselCollectionView (1.0.9)
-
-DEPENDENCIES:
-  - MVCarouselCollectionView
-
-SPEC CHECKSUMS:
-  MVCarouselCollectionView: 45b31730d7424a6d9dde3d5fa8f794efefea37f9
-
-PODFILE CHECKSUM: 83f66cecfc820deff0edd5a99a0f0e31d48bda28
+PODFILE CHECKSUM: 43ee74902df08e7ed81797715ba97003e34f3ea0
 
 COCOAPODS: 1.0.1
