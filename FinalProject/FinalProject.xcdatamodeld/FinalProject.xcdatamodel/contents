@@ -4,28 +4,16 @@
         <attribute name="address" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="descriptionHouse" optional="YES" attributeType="String" syncable="YES"/>
         <relationship name="images" optional="YES" toMany="YES" deletionRule="Nullify" ordered="YES" destinationEntity="ImagesHouse" inverseName="house" inverseEntity="ImagesHouse" syncable="YES"/>
-        <relationship name="inspections" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Inspection" inverseName="house" inverseEntity="Inspection" syncable="YES"/>
         <relationship name="landlord" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Landlord" inverseName="houses" inverseEntity="Landlord" syncable="YES"/>
+        <relationship name="rooms" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Room" inverseName="house" inverseEntity="Room" syncable="YES"/>
     </entity>
     <entity name="ImagesHouse" representedClassName="ImagesHouse" syncable="YES">
         <attribute name="image" optional="YES" attributeType="Binary" allowsExternalBinaryDataStorage="YES" indexed="YES" syncable="YES"/>
         <relationship name="house" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="House" inverseName="images" inverseEntity="House" syncable="YES"/>
     </entity>
-    <entity name="ImagesInteriorPart" representedClassName="ImagesInteriorPart" syncable="YES">
-        <relationship name="interiorPart" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="InteriorPart" inverseName="images" inverseEntity="InteriorPart" syncable="YES"/>
-    </entity>
-    <entity name="Inspection" representedClassName="Inspection" syncable="YES">
-        <attribute name="date" optional="YES" attributeType="Date" syncable="YES"/>
-        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
-        <relationship name="house" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="House" inverseName="inspections" inverseEntity="House" syncable="YES"/>
-        <relationship name="rooms" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Room" inverseName="inspection" inverseEntity="Room" syncable="YES"/>
-    </entity>
-    <entity name="InteriorPart" representedClassName="InteriorPart" syncable="YES">
-        <attribute name="descriptionAfter" optional="YES" attributeType="String" syncable="YES"/>
-        <attribute name="descriptionBefore" optional="YES" attributeType="String" syncable="YES"/>
-        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
-        <relationship name="images" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="ImagesInteriorPart" inverseName="interiorPart" inverseEntity="ImagesInteriorPart" syncable="YES"/>
-        <relationship name="room" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Room" inverseName="interiorPart" inverseEntity="Room" syncable="YES"/>
+    <entity name="ImagesRoomDetails" syncable="YES">
+        <attribute name="image" optional="YES" attributeType="Binary" syncable="YES"/>
+        <relationship name="roomDetail" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="RoomDetails" inverseName="images" inverseEntity="RoomDetails" syncable="YES"/>
     </entity>
     <entity name="Landlord" representedClassName="Landlord">
         <attribute name="email" optional="YES" attributeType="String" syncable="YES"/>
@@ -36,16 +24,21 @@
     </entity>
     <entity name="Room" representedClassName="Room" syncable="YES">
         <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
-        <relationship name="inspection" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Inspection" inverseName="rooms" inverseEntity="Inspection" syncable="YES"/>
-        <relationship name="interiorPart" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="InteriorPart" inverseName="room" inverseEntity="InteriorPart" syncable="YES"/>
+        <relationship name="house" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="House" inverseName="rooms" inverseEntity="House" syncable="YES"/>
+        <relationship name="roomDetails" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="RoomDetails" inverseName="room" inverseEntity="RoomDetails" syncable="YES"/>
+    </entity>
+    <entity name="RoomDetails" syncable="YES">
+        <attribute name="label" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="partDescription" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="images" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="ImagesRoomDetails" inverseName="roomDetail" inverseEntity="ImagesRoomDetails" syncable="YES"/>
+        <relationship name="room" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Room" inverseName="roomDetails" inverseEntity="Room" syncable="YES"/>
     </entity>
     <elements>
         <element name="House" positionX="34" positionY="63" width="128" height="118"/>
         <element name="ImagesHouse" positionX="-189" positionY="-0" width="128" height="75"/>
-        <element name="ImagesInteriorPart" positionX="-83" positionY="522" width="128" height="58"/>
-        <element name="Inspection" positionX="-29" positionY="225" width="128" height="103"/>
-        <element name="InteriorPart" positionX="-207" positionY="377" width="128" height="118"/>
         <element name="Landlord" positionX="-245" positionY="131" width="128" height="103"/>
-        <element name="Room" positionX="7" positionY="360" width="128" height="88"/>
+        <element name="ImagesRoomDetails" positionX="-333" positionY="297" width="128" height="73"/>
+        <element name="Room" positionX="25" positionY="210" width="128" height="88"/>
+        <element name="RoomDetails" positionX="-137" positionY="324" width="128" height="103"/>
     </elements>
 </model>
