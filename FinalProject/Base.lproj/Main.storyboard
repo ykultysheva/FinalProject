@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="HnI-QE-Vb2">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="dmC-lq-PHq">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
@@ -150,6 +150,7 @@
                                 <state key="normal" title="to DetailRoomDetails"/>
                                 <connections>
                                     <action selector="toDetailRoomDetails:" destination="dmC-lq-PHq" eventType="touchUpInside" id="DFX-SP-RxP"/>
+                                    <segue destination="0Cv-W2-vTF" kind="showDetail" identifier="toDetailRoomDetails" id="R9D-7G-hQD"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -175,7 +176,6 @@
                         <outlet property="roomDetailDescription" destination="dUG-W1-yw6" id="dVc-4p-bGc"/>
                         <outlet property="roomDetailsImageView" destination="en5-WA-WlU" id="BK3-Qy-LSP"/>
                         <outlet property="roomDetailsLabel" destination="WDG-wO-IOG" id="afx-bk-g3e"/>
-                        <segue destination="0Cv-W2-vTF" kind="showDetail" identifier="toDetailRoomDetails" id="VYi-HA-73I"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8XR-Gr-0Y0" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -212,6 +212,9 @@
                             <constraint firstItem="i7Z-54-Ug1" firstAttribute="centerY" secondItem="ZLh-hb-jIZ" secondAttribute="centerY" id="iL0-Ps-zSq"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="roomDetailsLabel" destination="i7Z-54-Ug1" id="ti4-lL-QUt"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="86r-nc-4nB" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

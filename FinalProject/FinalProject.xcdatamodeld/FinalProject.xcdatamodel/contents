@@ -30,7 +30,7 @@
     <entity name="RoomDetails" representedClassName="RoomDetails" syncable="YES">
         <attribute name="label" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="partDescription" optional="YES" attributeType="String" syncable="YES"/>
-        <relationship name="images" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="ImagesRoomDetails" inverseName="roomDetail" inverseEntity="ImagesRoomDetails" syncable="YES"/>
+        <relationship name="images" optional="YES" toMany="YES" deletionRule="Nullify" ordered="YES" destinationEntity="ImagesRoomDetails" inverseName="roomDetail" inverseEntity="ImagesRoomDetails" syncable="YES"/>
         <relationship name="room" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Room" inverseName="roomDetails" inverseEntity="Room" syncable="YES"/>
     </entity>
     <elements>
@@ -39,6 +39,6 @@
         <element name="ImagesRoomDetails" positionX="-333" positionY="297" width="128" height="73"/>
         <element name="Landlord" positionX="-245" positionY="131" width="128" height="103"/>
         <element name="Room" positionX="25" positionY="210" width="128" height="88"/>
-        <element name="RoomDetails" positionX="-137" positionY="324" width="128" height="103"/>
+        <element name="RoomDetails" positionX="-137" positionY="324" width="128" height="105"/>
     </elements>
 </model>

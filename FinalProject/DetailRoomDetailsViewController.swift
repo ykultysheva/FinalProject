@@ -11,12 +11,18 @@ import CoreData
 
 class DetailRoomDetailsViewController: UIViewController, NSFetchedResultsControllerDelegate {
 
+    @IBOutlet weak var roomDetailsLabel: UILabel!
     
     var managedObjectContext: NSManagedObjectContext!
-    var record: NSManagedObject!
+    var record: RoomDetails?
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        if let roomDetails = record {
+            roomDetailsLabel.text = roomDetails.label
+        }
+        
 
         // Do any additional setup after loading the view.
     }
