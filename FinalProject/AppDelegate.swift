@@ -23,7 +23,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 //        let defaults = NSUserDefaults.standardUserDefaults()
 //        defaults.removeObjectForKey("email")
 //        defaults.removeObjectForKey("password")
-        
+//        
         let masterNavigationController = window!.rootViewController as! UINavigationController
         let controller = masterNavigationController.topViewController as! MasterViewController
         controller.managedObjectContext = self.managedObjectContext

@@ -22,6 +22,8 @@
 		972D47461D5A826100AF6464 /* AddHouse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 972D47451D5A826100AF6464 /* AddHouse.swift */; };
 		97D247E61D6276540032B534 /* PagedScrollViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97D247E51D6276540032B534 /* PagedScrollViewController.swift */; };
 		97D247EA1D627ABF0032B534 /* UIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97D247E91D627ABF0032B534 /* UIViewController.swift */; };
+		97E618E81D63A37800C2490E /* AddRoomDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97E618E71D63A37800C2490E /* AddRoomDetails.swift */; };
+		97E618EA1D63BC9300C2490E /* DetailRoomDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97E618E91D63BC9300C2490E /* DetailRoomDetailsViewController.swift */; };
 		AB6438261D5CA73F002912D5 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB6438241D5CA73F002912D5 /* LoginViewController.swift */; };
 		AB6438271D5CA73F002912D5 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB6438251D5CA73F002912D5 /* RegisterViewController.swift */; };
 		AB64382C1D5FE40E002912D5 /* Landlord+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = AB6438291D5FE40E002912D5 /* Landlord+CoreDataProperties.m */; };
@@ -66,6 +68,8 @@
 		97CE993A6F17847CAD888303 /* Pods-FinalProject.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FinalProject.release.xcconfig"; path = "Pods/Target Support Files/Pods-FinalProject/Pods-FinalProject.release.xcconfig"; sourceTree = "<group>"; };
 		97D247E51D6276540032B534 /* PagedScrollViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PagedScrollViewController.swift; sourceTree = "<group>"; };
 		97D247E91D627ABF0032B534 /* UIViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewController.swift; sourceTree = "<group>"; };
+		97E618E71D63A37800C2490E /* AddRoomDetails.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddRoomDetails.swift; sourceTree = "<group>"; };
+		97E618E91D63BC9300C2490E /* DetailRoomDetailsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailRoomDetailsViewController.swift; sourceTree = "<group>"; };
 		AB6438241D5CA73F002912D5 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		AB6438251D5CA73F002912D5 /* RegisterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		AB6438281D5FE40E002912D5 /* Landlord+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "Landlord+CoreDataProperties.h"; path = "../Landlord+CoreDataProperties.h"; sourceTree = "<group>"; };
@@ -134,7 +138,6 @@
 		972D46F51D5911D500AF6464 = {
 			isa = PBXGroup;
 			children = (
-				ABFB14DE1D639BCF006274D3 /* Room */,
 				972D47001D5911D600AF6464 /* FinalProject */,
 				972D46FF1D5911D600AF6464 /* Products */,
 				6C4F93186D201E5FF04A6625 /* Pods */,
@@ -161,6 +164,8 @@
 				972D47431D5A71B900AF6464 /* CustomCell.swift */,
 				972D47081D5911D600AF6464 /* DetailViewController.swift */,
 				972D470A1D5911D600AF6464 /* Main.storyboard */,
+				97E618E91D63BC9300C2490E /* DetailRoomDetailsViewController.swift */,
+				97E618E71D63A37800C2490E /* AddRoomDetails.swift */,
 				972D47451D5A826100AF6464 /* AddHouse.swift */,
 				972D470D1D5911D600AF6464 /* Assets.xcassets */,
 				972D470F1D5911D600AF6464 /* LaunchScreen.storyboard */,
@@ -168,6 +173,7 @@
 				972D47031D5911D600AF6464 /* FinalProject.xcdatamodeld */,
 				972D47181D5938A500AF6464 /* FinalProject-Bridging-Header.h */,
 				97D247E51D6276540032B534 /* PagedScrollViewController.swift */,
+				ABFB14DE1D639BCF006274D3 /* Room */,
 				ABFB14D61D639B75006274D3 /* RoomDetails */,
 				ABFB14D71D639B78006274D3 /* ImagesRoomDetails */,
 				972D47261D59398B00AF6464 /* Landlord */,
@@ -243,6 +249,7 @@
 				ABFB14DB1D639BB6006274D3 /* Room.m */,
 			);
 			name = Room;
+			path = ..;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -384,9 +391,11 @@
 				ABB65C201D6347FE00A2C6A7 /* DefaultTableViewCell.swift in Sources */,
 				972D47211D5938A500AF6464 /* House+CoreDataProperties.m in Sources */,
 				97D247EA1D627ABF0032B534 /* UIViewController.swift in Sources */,
+				97E618EA1D63BC9300C2490E /* DetailRoomDetailsViewController.swift in Sources */,
 				ABB65C191D6347A800A2C6A7 /* MenuViewController+Configuration.swift in Sources */,
 				AB64382C1D5FE40E002912D5 /* Landlord+CoreDataProperties.m in Sources */,
 				972D47051D5911D600AF6464 /* FinalProject.xcdatamodeld in Sources */,
+				97E618E81D63A37800C2490E /* AddRoomDetails.swift in Sources */,
 				972D47021D5911D600AF6464 /* AppDelegate.swift in Sources */,
 				972D47071D5911D600AF6464 /* MasterViewController.swift in Sources */,
 				ABFB14D21D639AA4006274D3 /* RoomDetails.m in Sources */,
