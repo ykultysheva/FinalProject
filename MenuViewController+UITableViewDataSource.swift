@@ -13,25 +13,27 @@ extension MenuViewController: UITableViewDataSource {
     @name   numberOfSectionsInTableView
     */
     public func numberOfSectionsInTableView(tableView: UITableView) -> Int {
-        return MenuModel.sectionsCount()
+        return self.fetchedResultsController.fetchedObjects?.count ?? 0
     }
     
     /*
     @name   numberOfRowsInSection
     */
     public func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        var sections = MenuModel.sections()
-        let key = Array(sections.keys)[section]
-        let section = sections[key] as! [String]
-        return section.count
-    }
+        let room = self.fetchedResultsController.fetchedObjects![section] as! Room
+        print(self.fetchedResultsController.fetchedObjects)
+        
+        return room.roomDetails?.count ?? 0 }
     
     /*
     @name   cellForRowAtIndexPath
     */
     public func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell: DefaultTableViewCell =  tableView.dequeueReusableCellWithIdentifier("Cell") as! DefaultTableViewCell
-        cell.defaultLabel.text = "banana"
+        let object = self.fetchedResultsController.objectAtIndexPath(indexPath) as! Room
+        let detailObject = object.roomDetails![indexPath.row] as! RoomDetails
+
+        cell.defaultLabel.text = detailObject.label
         return cell
     }
     
@@ -46,6 +48,7 @@ extension MenuViewController: UITableViewDataSource {
     @name   titleForHeaderInSection
     */
     public func tableView(tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-        return "Default Section Title"
+          let room = self.fetchedResultsController.fetchedObjects![section] as! Room
+        return room.name
     }
 }

@@ -17,7 +17,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @property (nullable, nonatomic, retain) NSString *name;
 @property (nullable, nonatomic, retain) House *house;
-@property (nullable, nonatomic, retain) NSSet<RoomDetails *> *roomDetails;
+@property (nullable, nonatomic, retain) NSOrderedSet<RoomDetails *> *roomDetails;
 
 @end
 
