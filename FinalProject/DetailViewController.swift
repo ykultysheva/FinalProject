@@ -12,6 +12,7 @@
 
 import UIKit
 import CoreData
+import Material
 
 
 
@@ -105,6 +106,9 @@ class DetailViewController: UIViewController, UITextFieldDelegate  {
             pagedScrollViewController.pages = imageViewArray
             
             displayContentController(pagedScrollViewController, frame: CGRect(x: 0, y: 0, width: view.bounds.size.width, height: 300))
+            
+            displayContentController(MenuViewController(), frame: CGRect(x: 0, y: pagedScrollViewController.view.bounds.maxY+200, width: view.bounds.size.width, height: view.bounds.size.height - pagedScrollViewController.view.bounds.size.height))
+           
            
 
         }
@@ -121,7 +125,7 @@ class DetailViewController: UIViewController, UITextFieldDelegate  {
         return true
     }
     
-    
+    // MARK: Actions
     
     @IBAction func saveChanges(sender: AnyObject) {
         
@@ -158,10 +162,38 @@ class DetailViewController: UIViewController, UITextFieldDelegate  {
     }
     
     
+    @IBAction func addInspection(sender: AnyObject) {
+        let alertController = UIAlertController(title: "Add Inspection", message: "Please give a name for your this inspection", preferredStyle: UIAlertControllerStyle.Alert)
+        
+        let saveAction = UIAlertAction(title: "Save", style: UIAlertActionStyle.Default, handler: {
+            alert -> Void in
+            
+            
+        })
+        
+        let cancelAction = UIAlertAction(title: "Cancel", style: UIAlertActionStyle.Default, handler: {
+            (action : UIAlertAction!) -> Void in
+            
+        })
+        
+        alertController.addTextFieldWithConfigurationHandler { (textField : UITextField!) -> Void in
+            textField.placeholder = "Enter Inspection Name"
+        }
+     
+        
+        alertController.addAction(saveAction)
+        alertController.addAction(cancelAction)
+        
+        self.presentViewController(alertController, animated: true, completion: nil)
+    }
+        
+    
     @IBAction func cancelChanges(sender: UIButton) {
         self.performSegueWithIdentifier("backToMaster", sender: self)
 
     }
+    
+    
     
     
     

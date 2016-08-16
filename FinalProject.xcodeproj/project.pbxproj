@@ -32,6 +32,13 @@
 		AB6438271D5CA73F002912D5 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB6438251D5CA73F002912D5 /* RegisterViewController.swift */; };
 		AB64382C1D5FE40E002912D5 /* Landlord+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = AB6438291D5FE40E002912D5 /* Landlord+CoreDataProperties.m */; };
 		AB64382D1D5FE40E002912D5 /* Landlord.m in Sources */ = {isa = PBXBuildFile; fileRef = AB64382B1D5FE40E002912D5 /* Landlord.m */; };
+		ABB65C181D6347A800A2C6A7 /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABB65C141D6347A800A2C6A7 /* MenuViewController.swift */; };
+		ABB65C191D6347A800A2C6A7 /* MenuViewController+Configuration.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABB65C151D6347A800A2C6A7 /* MenuViewController+Configuration.swift */; };
+		ABB65C1A1D6347A800A2C6A7 /* MenuViewController+UITableViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABB65C161D6347A800A2C6A7 /* MenuViewController+UITableViewDataSource.swift */; };
+		ABB65C1B1D6347A800A2C6A7 /* MenuViewController+UITableViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABB65C171D6347A800A2C6A7 /* MenuViewController+UITableViewDelegate.swift */; };
+		ABB65C1D1D6347D500A2C6A7 /* MenuModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABB65C1C1D6347D500A2C6A7 /* MenuModel.swift */; };
+		ABB65C201D6347FE00A2C6A7 /* DefaultTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABB65C1E1D6347FE00A2C6A7 /* DefaultTableViewCell.swift */; };
+		ABB65C211D6347FE00A2C6A7 /* DefaultTableViewHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABB65C1F1D6347FE00A2C6A7 /* DefaultTableViewHeaderView.swift */; };
 		EF55B553ACE5C8A8C4E0CE65 /* Pods_FinalProject.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D73AD9749EDCFD84BF19CF65 /* Pods_FinalProject.framework */; };
 /* End PBXBuildFile section */
 
@@ -77,6 +84,13 @@
 		AB6438291D5FE40E002912D5 /* Landlord+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "Landlord+CoreDataProperties.m"; path = "../Landlord+CoreDataProperties.m"; sourceTree = "<group>"; };
 		AB64382A1D5FE40E002912D5 /* Landlord.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Landlord.h; path = ../Landlord.h; sourceTree = "<group>"; };
 		AB64382B1D5FE40E002912D5 /* Landlord.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Landlord.m; path = ../Landlord.m; sourceTree = "<group>"; };
+		ABB65C141D6347A800A2C6A7 /* MenuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
+		ABB65C151D6347A800A2C6A7 /* MenuViewController+Configuration.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "MenuViewController+Configuration.swift"; sourceTree = "<group>"; };
+		ABB65C161D6347A800A2C6A7 /* MenuViewController+UITableViewDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "MenuViewController+UITableViewDataSource.swift"; sourceTree = "<group>"; };
+		ABB65C171D6347A800A2C6A7 /* MenuViewController+UITableViewDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "MenuViewController+UITableViewDelegate.swift"; sourceTree = "<group>"; };
+		ABB65C1C1D6347D500A2C6A7 /* MenuModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuModel.swift; sourceTree = "<group>"; };
+		ABB65C1E1D6347FE00A2C6A7 /* DefaultTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DefaultTableViewCell.swift; sourceTree = "<group>"; };
+		ABB65C1F1D6347FE00A2C6A7 /* DefaultTableViewHeaderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DefaultTableViewHeaderView.swift; sourceTree = "<group>"; };
 		CCB3DA64D2F244B129226BBA /* Pods-FinalProject.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FinalProject.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FinalProject/Pods-FinalProject.debug.xcconfig"; sourceTree = "<group>"; };
 		D73AD9749EDCFD84BF19CF65 /* Pods_FinalProject.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FinalProject.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -96,6 +110,13 @@
 		283E7C68ADA5EDD5D7427C22 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				ABB65C1E1D6347FE00A2C6A7 /* DefaultTableViewCell.swift */,
+				ABB65C1F1D6347FE00A2C6A7 /* DefaultTableViewHeaderView.swift */,
+				ABB65C1C1D6347D500A2C6A7 /* MenuModel.swift */,
+				ABB65C141D6347A800A2C6A7 /* MenuViewController.swift */,
+				ABB65C151D6347A800A2C6A7 /* MenuViewController+Configuration.swift */,
+				ABB65C161D6347A800A2C6A7 /* MenuViewController+UITableViewDataSource.swift */,
+				ABB65C171D6347A800A2C6A7 /* MenuViewController+UITableViewDelegate.swift */,
 				D73AD9749EDCFD84BF19CF65 /* Pods_FinalProject.framework */,
 			);
 			name = Frameworks;
@@ -347,6 +368,7 @@
 			files = (
 				972D47381D593A2F00AF6464 /* Room.m in Sources */,
 				972D473B1D593A2F00AF6464 /* InteriorPart+CoreDataProperties.m in Sources */,
+				ABB65C1D1D6347D500A2C6A7 /* MenuModel.swift in Sources */,
 				972D47461D5A826100AF6464 /* AddHouse.swift in Sources */,
 				972D47441D5A71B900AF6464 /* CustomCell.swift in Sources */,
 				AB6438261D5CA73F002912D5 /* LoginViewController.swift in Sources */,
@@ -357,16 +379,22 @@
 				972D47391D593A2F00AF6464 /* ImagesHouse+CoreDataProperties.m in Sources */,
 				AB64382D1D5FE40E002912D5 /* Landlord.m in Sources */,
 				AB6438271D5CA73F002912D5 /* RegisterViewController.swift in Sources */,
+				ABB65C201D6347FE00A2C6A7 /* DefaultTableViewCell.swift in Sources */,
 				972D473E1D593A2F00AF6464 /* ImagesInteriorPart.m in Sources */,
 				972D47211D5938A500AF6464 /* House+CoreDataProperties.m in Sources */,
 				97D247EA1D627ABF0032B534 /* UIViewController.swift in Sources */,
 				972D473C1D593A2F00AF6464 /* InteriorPart.m in Sources */,
+				ABB65C191D6347A800A2C6A7 /* MenuViewController+Configuration.swift in Sources */,
 				AB64382C1D5FE40E002912D5 /* Landlord+CoreDataProperties.m in Sources */,
 				972D47051D5911D600AF6464 /* FinalProject.xcdatamodeld in Sources */,
 				972D47021D5911D600AF6464 /* AppDelegate.swift in Sources */,
 				972D47071D5911D600AF6464 /* MasterViewController.swift in Sources */,
+				ABB65C1A1D6347A800A2C6A7 /* MenuViewController+UITableViewDataSource.swift in Sources */,
+				ABB65C1B1D6347A800A2C6A7 /* MenuViewController+UITableViewDelegate.swift in Sources */,
+				ABB65C211D6347FE00A2C6A7 /* DefaultTableViewHeaderView.swift in Sources */,
 				97D247E61D6276540032B534 /* PagedScrollViewController.swift in Sources */,
 				972D47091D5911D600AF6464 /* DetailViewController.swift in Sources */,
+				ABB65C181D6347A800A2C6A7 /* MenuViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

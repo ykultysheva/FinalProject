@@ -48,11 +48,20 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="i9O-gS-MKW" customClass="MaterialButton" customModule="Material">
+                                <rect key="frame" x="467" y="330" width="103" height="30"/>
+                                <state key="normal" title="Add Inspection"/>
+                                <connections>
+                                    <action selector="addInspection:" destination="JEX-9P-axG" eventType="touchUpInside" id="09L-Oq-AWA"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="i9O-gS-MKW" secondAttribute="trailing" constant="10" id="6eW-f8-SSm"/>
                             <constraint firstItem="7V4-3Q-x03" firstAttribute="top" secondItem="UHM-QT-mMH" secondAttribute="bottom" constant="25" id="GZZ-yL-axu"/>
                             <constraint firstItem="UHM-QT-mMH" firstAttribute="top" secondItem="Ppy-qy-n1f" secondAttribute="bottom" constant="20" id="JBu-Ae-acn"/>
+                            <constraint firstItem="GAO-Cl-Wes" firstAttribute="top" secondItem="i9O-gS-MKW" secondAttribute="bottom" constant="240" id="WR8-mL-WC2"/>
                             <constraint firstItem="ps1-Vc-AFC" firstAttribute="centerX" secondItem="svH-Pt-448" secondAttribute="centerX" id="XXh-rZ-5Ra"/>
                             <constraint firstItem="UHM-QT-mMH" firstAttribute="centerX" secondItem="svH-Pt-448" secondAttribute="centerX" id="jdA-9E-aSh"/>
                             <constraint firstItem="Ppy-qy-n1f" firstAttribute="centerX" secondItem="svH-Pt-448" secondAttribute="centerX" id="lGa-uS-eHL"/>
