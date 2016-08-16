@@ -1,8 +1,8 @@
 //
-//  InteriorPart.h
+//  RoomDetails.h
 //  FinalProject
 //
-//  Created by Yana Kultysheva on 2016-08-08.
+//  Created by JOSE PILAPIL on 2016-08-16.
 //  Copyright © 2016 Yana Kultysheva. All rights reserved.
 //
 
@@ -13,7 +13,7 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface InteriorPart : NSManagedObject
+@interface RoomDetails : NSManagedObject
 
 // Insert code here to declare functionality of your managed object subclass
 
@@ -21,4 +21,4 @@ NS_ASSUME_NONNULL_BEGIN
 
 NS_ASSUME_NONNULL_END
 
-#import "InteriorPart+CoreDataProperties.h"
+#import "RoomDetails+CoreDataProperties.h"

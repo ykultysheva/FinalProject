@@ -11,7 +11,7 @@
         <attribute name="image" optional="YES" attributeType="Binary" allowsExternalBinaryDataStorage="YES" indexed="YES" syncable="YES"/>
         <relationship name="house" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="House" inverseName="images" inverseEntity="House" syncable="YES"/>
     </entity>
-    <entity name="ImagesRoomDetails" syncable="YES">
+    <entity name="ImagesRoomDetails" representedClassName="ImagesRoomDetails" syncable="YES">
         <attribute name="image" optional="YES" attributeType="Binary" syncable="YES"/>
         <relationship name="roomDetail" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="RoomDetails" inverseName="images" inverseEntity="RoomDetails" syncable="YES"/>
     </entity>
@@ -27,7 +27,7 @@
         <relationship name="house" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="House" inverseName="rooms" inverseEntity="House" syncable="YES"/>
         <relationship name="roomDetails" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="RoomDetails" inverseName="room" inverseEntity="RoomDetails" syncable="YES"/>
     </entity>
-    <entity name="RoomDetails" syncable="YES">
+    <entity name="RoomDetails" representedClassName="RoomDetails" syncable="YES">
         <attribute name="label" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="partDescription" optional="YES" attributeType="String" syncable="YES"/>
         <relationship name="images" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="ImagesRoomDetails" inverseName="roomDetail" inverseEntity="ImagesRoomDetails" syncable="YES"/>
@@ -36,8 +36,8 @@
     <elements>
         <element name="House" positionX="34" positionY="63" width="128" height="118"/>
         <element name="ImagesHouse" positionX="-189" positionY="-0" width="128" height="75"/>
-        <element name="Landlord" positionX="-245" positionY="131" width="128" height="103"/>
         <element name="ImagesRoomDetails" positionX="-333" positionY="297" width="128" height="73"/>
+        <element name="Landlord" positionX="-245" positionY="131" width="128" height="103"/>
         <element name="Room" positionX="25" positionY="210" width="128" height="88"/>
         <element name="RoomDetails" positionX="-137" positionY="324" width="128" height="103"/>
     </elements>

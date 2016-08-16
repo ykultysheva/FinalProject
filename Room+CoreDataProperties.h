@@ -2,7 +2,7 @@
 //  Room+CoreDataProperties.h
 //  FinalProject
 //
-//  Created by Yana Kultysheva on 2016-08-08.
+//  Created by JOSE PILAPIL on 2016-08-16.
 //  Copyright © 2016 Yana Kultysheva. All rights reserved.
 //
 //  Choose "Create NSManagedObject Subclass…" from the Core Data editor menu
@@ -17,16 +17,16 @@ NS_ASSUME_NONNULL_BEGIN
 
 @property (nullable, nonatomic, retain) NSString *name;
 @property (nullable, nonatomic, retain) House *house;
-@property (nullable, nonatomic, retain) NSSet<NSManagedObject *> *interiorPart;
+@property (nullable, nonatomic, retain) NSSet<RoomDetails *> *roomDetails;
 
 @end
 
 @interface Room (CoreDataGeneratedAccessors)
 
-- (void)addInteriorPartObject:(NSManagedObject *)value;
-- (void)removeInteriorPartObject:(NSManagedObject *)value;
-- (void)addInteriorPart:(NSSet<NSManagedObject *> *)values;
-- (void)removeInteriorPart:(NSSet<NSManagedObject *> *)values;
+- (void)addRoomDetailsObject:(RoomDetails *)value;
+- (void)removeRoomDetailsObject:(RoomDetails *)value;
+- (void)addRoomDetails:(NSSet<RoomDetails *> *)values;
+- (void)removeRoomDetails:(NSSet<RoomDetails *> *)values;
 
 @end
 

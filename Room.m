@@ -1,15 +1,16 @@
 //
-//  ImagesInteriorPart.m
+//  Room.m
 //  FinalProject
 //
-//  Created by Yana Kultysheva on 2016-08-08.
+//  Created by JOSE PILAPIL on 2016-08-16.
 //  Copyright © 2016 Yana Kultysheva. All rights reserved.
 //
 
-#import "ImagesInteriorPart.h"
-#import "InteriorPart.h"
+#import "Room.h"
+#import "House.h"
+#import "RoomDetails.h"
 
-@implementation ImagesInteriorPart
+@implementation Room
 
 // Insert code here to add functionality to your managed object subclass
 

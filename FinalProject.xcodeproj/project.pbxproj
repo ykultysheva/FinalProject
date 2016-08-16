@@ -16,14 +16,8 @@
 		972D47111D5911D600AF6464 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 972D470F1D5911D600AF6464 /* LaunchScreen.storyboard */; };
 		972D47211D5938A500AF6464 /* House+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 972D471A1D5938A500AF6464 /* House+CoreDataProperties.m */; };
 		972D47221D5938A500AF6464 /* House.m in Sources */ = {isa = PBXBuildFile; fileRef = 972D471C1D5938A500AF6464 /* House.m */; };
-		972D47371D593A2F00AF6464 /* Room+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 972D47281D593A2F00AF6464 /* Room+CoreDataProperties.m */; };
-		972D47381D593A2F00AF6464 /* Room.m in Sources */ = {isa = PBXBuildFile; fileRef = 972D472A1D593A2F00AF6464 /* Room.m */; };
 		972D47391D593A2F00AF6464 /* ImagesHouse+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 972D472C1D593A2F00AF6464 /* ImagesHouse+CoreDataProperties.m */; };
 		972D473A1D593A2F00AF6464 /* ImagesHouse.m in Sources */ = {isa = PBXBuildFile; fileRef = 972D472E1D593A2F00AF6464 /* ImagesHouse.m */; };
-		972D473B1D593A2F00AF6464 /* InteriorPart+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 972D47301D593A2F00AF6464 /* InteriorPart+CoreDataProperties.m */; };
-		972D473C1D593A2F00AF6464 /* InteriorPart.m in Sources */ = {isa = PBXBuildFile; fileRef = 972D47321D593A2F00AF6464 /* InteriorPart.m */; };
-		972D473D1D593A2F00AF6464 /* ImagesInteriorPart+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 972D47341D593A2F00AF6464 /* ImagesInteriorPart+CoreDataProperties.m */; };
-		972D473E1D593A2F00AF6464 /* ImagesInteriorPart.m in Sources */ = {isa = PBXBuildFile; fileRef = 972D47361D593A2F00AF6464 /* ImagesInteriorPart.m */; };
 		972D47441D5A71B900AF6464 /* CustomCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 972D47431D5A71B900AF6464 /* CustomCell.swift */; };
 		972D47461D5A826100AF6464 /* AddHouse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 972D47451D5A826100AF6464 /* AddHouse.swift */; };
 		97D247E61D6276540032B534 /* PagedScrollViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97D247E51D6276540032B534 /* PagedScrollViewController.swift */; };
@@ -39,6 +33,12 @@
 		ABB65C1D1D6347D500A2C6A7 /* MenuModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABB65C1C1D6347D500A2C6A7 /* MenuModel.swift */; };
 		ABB65C201D6347FE00A2C6A7 /* DefaultTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABB65C1E1D6347FE00A2C6A7 /* DefaultTableViewCell.swift */; };
 		ABB65C211D6347FE00A2C6A7 /* DefaultTableViewHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABB65C1F1D6347FE00A2C6A7 /* DefaultTableViewHeaderView.swift */; };
+		ABFB14D11D639AA4006274D3 /* RoomDetails+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = ABFB14CA1D639AA4006274D3 /* RoomDetails+CoreDataProperties.m */; };
+		ABFB14D21D639AA4006274D3 /* RoomDetails.m in Sources */ = {isa = PBXBuildFile; fileRef = ABFB14CC1D639AA4006274D3 /* RoomDetails.m */; };
+		ABFB14D31D639AA4006274D3 /* ImagesRoomDetails+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = ABFB14CE1D639AA4006274D3 /* ImagesRoomDetails+CoreDataProperties.m */; };
+		ABFB14D41D639AA4006274D3 /* ImagesRoomDetails.m in Sources */ = {isa = PBXBuildFile; fileRef = ABFB14D01D639AA4006274D3 /* ImagesRoomDetails.m */; };
+		ABFB14DC1D639BB6006274D3 /* Room+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = ABFB14D91D639BB6006274D3 /* Room+CoreDataProperties.m */; };
+		ABFB14DD1D639BB6006274D3 /* Room.m in Sources */ = {isa = PBXBuildFile; fileRef = ABFB14DB1D639BB6006274D3 /* Room.m */; };
 		EF55B553ACE5C8A8C4E0CE65 /* Pods_FinalProject.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D73AD9749EDCFD84BF19CF65 /* Pods_FinalProject.framework */; };
 /* End PBXBuildFile section */
 
@@ -57,22 +57,10 @@
 		972D471A1D5938A500AF6464 /* House+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "House+CoreDataProperties.m"; sourceTree = "<group>"; };
 		972D471B1D5938A500AF6464 /* House.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = House.h; sourceTree = "<group>"; };
 		972D471C1D5938A500AF6464 /* House.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = House.m; sourceTree = "<group>"; };
-		972D47271D593A2F00AF6464 /* Room+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Room+CoreDataProperties.h"; sourceTree = "<group>"; };
-		972D47281D593A2F00AF6464 /* Room+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Room+CoreDataProperties.m"; sourceTree = "<group>"; };
-		972D47291D593A2F00AF6464 /* Room.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Room.h; sourceTree = "<group>"; };
-		972D472A1D593A2F00AF6464 /* Room.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Room.m; sourceTree = "<group>"; };
 		972D472B1D593A2F00AF6464 /* ImagesHouse+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "ImagesHouse+CoreDataProperties.h"; sourceTree = "<group>"; };
 		972D472C1D593A2F00AF6464 /* ImagesHouse+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "ImagesHouse+CoreDataProperties.m"; sourceTree = "<group>"; };
 		972D472D1D593A2F00AF6464 /* ImagesHouse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImagesHouse.h; sourceTree = "<group>"; };
 		972D472E1D593A2F00AF6464 /* ImagesHouse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImagesHouse.m; sourceTree = "<group>"; };
-		972D472F1D593A2F00AF6464 /* InteriorPart+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "InteriorPart+CoreDataProperties.h"; sourceTree = "<group>"; };
-		972D47301D593A2F00AF6464 /* InteriorPart+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "InteriorPart+CoreDataProperties.m"; sourceTree = "<group>"; };
-		972D47311D593A2F00AF6464 /* InteriorPart.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InteriorPart.h; sourceTree = "<group>"; };
-		972D47321D593A2F00AF6464 /* InteriorPart.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InteriorPart.m; sourceTree = "<group>"; };
-		972D47331D593A2F00AF6464 /* ImagesInteriorPart+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "ImagesInteriorPart+CoreDataProperties.h"; sourceTree = "<group>"; };
-		972D47341D593A2F00AF6464 /* ImagesInteriorPart+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "ImagesInteriorPart+CoreDataProperties.m"; sourceTree = "<group>"; };
-		972D47351D593A2F00AF6464 /* ImagesInteriorPart.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImagesInteriorPart.h; sourceTree = "<group>"; };
-		972D47361D593A2F00AF6464 /* ImagesInteriorPart.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImagesInteriorPart.m; sourceTree = "<group>"; };
 		972D47431D5A71B900AF6464 /* CustomCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomCell.swift; sourceTree = "<group>"; };
 		972D47451D5A826100AF6464 /* AddHouse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddHouse.swift; sourceTree = "<group>"; };
 		97CE993A6F17847CAD888303 /* Pods-FinalProject.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FinalProject.release.xcconfig"; path = "Pods/Target Support Files/Pods-FinalProject/Pods-FinalProject.release.xcconfig"; sourceTree = "<group>"; };
@@ -91,6 +79,18 @@
 		ABB65C1C1D6347D500A2C6A7 /* MenuModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuModel.swift; sourceTree = "<group>"; };
 		ABB65C1E1D6347FE00A2C6A7 /* DefaultTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DefaultTableViewCell.swift; sourceTree = "<group>"; };
 		ABB65C1F1D6347FE00A2C6A7 /* DefaultTableViewHeaderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DefaultTableViewHeaderView.swift; sourceTree = "<group>"; };
+		ABFB14C91D639AA4006274D3 /* RoomDetails+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "RoomDetails+CoreDataProperties.h"; sourceTree = "<group>"; };
+		ABFB14CA1D639AA4006274D3 /* RoomDetails+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "RoomDetails+CoreDataProperties.m"; sourceTree = "<group>"; };
+		ABFB14CB1D639AA4006274D3 /* RoomDetails.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RoomDetails.h; sourceTree = "<group>"; };
+		ABFB14CC1D639AA4006274D3 /* RoomDetails.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RoomDetails.m; sourceTree = "<group>"; };
+		ABFB14CD1D639AA4006274D3 /* ImagesRoomDetails+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "ImagesRoomDetails+CoreDataProperties.h"; sourceTree = "<group>"; };
+		ABFB14CE1D639AA4006274D3 /* ImagesRoomDetails+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "ImagesRoomDetails+CoreDataProperties.m"; sourceTree = "<group>"; };
+		ABFB14CF1D639AA4006274D3 /* ImagesRoomDetails.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImagesRoomDetails.h; sourceTree = "<group>"; };
+		ABFB14D01D639AA4006274D3 /* ImagesRoomDetails.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImagesRoomDetails.m; sourceTree = "<group>"; };
+		ABFB14D81D639BB6006274D3 /* Room+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Room+CoreDataProperties.h"; sourceTree = "<group>"; };
+		ABFB14D91D639BB6006274D3 /* Room+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Room+CoreDataProperties.m"; sourceTree = "<group>"; };
+		ABFB14DA1D639BB6006274D3 /* Room.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Room.h; sourceTree = "<group>"; };
+		ABFB14DB1D639BB6006274D3 /* Room.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Room.m; sourceTree = "<group>"; };
 		CCB3DA64D2F244B129226BBA /* Pods-FinalProject.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FinalProject.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FinalProject/Pods-FinalProject.debug.xcconfig"; sourceTree = "<group>"; };
 		D73AD9749EDCFD84BF19CF65 /* Pods_FinalProject.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FinalProject.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -134,6 +134,7 @@
 		972D46F51D5911D500AF6464 = {
 			isa = PBXGroup;
 			children = (
+				ABFB14DE1D639BCF006274D3 /* Room */,
 				972D47001D5911D600AF6464 /* FinalProject */,
 				972D46FF1D5911D600AF6464 /* Products */,
 				6C4F93186D201E5FF04A6625 /* Pods */,
@@ -167,10 +168,9 @@
 				972D47031D5911D600AF6464 /* FinalProject.xcdatamodeld */,
 				972D47181D5938A500AF6464 /* FinalProject-Bridging-Header.h */,
 				97D247E51D6276540032B534 /* PagedScrollViewController.swift */,
-				972D47421D593A7400AF6464 /* ImagesInteriorPart */,
-				972D47411D593A6600AF6464 /* InteriorPart */,
+				ABFB14D61D639B75006274D3 /* RoomDetails */,
+				ABFB14D71D639B78006274D3 /* ImagesRoomDetails */,
 				972D47261D59398B00AF6464 /* Landlord */,
-				972D473F1D593A4B00AF6464 /* Room */,
 				972D47401D593A5800AF6464 /* ImagesHouse */,
 				972D47251D59393B00AF6464 /* House */,
 			);
@@ -199,17 +199,6 @@
 			name = Landlord;
 			sourceTree = "<group>";
 		};
-		972D473F1D593A4B00AF6464 /* Room */ = {
-			isa = PBXGroup;
-			children = (
-				972D47271D593A2F00AF6464 /* Room+CoreDataProperties.h */,
-				972D47281D593A2F00AF6464 /* Room+CoreDataProperties.m */,
-				972D47291D593A2F00AF6464 /* Room.h */,
-				972D472A1D593A2F00AF6464 /* Room.m */,
-			);
-			name = Room;
-			sourceTree = "<group>";
-		};
 		972D47401D593A5800AF6464 /* ImagesHouse */ = {
 			isa = PBXGroup;
 			children = (
@@ -221,26 +210,39 @@
 			name = ImagesHouse;
 			sourceTree = "<group>";
 		};
-		972D47411D593A6600AF6464 /* InteriorPart */ = {
+		ABFB14D61D639B75006274D3 /* RoomDetails */ = {
 			isa = PBXGroup;
 			children = (
-				972D472F1D593A2F00AF6464 /* InteriorPart+CoreDataProperties.h */,
-				972D47301D593A2F00AF6464 /* InteriorPart+CoreDataProperties.m */,
-				972D47311D593A2F00AF6464 /* InteriorPart.h */,
-				972D47321D593A2F00AF6464 /* InteriorPart.m */,
+				ABFB14C91D639AA4006274D3 /* RoomDetails+CoreDataProperties.h */,
+				ABFB14CA1D639AA4006274D3 /* RoomDetails+CoreDataProperties.m */,
+				ABFB14CB1D639AA4006274D3 /* RoomDetails.h */,
+				ABFB14CC1D639AA4006274D3 /* RoomDetails.m */,
 			);
-			name = InteriorPart;
+			name = RoomDetails;
+			path = ..;
 			sourceTree = "<group>";
 		};
-		972D47421D593A7400AF6464 /* ImagesInteriorPart */ = {
+		ABFB14D71D639B78006274D3 /* ImagesRoomDetails */ = {
 			isa = PBXGroup;
 			children = (
-				972D47331D593A2F00AF6464 /* ImagesInteriorPart+CoreDataProperties.h */,
-				972D47341D593A2F00AF6464 /* ImagesInteriorPart+CoreDataProperties.m */,
-				972D47351D593A2F00AF6464 /* ImagesInteriorPart.h */,
-				972D47361D593A2F00AF6464 /* ImagesInteriorPart.m */,
+				ABFB14CD1D639AA4006274D3 /* ImagesRoomDetails+CoreDataProperties.h */,
+				ABFB14CE1D639AA4006274D3 /* ImagesRoomDetails+CoreDataProperties.m */,
+				ABFB14CF1D639AA4006274D3 /* ImagesRoomDetails.h */,
+				ABFB14D01D639AA4006274D3 /* ImagesRoomDetails.m */,
 			);
-			name = ImagesInteriorPart;
+			name = ImagesRoomDetails;
+			path = ..;
+			sourceTree = "<group>";
+		};
+		ABFB14DE1D639BCF006274D3 /* Room */ = {
+			isa = PBXGroup;
+			children = (
+				ABFB14D81D639BB6006274D3 /* Room+CoreDataProperties.h */,
+				ABFB14D91D639BB6006274D3 /* Room+CoreDataProperties.m */,
+				ABFB14DA1D639BB6006274D3 /* Room.h */,
+				ABFB14DB1D639BB6006274D3 /* Room.m */,
+			);
+			name = Room;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -366,29 +368,29 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				972D47381D593A2F00AF6464 /* Room.m in Sources */,
-				972D473B1D593A2F00AF6464 /* InteriorPart+CoreDataProperties.m in Sources */,
+				ABFB14DC1D639BB6006274D3 /* Room+CoreDataProperties.m in Sources */,
 				ABB65C1D1D6347D500A2C6A7 /* MenuModel.swift in Sources */,
+				ABFB14D11D639AA4006274D3 /* RoomDetails+CoreDataProperties.m in Sources */,
 				972D47461D5A826100AF6464 /* AddHouse.swift in Sources */,
 				972D47441D5A71B900AF6464 /* CustomCell.swift in Sources */,
 				AB6438261D5CA73F002912D5 /* LoginViewController.swift in Sources */,
-				972D47371D593A2F00AF6464 /* Room+CoreDataProperties.m in Sources */,
+				ABFB14D41D639AA4006274D3 /* ImagesRoomDetails.m in Sources */,
 				972D473A1D593A2F00AF6464 /* ImagesHouse.m in Sources */,
-				972D473D1D593A2F00AF6464 /* ImagesInteriorPart+CoreDataProperties.m in Sources */,
 				972D47221D5938A500AF6464 /* House.m in Sources */,
 				972D47391D593A2F00AF6464 /* ImagesHouse+CoreDataProperties.m in Sources */,
 				AB64382D1D5FE40E002912D5 /* Landlord.m in Sources */,
+				ABFB14DD1D639BB6006274D3 /* Room.m in Sources */,
 				AB6438271D5CA73F002912D5 /* RegisterViewController.swift in Sources */,
 				ABB65C201D6347FE00A2C6A7 /* DefaultTableViewCell.swift in Sources */,
-				972D473E1D593A2F00AF6464 /* ImagesInteriorPart.m in Sources */,
 				972D47211D5938A500AF6464 /* House+CoreDataProperties.m in Sources */,
 				97D247EA1D627ABF0032B534 /* UIViewController.swift in Sources */,
-				972D473C1D593A2F00AF6464 /* InteriorPart.m in Sources */,
 				ABB65C191D6347A800A2C6A7 /* MenuViewController+Configuration.swift in Sources */,
 				AB64382C1D5FE40E002912D5 /* Landlord+CoreDataProperties.m in Sources */,
 				972D47051D5911D600AF6464 /* FinalProject.xcdatamodeld in Sources */,
 				972D47021D5911D600AF6464 /* AppDelegate.swift in Sources */,
 				972D47071D5911D600AF6464 /* MasterViewController.swift in Sources */,
+				ABFB14D21D639AA4006274D3 /* RoomDetails.m in Sources */,
+				ABFB14D31D639AA4006274D3 /* ImagesRoomDetails+CoreDataProperties.m in Sources */,
 				ABB65C1A1D6347A800A2C6A7 /* MenuViewController+UITableViewDataSource.swift in Sources */,
 				ABB65C1B1D6347A800A2C6A7 /* MenuViewController+UITableViewDelegate.swift in Sources */,
 				ABB65C211D6347FE00A2C6A7 /* DefaultTableViewHeaderView.swift in Sources */,

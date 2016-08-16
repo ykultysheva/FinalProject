@@ -1,22 +1,20 @@
 //
-//  InteriorPart+CoreDataProperties.m
+//  Room+CoreDataProperties.m
 //  FinalProject
 //
-//  Created by Yana Kultysheva on 2016-08-08.
+//  Created by JOSE PILAPIL on 2016-08-16.
 //  Copyright © 2016 Yana Kultysheva. All rights reserved.
 //
 //  Choose "Create NSManagedObject Subclass…" from the Core Data editor menu
 //  to delete and recreate this implementation file for your updated model.
 //
 
-#import "InteriorPart+CoreDataProperties.h"
+#import "Room+CoreDataProperties.h"
 
-@implementation InteriorPart (CoreDataProperties)
+@implementation Room (CoreDataProperties)
 
 @dynamic name;
-@dynamic descriptionBefore;
-@dynamic descriptionAfter;
-@dynamic room;
-@dynamic images;
+@dynamic house;
+@dynamic roomDetails;
 
 @end
