@@ -162,12 +162,31 @@ class DetailViewController: UIViewController, UITextFieldDelegate  {
     }
     
     
-    @IBAction func addInspection(sender: AnyObject) {
-        let alertController = UIAlertController(title: "Add Inspection", message: "Please give a name for your this inspection", preferredStyle: UIAlertControllerStyle.Alert)
+    @IBAction func addRoom(sender: AnyObject) {
+        
+        let roomEntity = NSEntityDescription.entityForName("Room", inManagedObjectContext: managedObjectContext)
+        
+        let room1 = NSManagedObject(entity: roomEntity!, insertIntoManagedObjectContext: self.managedObjectContext) as! Room
+        
+       
+        
+        let alertController = UIAlertController(title: "Add Room", message: "What room are you inspecting?", preferredStyle: UIAlertControllerStyle.Alert)
+        
+        alertController.addTextFieldWithConfigurationHandler { ( textField : UITextField!) -> Void in
+            textField.placeholder = "Enter Room Name"
+        }
         
         let saveAction = UIAlertAction(title: "Save", style: UIAlertActionStyle.Default, handler: {
             alert -> Void in
+            let textfield : UITextField!
+            textfield = alertController.textFields?.first
             
+            room1.setValue(textfield.text, forKey: "name")
+            self.detailItem?.addRoomsObject(room1)
+            do {try self.detailItem?.managedObjectContext?.save()
+            }catch {
+                print(error)
+            }
             
         })
         
@@ -176,9 +195,6 @@ class DetailViewController: UIViewController, UITextFieldDelegate  {
             
         })
         
-        alertController.addTextFieldWithConfigurationHandler { (textField : UITextField!) -> Void in
-            textField.placeholder = "Enter Inspection Name"
-        }
      
         
         alertController.addAction(saveAction)

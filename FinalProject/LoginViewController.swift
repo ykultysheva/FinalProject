@@ -82,15 +82,5 @@ class LoginViewController: UIViewController, NSFetchedResultsControllerDelegate 
         
         
     }
-    func displayMyAlertMessage(userMessage:String) {
-        
-        let alert = UIAlertController(title: "Alert!", message: userMessage, preferredStyle: UIAlertControllerStyle.Alert)
-        
-        let okAction = UIAlertAction(title: "OK", style: UIAlertActionStyle.Default, handler: nil)
-        
-        alert.addAction(okAction)
-        
-        self.presentViewController(alert, animated: true, completion: nil)
-    }
-
+  
 }

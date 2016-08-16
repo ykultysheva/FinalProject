@@ -48,11 +48,11 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="i9O-gS-MKW" customClass="MaterialButton" customModule="Material">
-                                <rect key="frame" x="467" y="330" width="103" height="30"/>
-                                <state key="normal" title="Add Inspection"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="i9O-gS-MKW">
+                                <rect key="frame" x="499" y="330" width="71" height="30"/>
+                                <state key="normal" title="Add Room"/>
                                 <connections>
-                                    <action selector="addInspection:" destination="JEX-9P-axG" eventType="touchUpInside" id="09L-Oq-AWA"/>
+                                    <action selector="addRoom:" destination="JEX-9P-axG" eventType="touchUpInside" id="333-Bb-fT6"/>
                                 </connections>
                             </button>
                         </subviews>
