@@ -25,7 +25,7 @@
     <entity name="Room" representedClassName="Room" syncable="YES">
         <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
         <relationship name="house" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="House" inverseName="rooms" inverseEntity="House" syncable="YES"/>
-        <relationship name="roomDetails" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="RoomDetails" inverseName="room" inverseEntity="RoomDetails" syncable="YES"/>
+        <relationship name="roomDetails" optional="YES" toMany="YES" deletionRule="Nullify" ordered="YES" destinationEntity="RoomDetails" inverseName="room" inverseEntity="RoomDetails" syncable="YES"/>
     </entity>
     <entity name="RoomDetails" representedClassName="RoomDetails" syncable="YES">
         <attribute name="label" optional="YES" attributeType="String" syncable="YES"/>

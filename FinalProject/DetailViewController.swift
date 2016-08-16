@@ -16,7 +16,7 @@ import Material
 
 
 
-class DetailViewController: UIViewController, UITextFieldDelegate  {
+class DetailViewController: UIViewController, UITextFieldDelegate {
     
     @IBOutlet weak var detailDescriptionLabel: UILabel!
     @IBOutlet weak var Address: UILabel!
@@ -39,7 +39,7 @@ class DetailViewController: UIViewController, UITextFieldDelegate  {
     
     
     let pagedScrollViewController = PagedScrollViewController()
-
+    let tableviewController = MenuViewController()
     
     
     
@@ -107,7 +107,7 @@ class DetailViewController: UIViewController, UITextFieldDelegate  {
             
             displayContentController(pagedScrollViewController, frame: CGRect(x: 0, y: 0, width: view.bounds.size.width, height: 300))
             
-            displayContentController(MenuViewController(), frame: CGRect(x: 0, y: pagedScrollViewController.view.bounds.maxY+200, width: view.bounds.size.width, height: view.bounds.size.height - pagedScrollViewController.view.bounds.size.height))
+            displayContentController(tableviewController, frame: CGRect(x: 0, y: pagedScrollViewController.view.bounds.maxY+200, width: view.bounds.size.width, height: view.bounds.size.height - pagedScrollViewController.view.bounds.size.height))
            
            
 
@@ -164,11 +164,6 @@ class DetailViewController: UIViewController, UITextFieldDelegate  {
     
     @IBAction func addRoom(sender: AnyObject) {
         
-        let roomEntity = NSEntityDescription.entityForName("Room", inManagedObjectContext: managedObjectContext)
-        
-        let room1 = NSManagedObject(entity: roomEntity!, insertIntoManagedObjectContext: self.managedObjectContext) as! Room
-        
-       
         
         let alertController = UIAlertController(title: "Add Room", message: "What room are you inspecting?", preferredStyle: UIAlertControllerStyle.Alert)
         
@@ -178,11 +173,20 @@ class DetailViewController: UIViewController, UITextFieldDelegate  {
         
         let saveAction = UIAlertAction(title: "Save", style: UIAlertActionStyle.Default, handler: {
             alert -> Void in
+            var appDel: AppDelegate = (UIApplication.sharedApplication().delegate as! AppDelegate)
+            var context:NSManagedObjectContext = appDel.managedObjectContext
+            
+            let roomEntity = NSEntityDescription.entityForName("Room", inManagedObjectContext: context)
+            
+            let room1 = NSManagedObject(entity: roomEntity!, insertIntoManagedObjectContext: context) as! Room
+            
+            
+            
             let textfield : UITextField!
             textfield = alertController.textFields?.first
-            
             room1.setValue(textfield.text, forKey: "name")
             self.detailItem?.addRoomsObject(room1)
+       
             do {try self.detailItem?.managedObjectContext?.save()
             }catch {
                 print(error)

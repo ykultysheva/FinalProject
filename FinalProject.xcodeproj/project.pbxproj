@@ -76,13 +76,13 @@
 		AB6438291D5FE40E002912D5 /* Landlord+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "Landlord+CoreDataProperties.m"; path = "../Landlord+CoreDataProperties.m"; sourceTree = "<group>"; };
 		AB64382A1D5FE40E002912D5 /* Landlord.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Landlord.h; path = ../Landlord.h; sourceTree = "<group>"; };
 		AB64382B1D5FE40E002912D5 /* Landlord.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Landlord.m; path = ../Landlord.m; sourceTree = "<group>"; };
-		ABB65C141D6347A800A2C6A7 /* MenuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
-		ABB65C151D6347A800A2C6A7 /* MenuViewController+Configuration.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "MenuViewController+Configuration.swift"; sourceTree = "<group>"; };
-		ABB65C161D6347A800A2C6A7 /* MenuViewController+UITableViewDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "MenuViewController+UITableViewDataSource.swift"; sourceTree = "<group>"; };
-		ABB65C171D6347A800A2C6A7 /* MenuViewController+UITableViewDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "MenuViewController+UITableViewDelegate.swift"; sourceTree = "<group>"; };
-		ABB65C1C1D6347D500A2C6A7 /* MenuModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuModel.swift; sourceTree = "<group>"; };
-		ABB65C1E1D6347FE00A2C6A7 /* DefaultTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DefaultTableViewCell.swift; sourceTree = "<group>"; };
-		ABB65C1F1D6347FE00A2C6A7 /* DefaultTableViewHeaderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DefaultTableViewHeaderView.swift; sourceTree = "<group>"; };
+		ABB65C141D6347A800A2C6A7 /* MenuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MenuViewController.swift; path = ../MenuViewController.swift; sourceTree = "<group>"; };
+		ABB65C151D6347A800A2C6A7 /* MenuViewController+Configuration.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "MenuViewController+Configuration.swift"; path = "../MenuViewController+Configuration.swift"; sourceTree = "<group>"; };
+		ABB65C161D6347A800A2C6A7 /* MenuViewController+UITableViewDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "MenuViewController+UITableViewDataSource.swift"; path = "../MenuViewController+UITableViewDataSource.swift"; sourceTree = "<group>"; };
+		ABB65C171D6347A800A2C6A7 /* MenuViewController+UITableViewDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "MenuViewController+UITableViewDelegate.swift"; path = "../MenuViewController+UITableViewDelegate.swift"; sourceTree = "<group>"; };
+		ABB65C1C1D6347D500A2C6A7 /* MenuModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MenuModel.swift; path = ../MenuModel.swift; sourceTree = "<group>"; };
+		ABB65C1E1D6347FE00A2C6A7 /* DefaultTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DefaultTableViewCell.swift; path = ../DefaultTableViewCell.swift; sourceTree = "<group>"; };
+		ABB65C1F1D6347FE00A2C6A7 /* DefaultTableViewHeaderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DefaultTableViewHeaderView.swift; path = ../DefaultTableViewHeaderView.swift; sourceTree = "<group>"; };
 		ABFB14C91D639AA4006274D3 /* RoomDetails+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "RoomDetails+CoreDataProperties.h"; sourceTree = "<group>"; };
 		ABFB14CA1D639AA4006274D3 /* RoomDetails+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "RoomDetails+CoreDataProperties.m"; sourceTree = "<group>"; };
 		ABFB14CB1D639AA4006274D3 /* RoomDetails.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RoomDetails.h; sourceTree = "<group>"; };
@@ -114,13 +114,6 @@
 		283E7C68ADA5EDD5D7427C22 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				ABB65C1E1D6347FE00A2C6A7 /* DefaultTableViewCell.swift */,
-				ABB65C1F1D6347FE00A2C6A7 /* DefaultTableViewHeaderView.swift */,
-				ABB65C1C1D6347D500A2C6A7 /* MenuModel.swift */,
-				ABB65C141D6347A800A2C6A7 /* MenuViewController.swift */,
-				ABB65C151D6347A800A2C6A7 /* MenuViewController+Configuration.swift */,
-				ABB65C161D6347A800A2C6A7 /* MenuViewController+UITableViewDataSource.swift */,
-				ABB65C171D6347A800A2C6A7 /* MenuViewController+UITableViewDelegate.swift */,
 				D73AD9749EDCFD84BF19CF65 /* Pods_FinalProject.framework */,
 			);
 			name = Frameworks;
@@ -175,8 +168,10 @@
 				97D247E51D6276540032B534 /* PagedScrollViewController.swift */,
 				ABFB14DE1D639BCF006274D3 /* Room */,
 				ABFB14D61D639B75006274D3 /* RoomDetails */,
+				ABFB14DE1D639BCF006274D3 /* Room */,
 				ABFB14D71D639B78006274D3 /* ImagesRoomDetails */,
 				972D47261D59398B00AF6464 /* Landlord */,
+				ABFB14DF1D639E5D006274D3 /* Components */,
 				972D47401D593A5800AF6464 /* ImagesHouse */,
 				972D47251D59393B00AF6464 /* House */,
 			);
@@ -250,6 +245,20 @@
 			);
 			name = Room;
 			path = ..;
+			sourceTree = "<group>";
+		};
+		ABFB14DF1D639E5D006274D3 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				ABB65C1E1D6347FE00A2C6A7 /* DefaultTableViewCell.swift */,
+				ABB65C1F1D6347FE00A2C6A7 /* DefaultTableViewHeaderView.swift */,
+				ABB65C1C1D6347D500A2C6A7 /* MenuModel.swift */,
+				ABB65C141D6347A800A2C6A7 /* MenuViewController.swift */,
+				ABB65C151D6347A800A2C6A7 /* MenuViewController+Configuration.swift */,
+				ABB65C161D6347A800A2C6A7 /* MenuViewController+UITableViewDataSource.swift */,
+				ABB65C171D6347A800A2C6A7 /* MenuViewController+UITableViewDelegate.swift */,
+			);
+			name = Components;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
