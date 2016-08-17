@@ -87,7 +87,7 @@
         <!--Add Room Details-->
         <scene sceneID="NM6-Ze-i8j">
             <objects>
-                <viewController id="dmC-lq-PHq" customClass="AddRoomDetails" customModule="FinalProject" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="AddRoomDetails" id="dmC-lq-PHq" customClass="AddRoomDetails" customModule="FinalProject" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="wQw-ki-Duo"/>
                         <viewControllerLayoutGuide type="bottom" id="zew-X0-axp"/>
@@ -111,12 +111,6 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Add Interior Part Condition" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aes-lz-afw">
-                                <rect key="frame" x="198" y="234" width="204" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="en5-WA-WlU">
                                 <rect key="frame" x="150" y="4" width="300" height="200"/>
                                 <color key="backgroundColor" red="0.0" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -152,6 +146,12 @@
                                     <action selector="toDetailRoomDetails:" destination="dmC-lq-PHq" eventType="touchUpInside" id="DFX-SP-RxP"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Add Interior Part Condition" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aes-lz-afw">
+                                <rect key="frame" x="198" y="234" width="204" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -175,6 +175,7 @@
                         <outlet property="roomDetailDescription" destination="dUG-W1-yw6" id="dVc-4p-bGc"/>
                         <outlet property="roomDetailsImageView" destination="en5-WA-WlU" id="BK3-Qy-LSP"/>
                         <outlet property="roomDetailsLabel" destination="WDG-wO-IOG" id="afx-bk-g3e"/>
+                        <outlet property="titleLabel" destination="aes-lz-afw" id="Wzp-Xq-mcU"/>
                         <segue destination="0Cv-W2-vTF" kind="showDetail" identifier="toDetailRoomDetails" id="VYi-HA-73I"/>
                     </connections>
                 </viewController>

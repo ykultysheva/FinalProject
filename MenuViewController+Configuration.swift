@@ -9,6 +9,7 @@
 import UIKit
 
 public extension MenuViewController {
+    
     /*
     @name   prepareView
     */
@@ -31,6 +32,7 @@ public extension MenuViewController {
     */
     public func prepareTableViewHeader() {
         tableView.tableHeaderView = tableViewHeaderView
+                
     }
     
     /*

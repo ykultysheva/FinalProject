@@ -11,7 +11,7 @@ import UIKit
 public class DefaultTableViewHeader: UIView {
     
     public lazy var defaultLabel: UILabel = UILabel()
-    
+    public lazy var defaultButton: UIButton = UIButton(type: .ContactAdd)
     /*
     @name   required initWithCoder
     */
@@ -25,6 +25,7 @@ public class DefaultTableViewHeader: UIView {
     public override init(frame: CGRect) {
         super.init(frame: frame)
         prepareDefaultLabel()
+      
     }
     
     /*
@@ -51,5 +52,11 @@ public class DefaultTableViewHeader: UIView {
     */
     public func layoutDefaultLabel() {
         
+    }
+    
+    public func prepareDefaultButton() {
+        defaultButton.frame = CGRect(x: self.frame.width - 30, y: 10, width: 20, height: 20)
+        defaultButton.tintColor = UIColor.blueColor()
+        addSubview(defaultButton)
     }
 }

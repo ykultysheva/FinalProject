@@ -5,7 +5,7 @@
         <attribute name="descriptionHouse" optional="YES" attributeType="String" syncable="YES"/>
         <relationship name="images" optional="YES" toMany="YES" deletionRule="Nullify" ordered="YES" destinationEntity="ImagesHouse" inverseName="house" inverseEntity="ImagesHouse" syncable="YES"/>
         <relationship name="landlord" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Landlord" inverseName="houses" inverseEntity="Landlord" syncable="YES"/>
-        <relationship name="rooms" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Room" inverseName="house" inverseEntity="Room" syncable="YES"/>
+        <relationship name="rooms" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="Room" inverseName="house" inverseEntity="Room" syncable="YES"/>
     </entity>
     <entity name="ImagesHouse" representedClassName="ImagesHouse" syncable="YES">
         <attribute name="image" optional="YES" attributeType="Binary" allowsExternalBinaryDataStorage="YES" indexed="YES" syncable="YES"/>
@@ -30,7 +30,7 @@
     <entity name="RoomDetails" representedClassName="RoomDetails" syncable="YES">
         <attribute name="label" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="partDescription" optional="YES" attributeType="String" syncable="YES"/>
-        <relationship name="images" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="ImagesRoomDetails" inverseName="roomDetail" inverseEntity="ImagesRoomDetails" syncable="YES"/>
+        <relationship name="images" optional="YES" toMany="YES" deletionRule="Nullify" ordered="YES" destinationEntity="ImagesRoomDetails" inverseName="roomDetail" inverseEntity="ImagesRoomDetails" syncable="YES"/>
         <relationship name="room" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Room" inverseName="roomDetails" inverseEntity="Room" syncable="YES"/>
     </entity>
     <elements>
