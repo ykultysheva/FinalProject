@@ -105,9 +105,9 @@ class AddRoomDetails: UIViewController, UITextFieldDelegate, UITextViewDelegate,
         let appDel: AppDelegate = (UIApplication.sharedApplication().delegate as! AppDelegate)
         let context:NSManagedObjectContext = appDel.managedObjectContext
         
-        
-        let label = roomDetailsLabel.text!
-        let partDescription = roomDetailDescription.text!
+//        names are reversed bellow, but it's ok for now
+        let partDescription = roomDetailsLabel.text!
+        let label = roomDetailDescription.text!
         
         guard label.isEmpty == false else {
             showAlertWithTitle("Warning", message: "Add label.", cancelButtonTitle: "OK")

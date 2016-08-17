@@ -9,3 +9,4 @@
 #import "ImagesHouse.h"
 #import "Landlord.h"
 #import "RoomDetails.h"
+#import "ImagesRoomDetails.h"
