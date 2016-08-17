@@ -221,8 +221,8 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xga-OP-JqZ">
-                                <rect key="frame" x="234" y="432" width="132" height="30"/>
-                                <state key="normal" title="Buck to your house"/>
+                                <rect key="frame" x="249" y="432" width="103" height="30"/>
+                                <state key="normal" title="Back To House"/>
                                 <connections>
                                     <action selector="backToHouse:" destination="0Cv-W2-vTF" eventType="touchUpInside" id="zo4-jH-KPb"/>
                                 </connections>
@@ -248,7 +248,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="86r-nc-4nB" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2611" y="-715"/>
+            <point key="canvasLocation" x="2617" y="-690"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="1wt-FS-KpP">
@@ -723,6 +723,6 @@
         <image name="defaultPhoto" width="1080" height="1080"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="VYi-HA-73I"/>
+        <segue reference="R9D-7G-hQD"/>
     </inferredMetricsTieBreakers>
 </document>

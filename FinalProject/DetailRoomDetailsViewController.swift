@@ -32,7 +32,8 @@ class DetailRoomDetailsViewController: UIViewController, NSFetchedResultsControl
         if let roomDetails = record {
             roomDetailsLabel.text = roomDetails.label
             roomDetailDescription.text = roomDetails.partDescription
-        }
+            belongsToRoom.text = "belongs to " + (roomDetails.room?.name)!}
+        
         
         var imageViewArray = [UIImageView]()
         
@@ -54,7 +55,8 @@ class DetailRoomDetailsViewController: UIViewController, NSFetchedResultsControl
 }
     
     @IBAction func backToHouse(sender: AnyObject) {
-//        self.performSegueWithIdentifier("someIdentifier", sender: self)
+        dismissViewControllerAnimated(true, completion: nil)    
+//self.performSegueWithIdentifier("someIdentifier", sender: self)
     }
     
 

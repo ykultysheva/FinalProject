@@ -205,8 +205,6 @@ class AddRoomDetails: UIViewController, UITextFieldDelegate, UITextViewDelegate,
             let controller = segue.destinationViewController as! DetailRoomDetailsViewController
             controller.managedObjectContext = managedObjectContext
             controller.record = object as! RoomDetails
-            
-            
         }
     }
     
