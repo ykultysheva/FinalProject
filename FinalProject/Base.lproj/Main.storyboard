@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="dmC-lq-PHq">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="HnI-QE-Vb2">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
@@ -87,7 +87,7 @@
         <!--Add Room Details-->
         <scene sceneID="NM6-Ze-i8j">
             <objects>
-                <viewController id="dmC-lq-PHq" customClass="AddRoomDetails" customModule="FinalProject" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="AddRoomDetails" id="dmC-lq-PHq" customClass="AddRoomDetails" customModule="FinalProject" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="wQw-ki-Duo"/>
                         <viewControllerLayoutGuide type="bottom" id="zew-X0-axp"/>
@@ -111,12 +111,6 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Add Interior Part Condition" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aes-lz-afw">
-                                <rect key="frame" x="198" y="234" width="204" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zqh-MT-zjl">
                                 <rect key="frame" x="268" y="503" width="64" height="24"/>
                                 <state key="normal" title="Save" image="cm_microphone_white"/>
@@ -151,6 +145,12 @@
                                     <outletCollection property="gestureRecognizers" destination="ByZ-Ox-i5u" appends="YES" id="C52-L1-lPC"/>
                                 </connections>
                             </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Add Interior Part Condition" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aes-lz-afw">
+                                <rect key="frame" x="198" y="234" width="204" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="0.20877452839999999" green="0.58591336999999999" blue="0.99919462199999998" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
@@ -174,6 +174,8 @@
                         <outlet property="roomDetailDescription" destination="dUG-W1-yw6" id="dVc-4p-bGc"/>
                         <outlet property="roomDetailsImageView" destination="en5-WA-WlU" id="BK3-Qy-LSP"/>
                         <outlet property="roomDetailsLabel" destination="WDG-wO-IOG" id="afx-bk-g3e"/>
+                        <outlet property="titleLabel" destination="aes-lz-afw" id="Wzp-Xq-mcU"/>
+                        <segue destination="0Cv-W2-vTF" kind="showDetail" identifier="toDetailRoomDetails" id="VYi-HA-73I"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8XR-Gr-0Y0" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -188,7 +190,7 @@
         <!--Detail Room Details View Controller-->
         <scene sceneID="xkv-Bx-74M">
             <objects>
-                <viewController id="0Cv-W2-vTF" customClass="DetailRoomDetailsViewController" customModule="FinalProject" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="DetailRoomDetails" id="0Cv-W2-vTF" customClass="DetailRoomDetailsViewController" customModule="FinalProject" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="NJB-xC-Dbl"/>
                         <viewControllerLayoutGuide type="bottom" id="tEA-DJ-czi"/>
@@ -720,4 +722,7 @@
         <image name="cm_microphone_white" width="24" height="24"/>
         <image name="defaultPhoto" width="1080" height="1080"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="VYi-HA-73I"/>
+    </inferredMetricsTieBreakers>
 </document>

@@ -205,8 +205,11 @@ class MasterViewController: UITableViewController, NSFetchedResultsControllerDel
             case .Delete:
                 tableView.deleteRowsAtIndexPaths([indexPath!], withRowAnimation: .Fade)
             case .Update:
-                
-            self.configureCell(tableView.cellForRowAtIndexPath(indexPath!)!, atIndexPath: indexPath!)
+                if let i = indexPath {
+                    if let cell = tableView.cellForRowAtIndexPath(i) {
+                        self.configureCell(cell, atIndexPath: i)
+                    }
+                }
             case .Move:
                 tableView.deleteRowsAtIndexPaths([indexPath!], withRowAnimation: .Fade)
                 

@@ -26,6 +26,7 @@ class DetailViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var imageDetailedHouse: UIImageView!
     
     
+    
     var managedObjectContext: NSManagedObjectContext!
     
     

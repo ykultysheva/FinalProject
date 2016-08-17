@@ -16,21 +16,35 @@ class AddRoomDetails: UIViewController, UITextFieldDelegate, UITextViewDelegate,
     @IBOutlet weak var roomDetailsLabel: UITextView!
     @IBOutlet weak var roomDetailDescription: UITextField!
     
+    @IBOutlet weak var titleLabel: UILabel!
     
     var addedImages: [UIImage] = []
     var managedObjectContext: NSManagedObjectContext!
     var savedRecord: NSManagedObject?
     
+    var detailItem: Room? {
+        didSet {
+            // Update the vieww
+        }
+    }
 
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        roomDetailDescription.delegate = self
-        roomDetailsLabel.delegate = self
+        self.configureView()
 
     }
+    
+    func configureView(){
+        titleLabel.text = detailItem?.name
+    }
 
+    override func viewWillAppear(animated: Bool) {
+        super.viewWillAppear(true)
+        roomDetailDescription.delegate = self
+        roomDetailsLabel.delegate = self
+    }
     
     
 
@@ -144,8 +158,12 @@ class AddRoomDetails: UIViewController, UITextFieldDelegate, UITextViewDelegate,
                 
             }
         }
+            let roomDetails = detailItem?.mutableOrderedSetValueForKey("roomDetails")
+            roomDetails?.addObject(record)
+        
         do {
             try record.managedObjectContext?.save()
+            try detailItem?.managedObjectContext?.save()
             dismissViewControllerAnimated(true, completion: nil)
             
         } catch {
@@ -187,9 +205,6 @@ class AddRoomDetails: UIViewController, UITextFieldDelegate, UITextViewDelegate,
             let controller = segue.destinationViewController as! DetailRoomDetailsViewController
             controller.managedObjectContext = managedObjectContext
             controller.record = object as! RoomDetails
-            
-            
-            
             
             
         }
