@@ -19,6 +19,7 @@ public class MenuViewController: UIViewController,  NSFetchedResultsControllerDe
     */
     public override func viewDidLoad() {
         super.viewDidLoad()
+        tableView.scrollsToTop = false
         prepareView()
         prepareTableView()
         prepareTableViewHeader()
