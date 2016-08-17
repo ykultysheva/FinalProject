@@ -119,9 +119,9 @@ class AddRoomDetails: UIViewController, UITextFieldDelegate, UITextViewDelegate,
         let appDel: AppDelegate = (UIApplication.sharedApplication().delegate as! AppDelegate)
         let context:NSManagedObjectContext = appDel.managedObjectContext
         
-        
-        let label = roomDetailsLabel.text!
-        let partDescription = roomDetailDescription.text!
+//        names are reversed bellow, but it's ok for now
+        let partDescription = roomDetailsLabel.text!
+        let label = roomDetailDescription.text!
         
         guard label.isEmpty == false else {
             showAlertWithTitle("Warning", message: "Add label.", cancelButtonTitle: "OK")
@@ -190,22 +190,23 @@ class AddRoomDetails: UIViewController, UITextFieldDelegate, UITextViewDelegate,
     
     
     @IBAction func toDetailRoomDetails(sender: AnyObject) {
-        func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-            if segue.identifier == "toDetailRoomDetails" {
-                
-                    let object = self.savedRecord!
-                    let controller = segue.destinationViewController as! DetailRoomDetailsViewController
-                    controller.managedObjectContext = managedObjectContext
-                    controller.record = object as! RoomDetails
-                
-                
-                
-                
-                
-            }
         
-        }
+        
     }
    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if segue.identifier == "toDetailRoomDetails" {
+            
+            let object = self.savedRecord!
+            let controller = segue.destinationViewController as! DetailRoomDetailsViewController
+            controller.managedObjectContext = managedObjectContext
+            controller.record = object as! RoomDetails
+            
+            
+            
+            
+            
+        }
+    }
     
 }

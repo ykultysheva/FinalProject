@@ -11,30 +11,49 @@ import CoreData
 
 class DetailRoomDetailsViewController: UIViewController, NSFetchedResultsControllerDelegate {
 
+    @IBOutlet weak var roomDetailsLabel: UILabel!
     
     var managedObjectContext: NSManagedObjectContext!
-    var record: NSManagedObject!
+    var record: RoomDetails?
+    
+    
+    
+    let pagedScrollViewController = PagedScrollViewController()
+
+    
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        if let roomDetails = record {
+            roomDetailsLabel.text = roomDetails.label
+        }
+        
+        var imageViewArray = [UIImageView]()
+        
+        if let imageSet1 = record!.images as? Set<ImagesRoomDetails> {
+            for imageRoomDetails in imageSet1 {
+                if let image = imageRoomDetails.image {
+                    if let actualImage = UIImage(data: image) {
+                        let imageView = UIImageView(image: actualImage)
+                        imageViewArray.append(imageView)
+                    }
+                }
+            }
+            
+            pagedScrollViewController.pages = imageViewArray
+            
+            displayContentController(pagedScrollViewController, frame: CGRect(x: 0, y: 0, width: view.bounds.size.width, height: 300))
+            
 
-        // Do any additional setup after loading the view.
+        
+       
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
+    
     
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
+}
 
 }
