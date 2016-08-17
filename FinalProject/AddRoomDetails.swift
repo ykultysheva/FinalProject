@@ -158,8 +158,12 @@ class AddRoomDetails: UIViewController, UITextFieldDelegate, UITextViewDelegate,
                 
             }
         }
+            let roomDetails = detailItem?.mutableOrderedSetValueForKey("roomDetails")
+            roomDetails?.addObject(record)
+        
         do {
             try record.managedObjectContext?.save()
+            try detailItem?.managedObjectContext?.save()
             dismissViewControllerAnimated(true, completion: nil)
             
         } catch {
@@ -201,9 +205,6 @@ class AddRoomDetails: UIViewController, UITextFieldDelegate, UITextViewDelegate,
             let controller = segue.destinationViewController as! DetailRoomDetailsViewController
             controller.managedObjectContext = managedObjectContext
             controller.record = object as! RoomDetails
-            
-            
-            
             
             
         }

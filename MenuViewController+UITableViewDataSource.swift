@@ -23,14 +23,15 @@ extension MenuViewController: UITableViewDataSource {
         let room = self.fetchedResultsController.fetchedObjects![section] as! Room
         print(self.fetchedResultsController.fetchedObjects)
         
-        return room.roomDetails?.count ?? 0 }
+        return room.roomDetails?.count ?? 0
+    }
     
     /*
      @name   cellForRowAtIndexPath
      */
     public func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell: DefaultTableViewCell =  tableView.dequeueReusableCellWithIdentifier("Cell") as! DefaultTableViewCell
-        let object = self.fetchedResultsController.objectAtIndexPath(indexPath) as! Room
+        let object = self.fetchedResultsController.fetchedObjects![indexPath.section] as! Room
         let detailObject = object.roomDetails![indexPath.row] as! RoomDetails
         
         cell.defaultLabel.text = detailObject.label

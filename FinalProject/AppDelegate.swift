@@ -27,9 +27,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
 //        NAVIGATION:
         
-//        let masterNavigationController = window!.rootViewController as! UINavigationController
-//        let controller = masterNavigationController.topViewController as! MasterViewController
-//        controller.managedObjectContext = self.managedObjectContext
+        let masterNavigationController = window!.rootViewController as! UINavigationController
+        let controller = masterNavigationController.topViewController as! MasterViewController
+        controller.managedObjectContext = self.managedObjectContext
         
         
 //        //create Managed Object
