@@ -12,6 +12,9 @@ import CoreData
 class DetailRoomDetailsViewController: UIViewController, NSFetchedResultsControllerDelegate {
 
     @IBOutlet weak var roomDetailsLabel: UILabel!
+    @IBOutlet weak var roomDetailDescription: UILabel!
+    @IBOutlet weak var belongsToRoom: UILabel!
+    
     
     var managedObjectContext: NSManagedObjectContext!
     var record: RoomDetails?
@@ -28,6 +31,7 @@ class DetailRoomDetailsViewController: UIViewController, NSFetchedResultsControl
         
         if let roomDetails = record {
             roomDetailsLabel.text = roomDetails.label
+            roomDetailDescription.text = roomDetails.partDescription
         }
         
         var imageViewArray = [UIImageView]()
@@ -45,15 +49,13 @@ class DetailRoomDetailsViewController: UIViewController, NSFetchedResultsControl
             pagedScrollViewController.pages = imageViewArray
             
             displayContentController(pagedScrollViewController, frame: CGRect(x: 0, y: 0, width: view.bounds.size.width, height: 300))
-            
-
-        
        
     }
-
-    
-    
-
 }
+    
+    @IBAction func backToHouse(sender: AnyObject) {
+//        self.performSegueWithIdentifier("someIdentifier", sender: self)
+    }
+    
 
 }
