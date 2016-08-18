@@ -18,7 +18,6 @@ class MasterViewController: UITableViewController, NSFetchedResultsControllerDel
     @IBOutlet weak var addressLable: UILabel!
     @IBOutlet weak var landlordLabel: UILabel!
     
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
@@ -133,9 +132,28 @@ class MasterViewController: UITableViewController, NSFetchedResultsControllerDel
         cell.Address!.text = object.valueForKey("address")?.description
         cell.Description!.text = object.valueForKey("descriptionHouse")?.description
         if object.landlord != nil {
-        cell.Landlord!.text = (object.landlord as! Landlord).name
+            cell.Landlord!.text = (object.landlord as! Landlord).name
+        }
+        var imageViewArray = [UIImageView]()
+        if let imageSet1 = object.images as? Set<ImagesHouse> {
+            for houseImage in imageSet1 {
+                if let image = houseImage.image {
+                    if let actualImage = UIImage(data: image) {
+                        let imageView = UIImageView(image: actualImage)
+                        imageView.contentMode = .ScaleAspectFill
+                        imageViewArray.append(imageView)
+                    }
+                }
+            }
+            let pagedScrollViewController = PagedScrollViewController()
+            pagedScrollViewController.pages = imageViewArray
+            let inset: CGFloat = 5.0
+            displayContentController(pagedScrollViewController, frame: CGRect(x: 0+inset*2, y: cell.frame.origin.y+inset, width: cell.frame.width/3 + 15, height: cell.frame.height-(inset*2)))
             
         }
+        
+
+       
     }
 
     // MARK: - Fetched results controlle
@@ -204,6 +222,7 @@ class MasterViewController: UITableViewController, NSFetchedResultsControllerDel
                 tableView.insertRowsAtIndexPaths([newIndexPath!], withRowAnimation: .Fade)
             case .Delete:
                 tableView.deleteRowsAtIndexPaths([indexPath!], withRowAnimation: .Fade)
+            
             case .Update:
                 if let i = indexPath {
                     if let cell = tableView.cellForRowAtIndexPath(i) {

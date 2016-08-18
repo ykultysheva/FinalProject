@@ -87,7 +87,7 @@ public class PagedScrollViewController: UIViewController, UIScrollViewDelegate  
     */
     private func layoutScrollView() {
         if scrollView.frame != CGRect.zero { return }
-        scrollView.frame = CGRect(x: 0, y: 64, width: view.bounds.size.width, height: view.bounds.size.height - 64)
+        scrollView.frame = CGRect(x: 0, y:0, width: view.bounds.size.width, height: view.bounds.size.height)
     }
     
     /*
@@ -108,6 +108,7 @@ public class PagedScrollViewController: UIViewController, UIScrollViewDelegate  
         for (var i = 0; i < pages.count; i++) {
             let p = pages[i]
             p.frame = CGRect(x: CGRectGetMaxX(scrollView.bounds) * CGFloat(i), y: 0, width: sw, height: sh)
+            p.clipsToBounds = true
             scrollView.addSubview(p)
         }
         scrollView.contentSize = CGSizeMake(sw * CGFloat(pages.count), 0)
