@@ -23,7 +23,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 //        let defaults = NSUserDefaults.standardUserDefaults()
 //        defaults.removeObjectForKey("email")
 //        defaults.removeObjectForKey("password")
-//        
+//
         
 //        NAVIGATION:
         

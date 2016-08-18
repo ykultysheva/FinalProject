@@ -57,6 +57,7 @@ extension MenuViewController: UITableViewDataSource {
         let titleLabel = UILabel(frame: CGRect(x: 10, y: 15, width: 100, height: 20))
         let room = self.fetchedResultsController.fetchedObjects![section] as! Room
         titleLabel.text = room.name
+        
         let button = UIButton(type: .ContactAdd)
         button.frame = CGRect(x: view.frame.width - 50, y: 15, width: 20, height: 20)
         button.tintColor = UIColor.blueColor()
