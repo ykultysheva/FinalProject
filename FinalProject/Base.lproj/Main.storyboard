@@ -225,47 +225,57 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Room Details Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="i7Z-54-Ug1">
-                                <rect key="frame" x="226" y="289" width="147" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Room Details Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="i7Z-54-Ug1">
+                                <rect key="frame" x="210" y="492" width="181" height="25.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="21"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Details Description" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0f9-2V-dqh">
-                                <rect key="frame" x="200.5" y="340" width="200" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Details Description" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0f9-2V-dqh">
+                                <rect key="frame" x="163" y="537.5" width="275" height="21"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="200" id="DtQ-Vh-FIv"/>
+                                    <constraint firstAttribute="width" constant="275" id="hyv-wL-Jci"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Belongs to Room: Room" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lDg-Bf-iqA">
-                                <rect key="frame" x="208" y="386" width="184" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="In the Room" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lDg-Bf-iqA">
+                                <rect key="frame" x="251" y="440" width="97" height="22"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xga-OP-JqZ">
-                                <rect key="frame" x="249" y="432" width="103" height="30"/>
-                                <state key="normal" title="Back To House"/>
+                                <rect key="frame" x="240" y="588.5" width="120" height="40"/>
+                                <color key="backgroundColor" red="0.15294117647058825" green="0.62745098039215685" blue="0.53725490196078429" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="120" id="GLH-xm-eG1"/>
+                                    <constraint firstAttribute="height" constant="40" id="jcI-co-ucH"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <state key="normal" title="Back To House">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
                                 <connections>
                                     <action selector="backToHouse:" destination="0Cv-W2-vTF" eventType="touchUpInside" id="zo4-jH-KPb"/>
                                 </connections>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.45490196078431372" green="0.45490196078431372" blue="0.45490196078431372" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstItem="Xga-OP-JqZ" firstAttribute="top" secondItem="lDg-Bf-iqA" secondAttribute="bottom" constant="25" id="ASi-5Z-3tX"/>
-                            <constraint firstItem="0f9-2V-dqh" firstAttribute="centerX" secondItem="ZLh-hb-jIZ" secondAttribute="centerX" id="KoF-yR-TSM"/>
-                            <constraint firstItem="i7Z-54-Ug1" firstAttribute="centerX" secondItem="ZLh-hb-jIZ" secondAttribute="centerX" id="M5T-SD-FWM"/>
-                            <constraint firstItem="lDg-Bf-iqA" firstAttribute="centerX" secondItem="ZLh-hb-jIZ" secondAttribute="centerX" id="YAo-mb-Uh4"/>
-                            <constraint firstItem="lDg-Bf-iqA" firstAttribute="top" secondItem="0f9-2V-dqh" secondAttribute="bottom" constant="25" id="dQK-oG-3G3"/>
-                            <constraint firstItem="i7Z-54-Ug1" firstAttribute="centerY" secondItem="ZLh-hb-jIZ" secondAttribute="centerY" id="iL0-Ps-zSq"/>
-                            <constraint firstItem="Xga-OP-JqZ" firstAttribute="centerX" secondItem="ZLh-hb-jIZ" secondAttribute="centerX" id="nlK-pr-wZr"/>
-                            <constraint firstItem="0f9-2V-dqh" firstAttribute="top" secondItem="i7Z-54-Ug1" secondAttribute="bottom" constant="30" id="y0i-HN-mBi"/>
+                            <constraint firstItem="lDg-Bf-iqA" firstAttribute="top" secondItem="NJB-xC-Dbl" secondAttribute="bottom" constant="420" id="29J-o6-b8l"/>
+                            <constraint firstItem="0f9-2V-dqh" firstAttribute="centerX" secondItem="ZLh-hb-jIZ" secondAttribute="centerX" id="4BT-XM-6EY"/>
+                            <constraint firstItem="Xga-OP-JqZ" firstAttribute="top" secondItem="0f9-2V-dqh" secondAttribute="bottom" constant="30" id="R3A-jl-2yP"/>
+                            <constraint firstItem="0f9-2V-dqh" firstAttribute="top" secondItem="i7Z-54-Ug1" secondAttribute="bottom" constant="20" id="fet-ov-edY"/>
+                            <constraint firstItem="i7Z-54-Ug1" firstAttribute="top" secondItem="lDg-Bf-iqA" secondAttribute="bottom" constant="30" id="h9x-TO-8Ge"/>
+                            <constraint firstItem="Xga-OP-JqZ" firstAttribute="centerX" secondItem="ZLh-hb-jIZ" secondAttribute="centerX" id="py6-JU-8du"/>
+                            <constraint firstItem="lDg-Bf-iqA" firstAttribute="centerX" secondItem="ZLh-hb-jIZ" secondAttribute="centerX" id="rtG-NK-psy"/>
+                            <constraint firstItem="i7Z-54-Ug1" firstAttribute="centerX" secondItem="ZLh-hb-jIZ" secondAttribute="centerX" id="uCR-dD-jwS"/>
                         </constraints>
                     </view>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="600" height="600"/>
                     <connections>
                         <outlet property="belongsToRoom" destination="lDg-Bf-iqA" id="UsA-Zu-Rbr"/>
                         <outlet property="roomDetailDescription" destination="0f9-2V-dqh" id="bzR-3f-i0s"/>
@@ -274,7 +284,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="86r-nc-4nB" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2617" y="-690"/>
+            <point key="canvasLocation" x="2809" y="-765"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="1wt-FS-KpP">
@@ -457,11 +467,11 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" red="0.20000000300000001" green="0.20000000300000001" blue="0.20000000300000001" alpha="1" colorSpace="calibratedRGB"/>
                         <prototypes>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="CustomCell" rowHeight="144" id="WCw-Qf-5nD" customClass="CustomCell" customModule="FinalProject" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="86" width="600" height="144"/>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="CustomCell" rowHeight="170" id="WCw-Qf-5nD" customClass="CustomCell" customModule="FinalProject" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="86" width="600" height="170"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="WCw-Qf-5nD" id="37f-cq-3Eg">
-                                    <rect key="frame" x="0.0" y="0.0" width="600" height="143.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="169.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Address" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FHU-FV-LAQ">
@@ -470,7 +480,7 @@
                                             <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Landlord" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="b9B-Cd-N64">
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Landlord" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="b9B-Cd-N64">
                                             <rect key="frame" x="494" y="61" width="68" height="21"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>

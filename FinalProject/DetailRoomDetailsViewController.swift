@@ -32,7 +32,7 @@ class DetailRoomDetailsViewController: UIViewController, NSFetchedResultsControl
         if let roomDetails = record {
             roomDetailsLabel.text = roomDetails.label
             roomDetailDescription.text = roomDetails.partDescription
-            belongsToRoom.text = "belongs to " + (roomDetails.room?.name)!}
+            belongsToRoom.text = "In the " + (roomDetails.room?.name)!}
         
         
         var imageViewArray = [UIImageView]()
@@ -49,7 +49,7 @@ class DetailRoomDetailsViewController: UIViewController, NSFetchedResultsControl
             
             pagedScrollViewController.pages = imageViewArray
             
-            displayContentController(pagedScrollViewController, frame: CGRect(x: 0, y: 0, width: view.bounds.size.width, height: 300))
+            displayContentController(pagedScrollViewController, frame: CGRect(x: 0, y: 0, width: view.bounds.size.width, height: 400))
        
     }
 }
