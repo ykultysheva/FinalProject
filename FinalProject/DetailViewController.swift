@@ -25,6 +25,7 @@ class DetailViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var saveButton: UIButton!
     @IBOutlet weak var imageDetailedHouse: UIImageView!
     
+    @IBOutlet weak var adressLabel: UILabel!
     
     
     var managedObjectContext: NSManagedObjectContext!
@@ -60,6 +61,9 @@ class DetailViewController: UIViewController, UITextFieldDelegate {
             }
             if let text2 = self.houseDescription {
                 text2.text = detail.valueForKey("descriptionHouse")!.description
+            }
+            if let label = self.adressLabel{
+                label.text = detail.address
             }
             
             if let imageHouse = self.imageDetailedHouse {
@@ -107,9 +111,9 @@ class DetailViewController: UIViewController, UITextFieldDelegate {
         
             pagedScrollViewController.pages = imageViewArray
             
-            displayContentController(pagedScrollViewController, frame: CGRect(x: 0, y: -50, width: view.bounds.size.width, height: 300))
+            displayContentController(pagedScrollViewController, frame: CGRect(x: 0, y: 64, width: view.bounds.size.width, height: 250))
             
-            displayContentController(tableviewController, frame: CGRect(x: 0, y: pagedScrollViewController.view.bounds.maxY + 200, width: view.bounds.size.width, height: view.frame.height - 500))
+            displayContentController(tableviewController, frame: CGRect(x: 0, y: pagedScrollViewController.view.bounds.maxY + 220, width: view.bounds.size.width, height: view.frame.height - 480))
            
            
 

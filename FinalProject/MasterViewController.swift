@@ -222,6 +222,7 @@ class MasterViewController: UITableViewController, NSFetchedResultsControllerDel
                 tableView.insertRowsAtIndexPaths([newIndexPath!], withRowAnimation: .Fade)
             case .Delete:
                 tableView.deleteRowsAtIndexPaths([indexPath!], withRowAnimation: .Fade)
+            
             case .Update:
                 if let i = indexPath {
                     if let cell = tableView.cellForRowAtIndexPath(i) {
