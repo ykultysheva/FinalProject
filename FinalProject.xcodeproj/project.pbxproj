@@ -41,6 +41,7 @@
 		ABFB14D41D639AA4006274D3 /* ImagesRoomDetails.m in Sources */ = {isa = PBXBuildFile; fileRef = ABFB14D01D639AA4006274D3 /* ImagesRoomDetails.m */; };
 		ABFB14DC1D639BB6006274D3 /* Room+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = ABFB14D91D639BB6006274D3 /* Room+CoreDataProperties.m */; };
 		ABFB14DD1D639BB6006274D3 /* Room.m in Sources */ = {isa = PBXBuildFile; fileRef = ABFB14DB1D639BB6006274D3 /* Room.m */; };
+		ABFB14E11D6620EC006274D3 /* housepark.png in Resources */ = {isa = PBXBuildFile; fileRef = ABFB14E01D6620EC006274D3 /* housepark.png */; };
 		EF55B553ACE5C8A8C4E0CE65 /* Pods_FinalProject.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D73AD9749EDCFD84BF19CF65 /* Pods_FinalProject.framework */; };
 /* End PBXBuildFile section */
 
@@ -95,6 +96,7 @@
 		ABFB14D91D639BB6006274D3 /* Room+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Room+CoreDataProperties.m"; sourceTree = "<group>"; };
 		ABFB14DA1D639BB6006274D3 /* Room.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Room.h; sourceTree = "<group>"; };
 		ABFB14DB1D639BB6006274D3 /* Room.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Room.m; sourceTree = "<group>"; };
+		ABFB14E01D6620EC006274D3 /* housepark.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = housepark.png; sourceTree = "<group>"; };
 		CCB3DA64D2F244B129226BBA /* Pods-FinalProject.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FinalProject.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FinalProject/Pods-FinalProject.debug.xcconfig"; sourceTree = "<group>"; };
 		D73AD9749EDCFD84BF19CF65 /* Pods_FinalProject.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FinalProject.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -161,12 +163,12 @@
 				97E618E71D63A37800C2490E /* AddRoomDetails.swift */,
 				972D47451D5A826100AF6464 /* AddHouse.swift */,
 				972D470D1D5911D600AF6464 /* Assets.xcassets */,
+				ABFB14E01D6620EC006274D3 /* housepark.png */,
 				972D470F1D5911D600AF6464 /* LaunchScreen.storyboard */,
-				972D47121D5911D600AF6464 /* Info.plist */,
 				972D47031D5911D600AF6464 /* FinalProject.xcdatamodeld */,
+				972D47121D5911D600AF6464 /* Info.plist */,
 				972D47181D5938A500AF6464 /* FinalProject-Bridging-Header.h */,
 				97D247E51D6276540032B534 /* PagedScrollViewController.swift */,
-				ABFB14DE1D639BCF006274D3 /* Room */,
 				ABFB14D61D639B75006274D3 /* RoomDetails */,
 				ABFB14DE1D639BCF006274D3 /* Room */,
 				ABFB14D71D639B78006274D3 /* ImagesRoomDetails */,
@@ -325,6 +327,7 @@
 			files = (
 				972D47111D5911D600AF6464 /* LaunchScreen.storyboard in Resources */,
 				972D470E1D5911D600AF6464 /* Assets.xcassets in Resources */,
+				ABFB14E11D6620EC006274D3 /* housepark.png in Resources */,
 				972D470C1D5911D600AF6464 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
