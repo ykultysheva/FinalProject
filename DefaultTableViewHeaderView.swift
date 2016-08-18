@@ -42,7 +42,7 @@ public class DefaultTableViewHeader: UIView {
     public func prepareDefaultLabel() {
         defaultLabel.font = UIFont.systemFontOfSize(12.0)
         defaultLabel.text = "Default Text"
-        defaultLabel.textColor = UIColor.blackColor()
+        defaultLabel.textColor = UIColor.redColor()
         defaultLabel.textAlignment = .Center
         addSubview(defaultLabel)
     }

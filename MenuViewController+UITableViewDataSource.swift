@@ -54,16 +54,19 @@ extension MenuViewController: UITableViewDataSource {
     //    }
     
     public func tableView(tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
-        let titleLabel = UILabel(frame: CGRect(x: 10, y: 15, width: 100, height: 20))
+        let titleLabel = UILabel(frame: CGRect(x: 0, y: 15, width: view.frame.width, height: 20))
+        titleLabel.textAlignment = .Center
         let room = self.fetchedResultsController.fetchedObjects![section] as! Room
         titleLabel.text = room.name
+        titleLabel.textColor = UIColor(red: 0.18, green: 0.73, blue: 0.67, alpha: 1)
+        titleLabel.font = UIFont(name: (titleLabel.font?.fontName)!, size: 19)
         let button = UIButton(type: .ContactAdd)
-        button.frame = CGRect(x: view.frame.width - 50, y: 15, width: 20, height: 20)
-        button.tintColor = UIColor.blueColor()
+        button.frame = CGRect(x: view.frame.width - 50, y: 15, width: 27, height: 23)
+        button.tintColor = UIColor(red: 0.18, green: 0.73, blue: 0.67, alpha: 1)
         button.addTarget(self, action: Selector("buttonPressed:"), forControlEvents: .TouchUpInside)
         button.tag = section
         let vw = UIView()
-        vw.backgroundColor = UIColor.grayColor()
+        vw.backgroundColor = UIColor(red: 0.15, green: 0.15, blue: 0.15, alpha: 1)
         vw.addSubview(button)
         vw.addSubview(titleLabel)
         return vw

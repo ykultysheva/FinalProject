@@ -111,9 +111,9 @@ class DetailViewController: UIViewController, UITextFieldDelegate {
         
             pagedScrollViewController.pages = imageViewArray
             
-            displayContentController(pagedScrollViewController, frame: CGRect(x: 0, y: 64, width: view.bounds.size.width, height: 250))
+            displayContentController(pagedScrollViewController, frame: CGRect(x: 0, y: 64, width: view.bounds.size.width, height: 275))
             
-            displayContentController(tableviewController, frame: CGRect(x: 0, y: pagedScrollViewController.view.bounds.maxY + 220, width: view.bounds.size.width, height: view.frame.height - 480))
+            displayContentController(tableviewController, frame: CGRect(x: 0, y: pagedScrollViewController.view.bounds.maxY + 260, width: view.bounds.size.width, height: view.frame.height - 535))
            
            
 

@@ -56,7 +56,7 @@ public class DefaultTableViewCell: UITableViewCell {
     @name   prepareDefaultImageView
     */
     public func prepareDefaultImageView() {
-        defaultImageView.backgroundColor = UIColor.yellowColor()
+        defaultImageView.backgroundColor = UIColor(red: 0.90, green: 0.28, blue: 0.53, alpha: 1)
         defaultImageView.clipsToBounds = true
         contentView.addSubview(defaultImageView)
     }
@@ -69,6 +69,7 @@ public class DefaultTableViewCell: UITableViewCell {
         defaultLabel.text = "Default Text"
         defaultLabel.textColor = UIColor.blackColor()
         defaultLabel.textAlignment = .Left
+        defaultLabel.font = UIFont(name: (defaultLabel.font?.fontName)!, size: 18)
         addSubview(defaultLabel)
     }
     

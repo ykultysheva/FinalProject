@@ -131,9 +131,9 @@ class MasterViewController: UITableViewController, NSFetchedResultsControllerDel
 //        cell.textLabel!.text = object.valueForKey("address")!.description
         cell.Address!.text = object.valueForKey("address")?.description
         cell.Description!.text = object.valueForKey("descriptionHouse")?.description
-        if object.landlord != nil {
-            cell.Landlord!.text = (object.landlord as! Landlord).name
-        }
+//        if object.landlord != nil {
+//            cell.Landlord!.text = (object.landlord as! Landlord).name
+//        }
         var imageViewArray = [UIImageView]()
         if let imageSet1 = object.images as? Set<ImagesHouse> {
             for houseImage in imageSet1 {
@@ -148,7 +148,7 @@ class MasterViewController: UITableViewController, NSFetchedResultsControllerDel
             let pagedScrollViewController = PagedScrollViewController()
             pagedScrollViewController.pages = imageViewArray
             let inset: CGFloat = 5.0
-            displayContentController(pagedScrollViewController, frame: CGRect(x: 0+inset*2, y: cell.frame.origin.y+inset, width: cell.frame.width/3 + 15, height: cell.frame.height-(inset*2)))
+            displayContentController(pagedScrollViewController, frame: CGRect(x: 0+inset*2, y: cell.frame.origin.y+inset, width: cell.frame.width/3 + 35, height: cell.frame.height-(inset*2)))
             
         }
         
