@@ -96,78 +96,104 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="name of the interior part" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="dUG-W1-yw6">
-                                <rect key="frame" x="210" y="285" width="178.5" height="30"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Add your description of the conditions of the interior part here." textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="WDG-wO-IOG">
-                                <rect key="frame" x="175" y="345" width="250" height="128"/>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="WDG-wO-IOG">
+                                <rect key="frame" x="150" y="326.5" width="300" height="75"/>
                                 <color key="backgroundColor" red="0.86666666670000003" green="0.86666666670000003" blue="0.86666666670000003" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="128" id="Xsj-qK-rEx"/>
-                                    <constraint firstAttribute="width" constant="250" id="cwG-Lo-HC1"/>
+                                    <constraint firstAttribute="height" constant="75" id="VSX-Fr-c5u"/>
+                                    <constraint firstAttribute="width" constant="300" id="sx1-Uh-Tfd"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zqh-MT-zjl">
-                                <rect key="frame" x="268" y="503" width="64" height="24"/>
-                                <state key="normal" title="Save" image="cm_microphone_white"/>
+                                <rect key="frame" x="150" y="416.5" width="100" height="40"/>
+                                <color key="backgroundColor" red="0.16470588235294117" green="0.68235294117647061" blue="0.60784313725490191" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="ktq-Mq-RKm"/>
+                                    <constraint firstAttribute="width" constant="100" id="lF7-xm-Cha"/>
+                                </constraints>
+                                <state key="normal" title="Save"/>
                                 <connections>
                                     <action selector="saveRoomDetail:" destination="dmC-lq-PHq" eventType="touchUpInside" id="gnG-4p-sVi"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4Ib-WY-OB1">
-                                <rect key="frame" x="276" y="553" width="48" height="30"/>
-                                <state key="normal" title="Cancel"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4Ib-WY-OB1">
+                                <rect key="frame" x="350" y="416.5" width="100" height="40"/>
+                                <color key="backgroundColor" red="0.8666666666666667" green="0.17647058823529413" blue="0.45490196078431372" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="6Fs-Hv-aaA"/>
+                                    <constraint firstAttribute="width" constant="100" id="M87-HZ-C8O"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <state key="normal" title="Cancel">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
                                 <connections>
                                     <action selector="cancel:" destination="dmC-lq-PHq" eventType="touchUpInside" id="8HM-nD-aPj"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TFf-oT-OW1">
-                                <rect key="frame" x="347" y="503" width="144" height="30"/>
-                                <state key="normal" title="to DetailRoomDetails"/>
-                                <connections>
-                                    <action selector="toDetailRoomDetails:" destination="dmC-lq-PHq" eventType="touchUpInside" id="DFX-SP-RxP"/>
-                                    <segue destination="0Cv-W2-vTF" kind="showDetail" identifier="toDetailRoomDetails" id="R9D-7G-hQD"/>
-                                </connections>
-                            </button>
                             <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="defaultPhoto" translatesAutoresizingMaskIntoConstraints="NO" id="en5-WA-WlU">
-                                <rect key="frame" x="200" y="9" width="200" height="200"/>
+                                <rect key="frame" x="230" y="25" width="140" height="140"/>
                                 <color key="backgroundColor" red="0.0" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <gestureRecognizers/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="200" id="gJ3-73-ecR"/>
-                                    <constraint firstAttribute="width" constant="200" id="ofz-FF-weH"/>
+                                    <constraint firstAttribute="height" constant="140" id="Tk8-zK-4Ro"/>
+                                    <constraint firstAttribute="width" constant="140" id="zXC-BS-QjQ"/>
                                 </constraints>
                                 <connections>
                                     <outletCollection property="gestureRecognizers" destination="ByZ-Ox-i5u" appends="YES" id="C52-L1-lPC"/>
                                 </connections>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Add Interior Part Condition" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aes-lz-afw">
-                                <rect key="frame" x="198" y="234" width="204" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="The Room Name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aes-lz-afw">
+                                <rect key="frame" x="200" y="185" width="200" height="21.5"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="200" id="e1f-pe-DfE"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Interior Part Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Rx9-66-CNB">
+                                <rect key="frame" x="150" y="219.5" width="132.5" height="19.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Condition" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1xu-J5-l4Y">
+                                <rect key="frame" x="150" y="299.5" width="70" height="19.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Interior Part" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="dUG-W1-yw6">
+                                <rect key="frame" x="150" y="246.5" width="300" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="VDh-IR-EWK"/>
+                                    <constraint firstAttribute="width" constant="300" id="hbo-F6-dzL"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
                         </subviews>
-                        <color key="backgroundColor" red="0.20877452839999999" green="0.58591336999999999" blue="0.99919462199999998" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" red="0.52941176470588236" green="0.52941176470588236" blue="0.52941176470588236" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstItem="Zqh-MT-zjl" firstAttribute="top" secondItem="WDG-wO-IOG" secondAttribute="bottom" constant="30" id="2CG-uC-4hc"/>
-                            <constraint firstItem="en5-WA-WlU" firstAttribute="centerX" secondItem="mlE-zq-n1k" secondAttribute="centerX" id="52Z-XS-1Tp"/>
-                            <constraint firstItem="dUG-W1-yw6" firstAttribute="centerX" secondItem="mlE-zq-n1k" secondAttribute="centerX" id="5TO-dw-Zjy"/>
-                            <constraint firstItem="dUG-W1-yw6" firstAttribute="top" secondItem="aes-lz-afw" secondAttribute="bottom" constant="30" id="9Ss-3B-YKB"/>
-                            <constraint firstItem="4Ib-WY-OB1" firstAttribute="top" secondItem="Zqh-MT-zjl" secondAttribute="bottom" constant="20" id="Jly-uz-Va9"/>
-                            <constraint firstItem="aes-lz-afw" firstAttribute="top" secondItem="en5-WA-WlU" secondAttribute="bottom" constant="25" id="KJc-Z1-qXJ"/>
-                            <constraint firstItem="Zqh-MT-zjl" firstAttribute="centerX" secondItem="mlE-zq-n1k" secondAttribute="centerX" id="PmK-Xa-Uyf"/>
-                            <constraint firstItem="TFf-oT-OW1" firstAttribute="leading" secondItem="Zqh-MT-zjl" secondAttribute="trailing" constant="30" id="ZMm-R4-Zzl"/>
-                            <constraint firstItem="WDG-wO-IOG" firstAttribute="centerX" secondItem="mlE-zq-n1k" secondAttribute="centerX" id="ZeM-1i-JLj"/>
-                            <constraint firstItem="dUG-W1-yw6" firstAttribute="centerY" secondItem="mlE-zq-n1k" secondAttribute="centerY" id="bDB-Mv-fcS"/>
-                            <constraint firstItem="WDG-wO-IOG" firstAttribute="top" secondItem="dUG-W1-yw6" secondAttribute="bottom" constant="30" id="cY4-qM-0SI"/>
-                            <constraint firstItem="TFf-oT-OW1" firstAttribute="top" secondItem="WDG-wO-IOG" secondAttribute="bottom" constant="30" id="mTS-VF-9XR"/>
-                            <constraint firstItem="4Ib-WY-OB1" firstAttribute="centerX" secondItem="mlE-zq-n1k" secondAttribute="centerX" id="uUu-Mb-O26"/>
-                            <constraint firstItem="aes-lz-afw" firstAttribute="centerX" secondItem="mlE-zq-n1k" secondAttribute="centerX" id="v3f-bh-whd"/>
+                            <constraint firstItem="WDG-wO-IOG" firstAttribute="top" secondItem="dUG-W1-yw6" secondAttribute="bottom" constant="40" id="0SI-U3-BdP"/>
+                            <constraint firstItem="en5-WA-WlU" firstAttribute="centerX" secondItem="mlE-zq-n1k" secondAttribute="centerX" id="Bgj-bw-Yv0"/>
+                            <constraint firstItem="dUG-W1-yw6" firstAttribute="top" secondItem="aes-lz-afw" secondAttribute="bottom" constant="40" id="Eq0-dX-Wx6"/>
+                            <constraint firstItem="4Ib-WY-OB1" firstAttribute="top" secondItem="WDG-wO-IOG" secondAttribute="bottom" constant="15" id="Lxx-sU-nMU"/>
+                            <constraint firstItem="Zqh-MT-zjl" firstAttribute="top" secondItem="WDG-wO-IOG" secondAttribute="bottom" constant="15" id="PhL-AN-zPl"/>
+                            <constraint firstItem="WDG-wO-IOG" firstAttribute="top" secondItem="1xu-J5-l4Y" secondAttribute="bottom" constant="7" id="TsN-rT-LIL"/>
+                            <constraint firstItem="aes-lz-afw" firstAttribute="top" secondItem="en5-WA-WlU" secondAttribute="bottom" constant="20" id="dwL-4d-Pes"/>
+                            <constraint firstItem="dUG-W1-yw6" firstAttribute="centerX" secondItem="mlE-zq-n1k" secondAttribute="centerX" id="gTV-TG-FMs"/>
+                            <constraint firstItem="aes-lz-afw" firstAttribute="centerX" secondItem="mlE-zq-n1k" secondAttribute="centerX" id="h6V-5x-Gpy"/>
+                            <constraint firstItem="en5-WA-WlU" firstAttribute="top" secondItem="mlE-zq-n1k" secondAttribute="topMargin" constant="25" id="jhc-5m-sRo"/>
+                            <constraint firstItem="WDG-wO-IOG" firstAttribute="centerX" secondItem="mlE-zq-n1k" secondAttribute="centerX" id="muc-Ml-lrQ"/>
+                            <constraint firstItem="dUG-W1-yw6" firstAttribute="top" secondItem="Rx9-66-CNB" secondAttribute="bottom" constant="7" id="mx7-qO-7QB"/>
+                            <constraint firstItem="4Ib-WY-OB1" firstAttribute="trailing" secondItem="WDG-wO-IOG" secondAttribute="trailing" id="pTy-vt-Ntt"/>
+                            <constraint firstItem="1xu-J5-l4Y" firstAttribute="leading" secondItem="WDG-wO-IOG" secondAttribute="leading" id="qVk-Nh-K7G"/>
+                            <constraint firstItem="Rx9-66-CNB" firstAttribute="leading" secondItem="dUG-W1-yw6" secondAttribute="leading" id="tsH-Zq-j4c"/>
+                            <constraint firstItem="Zqh-MT-zjl" firstAttribute="leading" secondItem="WDG-wO-IOG" secondAttribute="leading" id="yH1-yf-Dly"/>
                         </constraints>
                     </view>
                     <connections>
@@ -185,7 +211,7 @@
                     </connections>
                 </tapGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="1947" y="-715"/>
+            <point key="canvasLocation" x="2055" y="-713"/>
         </scene>
         <!--Detail Room Details View Controller-->
         <scene sceneID="xkv-Bx-74M">
@@ -747,10 +773,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="cm_microphone_white" width="24" height="24"/>
         <image name="defaultPhoto" width="1080" height="1080"/>
     </resources>
-    <inferredMetricsTieBreakers>
-        <segue reference="R9D-7G-hQD"/>
-    </inferredMetricsTieBreakers>
 </document>
