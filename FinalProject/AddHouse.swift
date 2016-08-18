@@ -17,7 +17,7 @@ class AddHouse: UIViewController, UITextFieldDelegate, UIImagePickerControllerDe
     
     @IBOutlet weak var addDescription: UITextField!
     @IBOutlet weak var addAddress: UITextField!
-    @IBOutlet weak var addLandlord: UITextField!
+//    @IBOutlet weak var addLandlord: UITextField!
     @IBOutlet weak var addImage: UIImageView!
     
     var addedImages: [UIImage] = []
@@ -33,14 +33,14 @@ class AddHouse: UIViewController, UITextFieldDelegate, UIImagePickerControllerDe
         
         addAddress.delegate = self
         addDescription.delegate = self
-        addLandlord.delegate = self
+//        addLandlord.delegate = self
         
     }
     
     func textFieldShouldReturn(textField: UITextField) -> Bool {
         
         // Hide the keyboard.
-        textField.resignFirstResponder()
+//        textField.resignFirstResponder()
         return true
     }
     
@@ -176,7 +176,7 @@ class AddHouse: UIViewController, UITextFieldDelegate, UIImagePickerControllerDe
         
         self.addAddress.resignFirstResponder()
         self.addDescription.resignFirstResponder()
-        self.addLandlord.resignFirstResponder()
+//        self.addLandlord.resignFirstResponder()
         
     
         
