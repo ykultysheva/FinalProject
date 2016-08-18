@@ -47,6 +47,7 @@ class DetailViewController: UIViewController, UITextFieldDelegate {
 //    to populate text fields with house details
     func configureView() {
         // Update the user interface for the detail item.
+    
         if let detail = self.detailItem {
             if let label = self.detailDescriptionLabel {
                 label.text = detail.valueForKey("descriptionHouse")!.description
@@ -106,7 +107,7 @@ class DetailViewController: UIViewController, UITextFieldDelegate {
         
             pagedScrollViewController.pages = imageViewArray
             
-            displayContentController(pagedScrollViewController, frame: CGRect(x: 0, y: 0, width: view.bounds.size.width, height: 300))
+            displayContentController(pagedScrollViewController, frame: CGRect(x: 0, y: -50, width: view.bounds.size.width, height: 300))
             
             displayContentController(tableviewController, frame: CGRect(x: 0, y: pagedScrollViewController.view.bounds.maxY + 200, width: view.bounds.size.width, height: view.frame.height - 500))
            
@@ -174,8 +175,8 @@ class DetailViewController: UIViewController, UITextFieldDelegate {
         
         let saveAction = UIAlertAction(title: "Save", style: UIAlertActionStyle.Default, handler: {
             alert -> Void in
-            var appDel: AppDelegate = (UIApplication.sharedApplication().delegate as! AppDelegate)
-            var context:NSManagedObjectContext = appDel.managedObjectContext
+            let appDel: AppDelegate = (UIApplication.sharedApplication().delegate as! AppDelegate)
+            let context:NSManagedObjectContext = appDel.managedObjectContext
             
             let roomEntity = NSEntityDescription.entityForName("Room", inManagedObjectContext: context)
             

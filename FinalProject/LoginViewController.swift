@@ -48,8 +48,8 @@ class LoginViewController: UIViewController, NSFetchedResultsControllerDelegate 
     @IBAction func loginButtonPressed(sender: AnyObject) {
         let email = emailField.text
         let password = passwordField.text
-        var appDel: AppDelegate = (UIApplication.sharedApplication().delegate as! AppDelegate)
-        var context:NSManagedObjectContext = appDel.managedObjectContext
+        let appDel: AppDelegate = (UIApplication.sharedApplication().delegate as! AppDelegate)
+        let context:NSManagedObjectContext = appDel.managedObjectContext
         let fetchRequest = NSFetchRequest()
         // Edit the entity name as appropriate.
         

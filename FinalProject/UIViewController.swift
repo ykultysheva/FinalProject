@@ -15,7 +15,7 @@ extension UIViewController {
     */
     func displayContentController(content: UIViewController, frame: CGRect?) {
         addChildViewController(content)
-        content.view.frame = frame == nil ? view.bounds : frame!
+        content.view.frame = frame == nil ? view.frame : frame!
         view.addSubview(content.view)
         content.didMoveToParentViewController(self)
     }

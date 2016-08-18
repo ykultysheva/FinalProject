@@ -190,22 +190,5 @@ class AddRoomDetails: UIViewController, UITextFieldDelegate, UITextViewDelegate,
         // Present Alert Controller
         presentViewController(alertController, animated: true, completion: nil)
     }
-
-    
-    
-    @IBAction func toDetailRoomDetails(sender: AnyObject) {
-        
-        
-    }
-   
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        if segue.identifier == "toDetailRoomDetails" {
-            
-            let object = self.savedRecord!
-            let controller = segue.destinationViewController as! DetailRoomDetailsViewController
-            controller.managedObjectContext = managedObjectContext
-            controller.record = object as! RoomDetails
-        }
-    }
     
 }
